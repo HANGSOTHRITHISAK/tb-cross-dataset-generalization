@@ -1,26 +1,20 @@
-# Data Directory
+# Data
 
-Raw chest X-ray datasets are intentionally excluded from Git.
+Raw chest X-ray datasets are intentionally **not stored in this repository**.
+
+Use this directory for lightweight, redistributable metadata and manifests only.
 
 Recommended local layout:
 
 ```text
 data/
-├── raw/          # Original downloaded datasets; never modify in place
-├── interim/      # Intermediate conversions / temporary preprocessing
-├── processed/    # Model-ready derived data when needed
-├── external/     # External-domain data if kept separately
-└── manifests/    # Versionable split/index metadata when redistribution permits
+├── raw/          # Original downloaded datasets (ignored by Git)
+├── interim/      # Temporary conversions / cleaned metadata (ignored)
+├── processed/    # Model-ready local data (ignored)
+├── external/     # External validation datasets if kept separately (ignored)
+└── manifests/    # Versioned split/index CSVs when redistribution is permitted
 ```
 
-## Rules
+Before adding any manifest or metadata file, confirm that its redistribution is allowed by the source dataset's terms.
 
-- Never commit raw medical images.
-- Preserve original downloads unchanged under `raw/`.
-- Keep dataset-specific provenance and setup instructions in `docs/dataset_audit.md`.
-- Prefer reproducible preprocessing over manually edited image folders.
-- Split at patient level whenever patient identifiers are available.
-- Do not tune models against the external test set.
-- Before committing manifests, confirm that their contents can legally be redistributed.
-
-Dataset download instructions will be added after the dataset audit is complete.
+Dataset provenance and suitability decisions belong in `docs/dataset-audit.md`.

@@ -1,1 +1,1 @@
-"""Cross-dataset tuberculosis chest X-ray research package."""
+"""Project source package for TB cross-dataset generalization experiments."""
