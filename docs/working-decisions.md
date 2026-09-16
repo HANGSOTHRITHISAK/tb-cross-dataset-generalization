@@ -35,3 +35,40 @@ The project studies cross-dataset generalization, so dataset independence is par
 ### Next decision gate
 
 Download/inspect the candidate source files and determine whether the Pakistani dataset provides adequate patient grouping and whether TB/normal classes show obvious acquisition or preprocessing confounding.
+
+---
+
+## 2026-09-16 — Dataset strategy v2
+
+### Trigger
+
+A newly posted 2026 medRxiv preprint and its public reproducibility repository provide substantially stronger evidence about acquisition confounding in the same five open TB CXR corpora we are considering. This is external evidence, not a result produced by this project, and the preprint is not yet peer reviewed.
+
+### Revised decision
+
+Do **not** pre-commit the Kiran/Jabeen Pakistani dataset as the primary training domain. Keep it as a high-priority independent domain, but decide its role only after our own file-level audit.
+
+For the course MVP, preserve a simple cross-dataset design built from the cleanest defensible pair available after auditing. Shenzhen remains attractive because its public provenance documents both classes coming from the same hospital/routine acquisition window. Montgomery remains useful as a small external stress test rather than a primary training source. The Pakistani cohort may become an external domain, a training domain with explicit confound caveats, or a bias-analysis case depending on our own findings.
+
+### Evidence that changed the decision
+
+- The external audit used Mendeley **V2** (`10.17632/8j2g3csprk.2`) and reports zero exact/near-duplicate overlap between the 3,008 Pakistani images and its 13,260-image training corpus under its published MD5 + pHash policy.
+- That same work reports extremely strong class separability from features that should be treated as shortcut/confound evidence rather than proof of pathology recognition. In its released robustness results, the Pakistani cohort reaches AUROC 0.988 using low-dimensional image statistics and approximately 1.0 using several frozen/low-spatial-content representations.
+- The Pakistani dataset's public documentation does not provide a per-class acquisition breakdown, device information, diagnostic reference standard, or verified patient grouping. A third-party manifest creates `patient_id` values directly from image stems; these are not evidence of true patient identifiers.
+- Mendeley V2 and V3 have the same published class counts and description, but file equality has not been established. For reproducibility, use **V2 first** because the 2026 audit explicitly names that version; compare V3 only after hashes/file manifests can establish whether it materially differs.
+
+### What this means for our contribution
+
+We should not turn the course project into a reproduction of the confound-audit preprint. Our core contribution remains a transparent, reproducible **cross-dataset generalization experiment** with a fixed baseline and carefully audited domain boundaries. A lightweight shortcut/acquisition diagnostic can strengthen the interpretation of any performance drop, but it stays secondary to the cross-dataset evaluation matrix.
+
+### Confidence
+
+**High** that the project must remain confound-aware and provenance-first. **Medium** on final dataset roles until we inspect the original image distributions ourselves.
+
+### Next decision gate
+
+1. Acquire the original Kiran/Jabeen **V2** files.
+2. Run our own manifest/hash/image-statistics tooling.
+3. Verify whether any real patient/study identifiers exist rather than assuming one image equals one patient.
+4. Compare class-conditional border, sharpness, histogram/intensity, dimensions, format, and compression characteristics.
+5. Only then lock the training and external-test domains.
