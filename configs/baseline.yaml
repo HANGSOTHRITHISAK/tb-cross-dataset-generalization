@@ -1,18 +1,17 @@
-# Baseline experiment configuration
-# Values marked TBD will be finalized after the dataset audit.
+project:
+  name: tb-cross-dataset-generalization
+  task: binary_classification
+  positive_class: tuberculosis
 
-experiment:
-  name: baseline_cross_dataset
-  seed: 42
+seed: 42
 
 data:
-  source_dataset: TBD
-  external_dataset: TBD
   image_size: 224
+  channels: 3
+  train_dataset: null
+  external_test_datasets: []
   patient_level_split: true
-  train_fraction: 0.70
-  val_fraction: 0.15
-  test_fraction: 0.15
+  normalize: imagenet
 
 model:
   architecture: densenet121
@@ -20,22 +19,23 @@ model:
   num_classes: 1
 
 training:
-  epochs: 25
+  epochs: 20
   batch_size: 32
-  optimizer: adamw
   learning_rate: 0.0001
   weight_decay: 0.0001
+  optimizer: adamw
   early_stopping_patience: 5
 
-augmentation:
-  enabled: true
-  # Exact transforms will be finalized after inspecting dataset characteristics.
-
 evaluation:
+  threshold: 0.5
   metrics:
     - auroc
     - sensitivity
     - specificity
     - precision
     - f1
-  external_evaluation: true
+    - confusion_matrix
+
+notes: >-
+  Placeholder baseline configuration. Dataset-specific values should be filled in
+  only after the dataset audit and split protocol are finalized.
