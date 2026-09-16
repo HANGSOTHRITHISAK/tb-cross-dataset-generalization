@@ -1,0 +1,41 @@
+# Baseline experiment configuration
+# Values marked TBD will be finalized after the dataset audit.
+
+experiment:
+  name: baseline_cross_dataset
+  seed: 42
+
+data:
+  source_dataset: TBD
+  external_dataset: TBD
+  image_size: 224
+  patient_level_split: true
+  train_fraction: 0.70
+  val_fraction: 0.15
+  test_fraction: 0.15
+
+model:
+  architecture: densenet121
+  pretrained: true
+  num_classes: 1
+
+training:
+  epochs: 25
+  batch_size: 32
+  optimizer: adamw
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  early_stopping_patience: 5
+
+augmentation:
+  enabled: true
+  # Exact transforms will be finalized after inspecting dataset characteristics.
+
+evaluation:
+  metrics:
+    - auroc
+    - sensitivity
+    - specificity
+    - precision
+    - f1
+  external_evaluation: true
