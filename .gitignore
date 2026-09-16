@@ -1,0 +1,68 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Raw and processed medical-image data
+# Keep lightweight, redistributable manifests/documentation only.
+data/raw/
+data/processed/
+data/interim/
+data/external/
+*.dcm
+*.dicom
+
+# Model artifacts / checkpoints
+checkpoints/
+models/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Experiment tracking
+runs/
+wandb/
+mlruns/
+lightning_logs/
+
+# Generated result artifacts (keep README/placeholders and selectively force-add final figures if needed)
+results/*
+!results/.gitkeep
+!results/README.md
+
+# Local logs / temporary files
+*.log
+logs/
+tmp/
+temp/
