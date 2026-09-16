@@ -72,3 +72,49 @@ We should not turn the course project into a reproduction of the confound-audit 
 3. Verify whether any real patient/study identifiers exist rather than assuming one image equals one patient.
 4. Compare class-conditional border, sharpness, histogram/intensity, dimensions, format, and compression characteristics.
 5. Only then lock the training and external-test domains.
+
+---
+
+## 2026-09-16 — Dataset strategy v3: proposal-aligned core, flexible extensions
+
+### Trigger
+
+The accepted course proposal already defines a useful experimental spine around TBX11K with Shenzhen and Montgomery as cross-dataset tests. The proposal is not immutable, but there is no empirical reason to replace that core before first testing whether the known overlap can be controlled directly.
+
+### Revised working decision
+
+Return **TBX11K to the main development/training role**, subject to a mandatory overlap-cleaning gate. Keep **Shenzhen** and **Montgomery County** as the primary external domains from the proposal.
+
+The core experiment is therefore:
+
+- cleaned TBX11K -> held-out TBX11K internal test
+- cleaned TBX11K -> Shenzhen external test
+- cleaned TBX11K -> Montgomery external stress test
+
+The Pakistani Mendeley cohort remains an optional additional independent domain or confound-analysis extension after its own audit; it does not currently replace TBX11K.
+
+### Why this is defensible
+
+Public documentation explicitly warns that TBX11K overlaps the NLM TB datasets containing Shenzhen and Montgomery. That makes a naive train/test pairing invalid, but it does **not** automatically make TBX11K unusable. The correct next question is whether direct hashing/perceptual comparison can identify the overlapping rows and allow us to construct a cleaned TBX11K development pool while leaving the external sets untouched.
+
+This keeps the project close to the accepted proposal while improving its methodology. If the overlap cannot be cleanly controlled, redesign remains available as a documented fallback rather than a premature pivot.
+
+### What can proceed now
+
+- download/audit TBX11K, Shenzhen and Montgomery
+- generate per-dataset manifests
+- run exact SHA-256 and perceptual-hash cross-dataset comparisons
+- create a versioned exclusion manifest for confirmed TBX11K overlaps
+- inspect TBX11K class balance after cleaning
+- then lock the train/validation/internal-test split
+
+### What still waits
+
+- final baseline training
+- final external evaluation
+- any claim that Shenzhen/Montgomery are unseen relative to TBX11K
+- any expansion to Pakistan as a core domain
+
+### Next decision gate
+
+Complete Issue #8: quantify TBX11K overlap with Shenzhen/Montgomery, manually review near-duplicate candidates, and determine whether the cleaned TBX11K pool remains suitable for the core experiment.
