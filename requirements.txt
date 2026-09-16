@@ -22,3 +22,4 @@ tqdm
 # Development / notebooks
 jupyter
 ipykernel
+pytest
