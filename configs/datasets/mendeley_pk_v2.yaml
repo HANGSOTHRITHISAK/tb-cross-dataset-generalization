@@ -1,0 +1,45 @@
+dataset:
+  id: mendeley_pk_v2
+  name: Dataset of Tuberculosis Chest X-rays Images
+  version: 2
+  doi: 10.17632/8j2g3csprk.2
+  country: Pakistan
+  institution: null
+  license: CC BY 4.0
+
+published_counts:
+  total: 3008
+  tuberculosis: 2494
+  normal: 514
+
+local:
+  root: data/raw/mendeley_pk_v2
+  tuberculosis_dir: TB Chest X-rays
+  normal_dir: Normal Chest X-rays
+
+provenance:
+  public_description: >-
+    Chest X-rays of tuberculosis patients and normal controls collected from a
+    local hospital in Pakistan; images were processed and resized to a uniform
+    dimension before public release.
+  patient_ids_verified: false
+  per_class_acquisition_verified: false
+  diagnostic_reference_verified: false
+
+role:
+  status: audit_required
+  allowed_before_clearance:
+    - inventory
+    - hashing
+    - duplicate_detection
+    - image_statistics
+    - provenance_review
+  blocked_before_clearance:
+    - final_split
+    - baseline_training
+    - model_selection
+
+notes: >-
+  V2 is pinned for the initial project audit because the 2026 acquisition-confound
+  preprint explicitly used this version. Do not assume V3 is file-identical until
+  manifests and hashes are compared.
