@@ -90,7 +90,7 @@ def zip_inventory():
     with zipfile.ZipFile(ARCHIVE) as z:
         fs = [i for i in z.infolist() if not i.is_dir()]
         return {
-            "archive_path": str(ARCHIVE),
+            "archive_path": ARCHIVE.relative_to(ROOT).as_posix(),
             "archive_sha256": sha256(ARCHIVE),
             "archive_bytes": ARCHIVE.stat().st_size,
             "member_count": len(z.infolist()),
@@ -383,7 +383,7 @@ def main():
     summary = {
         "dataset": "tbx11k",
         "archive": zip_inventory(),
-        "release_root": str(RAW),
+        "release_root": RAW.relative_to(ROOT).as_posix(),
         "image_count_all_extracted": len(recs),
         "nominal_official_tbx11k_image_count": 11200,
         "official_trainval_labeled_image_count": 8400,

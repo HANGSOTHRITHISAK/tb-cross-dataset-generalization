@@ -38,7 +38,7 @@ def main():
     with zipfile.ZipFile(ARCH) as z:
         fs = [i for i in z.infolist() if not i.is_dir()]
         zi = {
-            "archive_path": str(ARCH),
+            "archive_path": ARCH.relative_to(ROOT).as_posix(),
             "archive_sha256": archive_sha,
             "archive_bytes": ARCH.stat().st_size,
             "member_count": len(z.infolist()),
@@ -201,7 +201,7 @@ def main():
     summary = {
         "dataset": "tbx11k",
         "archive": zi,
-        "release_root": str(RAW),
+        "release_root": RAW.relative_to(ROOT).as_posix(),
         "image_count_all_extracted": len(recs),
         "nominal_official_tbx11k_image_count": 11200,
         "official_trainval_labeled_image_count": 8400,

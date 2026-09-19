@@ -66,6 +66,15 @@ def audit_nlm_dataset(
     dimensions: Counter[str] = Counter()
     modes: Counter[str] = Counter()
     clinical_readings_present = 0
+    if dataset == "montgomery":
+        annotation_files = sorted((raw_root / "ManualMask").rglob("*.png"))
+        annotations_by_name: dict[str, list[Path]] = defaultdict(list)
+        for candidate in annotation_files:
+            annotations_by_name[candidate.name].append(candidate)
+    else:
+        annotation_files = sorted(raw_root.rglob("*.json"))
+        annotations_by_name = {}
+
     for path in sorted(image_dir.glob("*")):
         if not path.is_file():
             continue
@@ -113,10 +122,14 @@ def audit_nlm_dataset(
             flags.append("missing_clinical_reading")
         else:
             clinical_readings_present += 1
-        annotation_candidates = sorted(raw_root.rglob(f"{path.stem}*.json"))
         if dataset == "montgomery":
-            annotation_candidates = sorted(raw_root.glob(f"ManualMask/**/*{path.name}"))
+            annotation_candidates = list(annotations_by_name.get(path.name, []))
         else:
+            annotation_candidates = [
+                candidate
+                for candidate in annotation_files
+                if candidate.name.startswith(path.stem)
+            ]
             annotation_candidates.sort(
                 key=lambda candidate: (
                     0
