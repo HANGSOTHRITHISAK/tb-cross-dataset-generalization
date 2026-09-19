@@ -1,0 +1,897 @@
+{
+  "all_file_extensions": {
+    ".csv": 1,
+    ".json": 1,
+    ".pdf": 1,
+    ".png": 414,
+    ".txt": 138
+  },
+  "annotations_linked": 138,
+  "canonical_label_counts": {
+    "0": 80,
+    "1": 58
+  },
+  "clinical_readings_present": 138,
+  "corrupt_images": [],
+  "dataset": "montgomery",
+  "dimensions": {
+    "4020x4892": 97,
+    "4892x4020": 41
+  },
+  "duplicate_basenames": {
+    "MCUCXR_0001_0.png": [
+      "CXR_png/MCUCXR_0001_0.png",
+      "ManualMask/leftMask/MCUCXR_0001_0.png",
+      "ManualMask/rightMask/MCUCXR_0001_0.png"
+    ],
+    "MCUCXR_0002_0.png": [
+      "CXR_png/MCUCXR_0002_0.png",
+      "ManualMask/leftMask/MCUCXR_0002_0.png",
+      "ManualMask/rightMask/MCUCXR_0002_0.png"
+    ],
+    "MCUCXR_0003_0.png": [
+      "CXR_png/MCUCXR_0003_0.png",
+      "ManualMask/leftMask/MCUCXR_0003_0.png",
+      "ManualMask/rightMask/MCUCXR_0003_0.png"
+    ],
+    "MCUCXR_0004_0.png": [
+      "CXR_png/MCUCXR_0004_0.png",
+      "ManualMask/leftMask/MCUCXR_0004_0.png",
+      "ManualMask/rightMask/MCUCXR_0004_0.png"
+    ],
+    "MCUCXR_0005_0.png": [
+      "CXR_png/MCUCXR_0005_0.png",
+      "ManualMask/leftMask/MCUCXR_0005_0.png",
+      "ManualMask/rightMask/MCUCXR_0005_0.png"
+    ],
+    "MCUCXR_0006_0.png": [
+      "CXR_png/MCUCXR_0006_0.png",
+      "ManualMask/leftMask/MCUCXR_0006_0.png",
+      "ManualMask/rightMask/MCUCXR_0006_0.png"
+    ],
+    "MCUCXR_0008_0.png": [
+      "CXR_png/MCUCXR_0008_0.png",
+      "ManualMask/leftMask/MCUCXR_0008_0.png",
+      "ManualMask/rightMask/MCUCXR_0008_0.png"
+    ],
+    "MCUCXR_0011_0.png": [
+      "CXR_png/MCUCXR_0011_0.png",
+      "ManualMask/leftMask/MCUCXR_0011_0.png",
+      "ManualMask/rightMask/MCUCXR_0011_0.png"
+    ],
+    "MCUCXR_0013_0.png": [
+      "CXR_png/MCUCXR_0013_0.png",
+      "ManualMask/leftMask/MCUCXR_0013_0.png",
+      "ManualMask/rightMask/MCUCXR_0013_0.png"
+    ],
+    "MCUCXR_0015_0.png": [
+      "CXR_png/MCUCXR_0015_0.png",
+      "ManualMask/leftMask/MCUCXR_0015_0.png",
+      "ManualMask/rightMask/MCUCXR_0015_0.png"
+    ],
+    "MCUCXR_0016_0.png": [
+      "CXR_png/MCUCXR_0016_0.png",
+      "ManualMask/leftMask/MCUCXR_0016_0.png",
+      "ManualMask/rightMask/MCUCXR_0016_0.png"
+    ],
+    "MCUCXR_0017_0.png": [
+      "CXR_png/MCUCXR_0017_0.png",
+      "ManualMask/leftMask/MCUCXR_0017_0.png",
+      "ManualMask/rightMask/MCUCXR_0017_0.png"
+    ],
+    "MCUCXR_0019_0.png": [
+      "CXR_png/MCUCXR_0019_0.png",
+      "ManualMask/leftMask/MCUCXR_0019_0.png",
+      "ManualMask/rightMask/MCUCXR_0019_0.png"
+    ],
+    "MCUCXR_0020_0.png": [
+      "CXR_png/MCUCXR_0020_0.png",
+      "ManualMask/leftMask/MCUCXR_0020_0.png",
+      "ManualMask/rightMask/MCUCXR_0020_0.png"
+    ],
+    "MCUCXR_0021_0.png": [
+      "CXR_png/MCUCXR_0021_0.png",
+      "ManualMask/leftMask/MCUCXR_0021_0.png",
+      "ManualMask/rightMask/MCUCXR_0021_0.png"
+    ],
+    "MCUCXR_0022_0.png": [
+      "CXR_png/MCUCXR_0022_0.png",
+      "ManualMask/leftMask/MCUCXR_0022_0.png",
+      "ManualMask/rightMask/MCUCXR_0022_0.png"
+    ],
+    "MCUCXR_0023_0.png": [
+      "CXR_png/MCUCXR_0023_0.png",
+      "ManualMask/leftMask/MCUCXR_0023_0.png",
+      "ManualMask/rightMask/MCUCXR_0023_0.png"
+    ],
+    "MCUCXR_0024_0.png": [
+      "CXR_png/MCUCXR_0024_0.png",
+      "ManualMask/leftMask/MCUCXR_0024_0.png",
+      "ManualMask/rightMask/MCUCXR_0024_0.png"
+    ],
+    "MCUCXR_0026_0.png": [
+      "CXR_png/MCUCXR_0026_0.png",
+      "ManualMask/leftMask/MCUCXR_0026_0.png",
+      "ManualMask/rightMask/MCUCXR_0026_0.png"
+    ],
+    "MCUCXR_0027_0.png": [
+      "CXR_png/MCUCXR_0027_0.png",
+      "ManualMask/leftMask/MCUCXR_0027_0.png",
+      "ManualMask/rightMask/MCUCXR_0027_0.png"
+    ],
+    "MCUCXR_0028_0.png": [
+      "CXR_png/MCUCXR_0028_0.png",
+      "ManualMask/leftMask/MCUCXR_0028_0.png",
+      "ManualMask/rightMask/MCUCXR_0028_0.png"
+    ],
+    "MCUCXR_0029_0.png": [
+      "CXR_png/MCUCXR_0029_0.png",
+      "ManualMask/leftMask/MCUCXR_0029_0.png",
+      "ManualMask/rightMask/MCUCXR_0029_0.png"
+    ],
+    "MCUCXR_0030_0.png": [
+      "CXR_png/MCUCXR_0030_0.png",
+      "ManualMask/leftMask/MCUCXR_0030_0.png",
+      "ManualMask/rightMask/MCUCXR_0030_0.png"
+    ],
+    "MCUCXR_0031_0.png": [
+      "CXR_png/MCUCXR_0031_0.png",
+      "ManualMask/leftMask/MCUCXR_0031_0.png",
+      "ManualMask/rightMask/MCUCXR_0031_0.png"
+    ],
+    "MCUCXR_0035_0.png": [
+      "CXR_png/MCUCXR_0035_0.png",
+      "ManualMask/leftMask/MCUCXR_0035_0.png",
+      "ManualMask/rightMask/MCUCXR_0035_0.png"
+    ],
+    "MCUCXR_0038_0.png": [
+      "CXR_png/MCUCXR_0038_0.png",
+      "ManualMask/leftMask/MCUCXR_0038_0.png",
+      "ManualMask/rightMask/MCUCXR_0038_0.png"
+    ],
+    "MCUCXR_0040_0.png": [
+      "CXR_png/MCUCXR_0040_0.png",
+      "ManualMask/leftMask/MCUCXR_0040_0.png",
+      "ManualMask/rightMask/MCUCXR_0040_0.png"
+    ],
+    "MCUCXR_0041_0.png": [
+      "CXR_png/MCUCXR_0041_0.png",
+      "ManualMask/leftMask/MCUCXR_0041_0.png",
+      "ManualMask/rightMask/MCUCXR_0041_0.png"
+    ],
+    "MCUCXR_0042_0.png": [
+      "CXR_png/MCUCXR_0042_0.png",
+      "ManualMask/leftMask/MCUCXR_0042_0.png",
+      "ManualMask/rightMask/MCUCXR_0042_0.png"
+    ],
+    "MCUCXR_0043_0.png": [
+      "CXR_png/MCUCXR_0043_0.png",
+      "ManualMask/leftMask/MCUCXR_0043_0.png",
+      "ManualMask/rightMask/MCUCXR_0043_0.png"
+    ],
+    "MCUCXR_0044_0.png": [
+      "CXR_png/MCUCXR_0044_0.png",
+      "ManualMask/leftMask/MCUCXR_0044_0.png",
+      "ManualMask/rightMask/MCUCXR_0044_0.png"
+    ],
+    "MCUCXR_0045_0.png": [
+      "CXR_png/MCUCXR_0045_0.png",
+      "ManualMask/leftMask/MCUCXR_0045_0.png",
+      "ManualMask/rightMask/MCUCXR_0045_0.png"
+    ],
+    "MCUCXR_0046_0.png": [
+      "CXR_png/MCUCXR_0046_0.png",
+      "ManualMask/leftMask/MCUCXR_0046_0.png",
+      "ManualMask/rightMask/MCUCXR_0046_0.png"
+    ],
+    "MCUCXR_0047_0.png": [
+      "CXR_png/MCUCXR_0047_0.png",
+      "ManualMask/leftMask/MCUCXR_0047_0.png",
+      "ManualMask/rightMask/MCUCXR_0047_0.png"
+    ],
+    "MCUCXR_0048_0.png": [
+      "CXR_png/MCUCXR_0048_0.png",
+      "ManualMask/leftMask/MCUCXR_0048_0.png",
+      "ManualMask/rightMask/MCUCXR_0048_0.png"
+    ],
+    "MCUCXR_0049_0.png": [
+      "CXR_png/MCUCXR_0049_0.png",
+      "ManualMask/leftMask/MCUCXR_0049_0.png",
+      "ManualMask/rightMask/MCUCXR_0049_0.png"
+    ],
+    "MCUCXR_0051_0.png": [
+      "CXR_png/MCUCXR_0051_0.png",
+      "ManualMask/leftMask/MCUCXR_0051_0.png",
+      "ManualMask/rightMask/MCUCXR_0051_0.png"
+    ],
+    "MCUCXR_0052_0.png": [
+      "CXR_png/MCUCXR_0052_0.png",
+      "ManualMask/leftMask/MCUCXR_0052_0.png",
+      "ManualMask/rightMask/MCUCXR_0052_0.png"
+    ],
+    "MCUCXR_0053_0.png": [
+      "CXR_png/MCUCXR_0053_0.png",
+      "ManualMask/leftMask/MCUCXR_0053_0.png",
+      "ManualMask/rightMask/MCUCXR_0053_0.png"
+    ],
+    "MCUCXR_0054_0.png": [
+      "CXR_png/MCUCXR_0054_0.png",
+      "ManualMask/leftMask/MCUCXR_0054_0.png",
+      "ManualMask/rightMask/MCUCXR_0054_0.png"
+    ],
+    "MCUCXR_0055_0.png": [
+      "CXR_png/MCUCXR_0055_0.png",
+      "ManualMask/leftMask/MCUCXR_0055_0.png",
+      "ManualMask/rightMask/MCUCXR_0055_0.png"
+    ],
+    "MCUCXR_0056_0.png": [
+      "CXR_png/MCUCXR_0056_0.png",
+      "ManualMask/leftMask/MCUCXR_0056_0.png",
+      "ManualMask/rightMask/MCUCXR_0056_0.png"
+    ],
+    "MCUCXR_0057_0.png": [
+      "CXR_png/MCUCXR_0057_0.png",
+      "ManualMask/leftMask/MCUCXR_0057_0.png",
+      "ManualMask/rightMask/MCUCXR_0057_0.png"
+    ],
+    "MCUCXR_0058_0.png": [
+      "CXR_png/MCUCXR_0058_0.png",
+      "ManualMask/leftMask/MCUCXR_0058_0.png",
+      "ManualMask/rightMask/MCUCXR_0058_0.png"
+    ],
+    "MCUCXR_0059_0.png": [
+      "CXR_png/MCUCXR_0059_0.png",
+      "ManualMask/leftMask/MCUCXR_0059_0.png",
+      "ManualMask/rightMask/MCUCXR_0059_0.png"
+    ],
+    "MCUCXR_0060_0.png": [
+      "CXR_png/MCUCXR_0060_0.png",
+      "ManualMask/leftMask/MCUCXR_0060_0.png",
+      "ManualMask/rightMask/MCUCXR_0060_0.png"
+    ],
+    "MCUCXR_0061_0.png": [
+      "CXR_png/MCUCXR_0061_0.png",
+      "ManualMask/leftMask/MCUCXR_0061_0.png",
+      "ManualMask/rightMask/MCUCXR_0061_0.png"
+    ],
+    "MCUCXR_0062_0.png": [
+      "CXR_png/MCUCXR_0062_0.png",
+      "ManualMask/leftMask/MCUCXR_0062_0.png",
+      "ManualMask/rightMask/MCUCXR_0062_0.png"
+    ],
+    "MCUCXR_0063_0.png": [
+      "CXR_png/MCUCXR_0063_0.png",
+      "ManualMask/leftMask/MCUCXR_0063_0.png",
+      "ManualMask/rightMask/MCUCXR_0063_0.png"
+    ],
+    "MCUCXR_0064_0.png": [
+      "CXR_png/MCUCXR_0064_0.png",
+      "ManualMask/leftMask/MCUCXR_0064_0.png",
+      "ManualMask/rightMask/MCUCXR_0064_0.png"
+    ],
+    "MCUCXR_0068_0.png": [
+      "CXR_png/MCUCXR_0068_0.png",
+      "ManualMask/leftMask/MCUCXR_0068_0.png",
+      "ManualMask/rightMask/MCUCXR_0068_0.png"
+    ],
+    "MCUCXR_0069_0.png": [
+      "CXR_png/MCUCXR_0069_0.png",
+      "ManualMask/leftMask/MCUCXR_0069_0.png",
+      "ManualMask/rightMask/MCUCXR_0069_0.png"
+    ],
+    "MCUCXR_0070_0.png": [
+      "CXR_png/MCUCXR_0070_0.png",
+      "ManualMask/leftMask/MCUCXR_0070_0.png",
+      "ManualMask/rightMask/MCUCXR_0070_0.png"
+    ],
+    "MCUCXR_0071_0.png": [
+      "CXR_png/MCUCXR_0071_0.png",
+      "ManualMask/leftMask/MCUCXR_0071_0.png",
+      "ManualMask/rightMask/MCUCXR_0071_0.png"
+    ],
+    "MCUCXR_0072_0.png": [
+      "CXR_png/MCUCXR_0072_0.png",
+      "ManualMask/leftMask/MCUCXR_0072_0.png",
+      "ManualMask/rightMask/MCUCXR_0072_0.png"
+    ],
+    "MCUCXR_0074_0.png": [
+      "CXR_png/MCUCXR_0074_0.png",
+      "ManualMask/leftMask/MCUCXR_0074_0.png",
+      "ManualMask/rightMask/MCUCXR_0074_0.png"
+    ],
+    "MCUCXR_0075_0.png": [
+      "CXR_png/MCUCXR_0075_0.png",
+      "ManualMask/leftMask/MCUCXR_0075_0.png",
+      "ManualMask/rightMask/MCUCXR_0075_0.png"
+    ],
+    "MCUCXR_0077_0.png": [
+      "CXR_png/MCUCXR_0077_0.png",
+      "ManualMask/leftMask/MCUCXR_0077_0.png",
+      "ManualMask/rightMask/MCUCXR_0077_0.png"
+    ],
+    "MCUCXR_0079_0.png": [
+      "CXR_png/MCUCXR_0079_0.png",
+      "ManualMask/leftMask/MCUCXR_0079_0.png",
+      "ManualMask/rightMask/MCUCXR_0079_0.png"
+    ],
+    "MCUCXR_0080_0.png": [
+      "CXR_png/MCUCXR_0080_0.png",
+      "ManualMask/leftMask/MCUCXR_0080_0.png",
+      "ManualMask/rightMask/MCUCXR_0080_0.png"
+    ],
+    "MCUCXR_0081_0.png": [
+      "CXR_png/MCUCXR_0081_0.png",
+      "ManualMask/leftMask/MCUCXR_0081_0.png",
+      "ManualMask/rightMask/MCUCXR_0081_0.png"
+    ],
+    "MCUCXR_0082_0.png": [
+      "CXR_png/MCUCXR_0082_0.png",
+      "ManualMask/leftMask/MCUCXR_0082_0.png",
+      "ManualMask/rightMask/MCUCXR_0082_0.png"
+    ],
+    "MCUCXR_0083_0.png": [
+      "CXR_png/MCUCXR_0083_0.png",
+      "ManualMask/leftMask/MCUCXR_0083_0.png",
+      "ManualMask/rightMask/MCUCXR_0083_0.png"
+    ],
+    "MCUCXR_0084_0.png": [
+      "CXR_png/MCUCXR_0084_0.png",
+      "ManualMask/leftMask/MCUCXR_0084_0.png",
+      "ManualMask/rightMask/MCUCXR_0084_0.png"
+    ],
+    "MCUCXR_0085_0.png": [
+      "CXR_png/MCUCXR_0085_0.png",
+      "ManualMask/leftMask/MCUCXR_0085_0.png",
+      "ManualMask/rightMask/MCUCXR_0085_0.png"
+    ],
+    "MCUCXR_0086_0.png": [
+      "CXR_png/MCUCXR_0086_0.png",
+      "ManualMask/leftMask/MCUCXR_0086_0.png",
+      "ManualMask/rightMask/MCUCXR_0086_0.png"
+    ],
+    "MCUCXR_0087_0.png": [
+      "CXR_png/MCUCXR_0087_0.png",
+      "ManualMask/leftMask/MCUCXR_0087_0.png",
+      "ManualMask/rightMask/MCUCXR_0087_0.png"
+    ],
+    "MCUCXR_0089_0.png": [
+      "CXR_png/MCUCXR_0089_0.png",
+      "ManualMask/leftMask/MCUCXR_0089_0.png",
+      "ManualMask/rightMask/MCUCXR_0089_0.png"
+    ],
+    "MCUCXR_0090_0.png": [
+      "CXR_png/MCUCXR_0090_0.png",
+      "ManualMask/leftMask/MCUCXR_0090_0.png",
+      "ManualMask/rightMask/MCUCXR_0090_0.png"
+    ],
+    "MCUCXR_0091_0.png": [
+      "CXR_png/MCUCXR_0091_0.png",
+      "ManualMask/leftMask/MCUCXR_0091_0.png",
+      "ManualMask/rightMask/MCUCXR_0091_0.png"
+    ],
+    "MCUCXR_0092_0.png": [
+      "CXR_png/MCUCXR_0092_0.png",
+      "ManualMask/leftMask/MCUCXR_0092_0.png",
+      "ManualMask/rightMask/MCUCXR_0092_0.png"
+    ],
+    "MCUCXR_0094_0.png": [
+      "CXR_png/MCUCXR_0094_0.png",
+      "ManualMask/leftMask/MCUCXR_0094_0.png",
+      "ManualMask/rightMask/MCUCXR_0094_0.png"
+    ],
+    "MCUCXR_0095_0.png": [
+      "CXR_png/MCUCXR_0095_0.png",
+      "ManualMask/leftMask/MCUCXR_0095_0.png",
+      "ManualMask/rightMask/MCUCXR_0095_0.png"
+    ],
+    "MCUCXR_0096_0.png": [
+      "CXR_png/MCUCXR_0096_0.png",
+      "ManualMask/leftMask/MCUCXR_0096_0.png",
+      "ManualMask/rightMask/MCUCXR_0096_0.png"
+    ],
+    "MCUCXR_0097_0.png": [
+      "CXR_png/MCUCXR_0097_0.png",
+      "ManualMask/leftMask/MCUCXR_0097_0.png",
+      "ManualMask/rightMask/MCUCXR_0097_0.png"
+    ],
+    "MCUCXR_0099_0.png": [
+      "CXR_png/MCUCXR_0099_0.png",
+      "ManualMask/leftMask/MCUCXR_0099_0.png",
+      "ManualMask/rightMask/MCUCXR_0099_0.png"
+    ],
+    "MCUCXR_0100_0.png": [
+      "CXR_png/MCUCXR_0100_0.png",
+      "ManualMask/leftMask/MCUCXR_0100_0.png",
+      "ManualMask/rightMask/MCUCXR_0100_0.png"
+    ],
+    "MCUCXR_0101_0.png": [
+      "CXR_png/MCUCXR_0101_0.png",
+      "ManualMask/leftMask/MCUCXR_0101_0.png",
+      "ManualMask/rightMask/MCUCXR_0101_0.png"
+    ],
+    "MCUCXR_0102_0.png": [
+      "CXR_png/MCUCXR_0102_0.png",
+      "ManualMask/leftMask/MCUCXR_0102_0.png",
+      "ManualMask/rightMask/MCUCXR_0102_0.png"
+    ],
+    "MCUCXR_0103_0.png": [
+      "CXR_png/MCUCXR_0103_0.png",
+      "ManualMask/leftMask/MCUCXR_0103_0.png",
+      "ManualMask/rightMask/MCUCXR_0103_0.png"
+    ],
+    "MCUCXR_0104_1.png": [
+      "CXR_png/MCUCXR_0104_1.png",
+      "ManualMask/leftMask/MCUCXR_0104_1.png",
+      "ManualMask/rightMask/MCUCXR_0104_1.png"
+    ],
+    "MCUCXR_0108_1.png": [
+      "CXR_png/MCUCXR_0108_1.png",
+      "ManualMask/leftMask/MCUCXR_0108_1.png",
+      "ManualMask/rightMask/MCUCXR_0108_1.png"
+    ],
+    "MCUCXR_0113_1.png": [
+      "CXR_png/MCUCXR_0113_1.png",
+      "ManualMask/leftMask/MCUCXR_0113_1.png",
+      "ManualMask/rightMask/MCUCXR_0113_1.png"
+    ],
+    "MCUCXR_0117_1.png": [
+      "CXR_png/MCUCXR_0117_1.png",
+      "ManualMask/leftMask/MCUCXR_0117_1.png",
+      "ManualMask/rightMask/MCUCXR_0117_1.png"
+    ],
+    "MCUCXR_0126_1.png": [
+      "CXR_png/MCUCXR_0126_1.png",
+      "ManualMask/leftMask/MCUCXR_0126_1.png",
+      "ManualMask/rightMask/MCUCXR_0126_1.png"
+    ],
+    "MCUCXR_0140_1.png": [
+      "CXR_png/MCUCXR_0140_1.png",
+      "ManualMask/leftMask/MCUCXR_0140_1.png",
+      "ManualMask/rightMask/MCUCXR_0140_1.png"
+    ],
+    "MCUCXR_0141_1.png": [
+      "CXR_png/MCUCXR_0141_1.png",
+      "ManualMask/leftMask/MCUCXR_0141_1.png",
+      "ManualMask/rightMask/MCUCXR_0141_1.png"
+    ],
+    "MCUCXR_0142_1.png": [
+      "CXR_png/MCUCXR_0142_1.png",
+      "ManualMask/leftMask/MCUCXR_0142_1.png",
+      "ManualMask/rightMask/MCUCXR_0142_1.png"
+    ],
+    "MCUCXR_0144_1.png": [
+      "CXR_png/MCUCXR_0144_1.png",
+      "ManualMask/leftMask/MCUCXR_0144_1.png",
+      "ManualMask/rightMask/MCUCXR_0144_1.png"
+    ],
+    "MCUCXR_0150_1.png": [
+      "CXR_png/MCUCXR_0150_1.png",
+      "ManualMask/leftMask/MCUCXR_0150_1.png",
+      "ManualMask/rightMask/MCUCXR_0150_1.png"
+    ],
+    "MCUCXR_0162_1.png": [
+      "CXR_png/MCUCXR_0162_1.png",
+      "ManualMask/leftMask/MCUCXR_0162_1.png",
+      "ManualMask/rightMask/MCUCXR_0162_1.png"
+    ],
+    "MCUCXR_0166_1.png": [
+      "CXR_png/MCUCXR_0166_1.png",
+      "ManualMask/leftMask/MCUCXR_0166_1.png",
+      "ManualMask/rightMask/MCUCXR_0166_1.png"
+    ],
+    "MCUCXR_0170_1.png": [
+      "CXR_png/MCUCXR_0170_1.png",
+      "ManualMask/leftMask/MCUCXR_0170_1.png",
+      "ManualMask/rightMask/MCUCXR_0170_1.png"
+    ],
+    "MCUCXR_0173_1.png": [
+      "CXR_png/MCUCXR_0173_1.png",
+      "ManualMask/leftMask/MCUCXR_0173_1.png",
+      "ManualMask/rightMask/MCUCXR_0173_1.png"
+    ],
+    "MCUCXR_0182_1.png": [
+      "CXR_png/MCUCXR_0182_1.png",
+      "ManualMask/leftMask/MCUCXR_0182_1.png",
+      "ManualMask/rightMask/MCUCXR_0182_1.png"
+    ],
+    "MCUCXR_0188_1.png": [
+      "CXR_png/MCUCXR_0188_1.png",
+      "ManualMask/leftMask/MCUCXR_0188_1.png",
+      "ManualMask/rightMask/MCUCXR_0188_1.png"
+    ],
+    "MCUCXR_0194_1.png": [
+      "CXR_png/MCUCXR_0194_1.png",
+      "ManualMask/leftMask/MCUCXR_0194_1.png",
+      "ManualMask/rightMask/MCUCXR_0194_1.png"
+    ],
+    "MCUCXR_0195_1.png": [
+      "CXR_png/MCUCXR_0195_1.png",
+      "ManualMask/leftMask/MCUCXR_0195_1.png",
+      "ManualMask/rightMask/MCUCXR_0195_1.png"
+    ],
+    "MCUCXR_0196_1.png": [
+      "CXR_png/MCUCXR_0196_1.png",
+      "ManualMask/leftMask/MCUCXR_0196_1.png",
+      "ManualMask/rightMask/MCUCXR_0196_1.png"
+    ],
+    "MCUCXR_0203_1.png": [
+      "CXR_png/MCUCXR_0203_1.png",
+      "ManualMask/leftMask/MCUCXR_0203_1.png",
+      "ManualMask/rightMask/MCUCXR_0203_1.png"
+    ],
+    "MCUCXR_0213_1.png": [
+      "CXR_png/MCUCXR_0213_1.png",
+      "ManualMask/leftMask/MCUCXR_0213_1.png",
+      "ManualMask/rightMask/MCUCXR_0213_1.png"
+    ],
+    "MCUCXR_0218_1.png": [
+      "CXR_png/MCUCXR_0218_1.png",
+      "ManualMask/leftMask/MCUCXR_0218_1.png",
+      "ManualMask/rightMask/MCUCXR_0218_1.png"
+    ],
+    "MCUCXR_0223_1.png": [
+      "CXR_png/MCUCXR_0223_1.png",
+      "ManualMask/leftMask/MCUCXR_0223_1.png",
+      "ManualMask/rightMask/MCUCXR_0223_1.png"
+    ],
+    "MCUCXR_0228_1.png": [
+      "CXR_png/MCUCXR_0228_1.png",
+      "ManualMask/leftMask/MCUCXR_0228_1.png",
+      "ManualMask/rightMask/MCUCXR_0228_1.png"
+    ],
+    "MCUCXR_0243_1.png": [
+      "CXR_png/MCUCXR_0243_1.png",
+      "ManualMask/leftMask/MCUCXR_0243_1.png",
+      "ManualMask/rightMask/MCUCXR_0243_1.png"
+    ],
+    "MCUCXR_0251_1.png": [
+      "CXR_png/MCUCXR_0251_1.png",
+      "ManualMask/leftMask/MCUCXR_0251_1.png",
+      "ManualMask/rightMask/MCUCXR_0251_1.png"
+    ],
+    "MCUCXR_0253_1.png": [
+      "CXR_png/MCUCXR_0253_1.png",
+      "ManualMask/leftMask/MCUCXR_0253_1.png",
+      "ManualMask/rightMask/MCUCXR_0253_1.png"
+    ],
+    "MCUCXR_0254_1.png": [
+      "CXR_png/MCUCXR_0254_1.png",
+      "ManualMask/leftMask/MCUCXR_0254_1.png",
+      "ManualMask/rightMask/MCUCXR_0254_1.png"
+    ],
+    "MCUCXR_0255_1.png": [
+      "CXR_png/MCUCXR_0255_1.png",
+      "ManualMask/leftMask/MCUCXR_0255_1.png",
+      "ManualMask/rightMask/MCUCXR_0255_1.png"
+    ],
+    "MCUCXR_0258_1.png": [
+      "CXR_png/MCUCXR_0258_1.png",
+      "ManualMask/leftMask/MCUCXR_0258_1.png",
+      "ManualMask/rightMask/MCUCXR_0258_1.png"
+    ],
+    "MCUCXR_0264_1.png": [
+      "CXR_png/MCUCXR_0264_1.png",
+      "ManualMask/leftMask/MCUCXR_0264_1.png",
+      "ManualMask/rightMask/MCUCXR_0264_1.png"
+    ],
+    "MCUCXR_0266_1.png": [
+      "CXR_png/MCUCXR_0266_1.png",
+      "ManualMask/leftMask/MCUCXR_0266_1.png",
+      "ManualMask/rightMask/MCUCXR_0266_1.png"
+    ],
+    "MCUCXR_0275_1.png": [
+      "CXR_png/MCUCXR_0275_1.png",
+      "ManualMask/leftMask/MCUCXR_0275_1.png",
+      "ManualMask/rightMask/MCUCXR_0275_1.png"
+    ],
+    "MCUCXR_0282_1.png": [
+      "CXR_png/MCUCXR_0282_1.png",
+      "ManualMask/leftMask/MCUCXR_0282_1.png",
+      "ManualMask/rightMask/MCUCXR_0282_1.png"
+    ],
+    "MCUCXR_0289_1.png": [
+      "CXR_png/MCUCXR_0289_1.png",
+      "ManualMask/leftMask/MCUCXR_0289_1.png",
+      "ManualMask/rightMask/MCUCXR_0289_1.png"
+    ],
+    "MCUCXR_0294_1.png": [
+      "CXR_png/MCUCXR_0294_1.png",
+      "ManualMask/leftMask/MCUCXR_0294_1.png",
+      "ManualMask/rightMask/MCUCXR_0294_1.png"
+    ],
+    "MCUCXR_0301_1.png": [
+      "CXR_png/MCUCXR_0301_1.png",
+      "ManualMask/leftMask/MCUCXR_0301_1.png",
+      "ManualMask/rightMask/MCUCXR_0301_1.png"
+    ],
+    "MCUCXR_0309_1.png": [
+      "CXR_png/MCUCXR_0309_1.png",
+      "ManualMask/leftMask/MCUCXR_0309_1.png",
+      "ManualMask/rightMask/MCUCXR_0309_1.png"
+    ],
+    "MCUCXR_0311_1.png": [
+      "CXR_png/MCUCXR_0311_1.png",
+      "ManualMask/leftMask/MCUCXR_0311_1.png",
+      "ManualMask/rightMask/MCUCXR_0311_1.png"
+    ],
+    "MCUCXR_0313_1.png": [
+      "CXR_png/MCUCXR_0313_1.png",
+      "ManualMask/leftMask/MCUCXR_0313_1.png",
+      "ManualMask/rightMask/MCUCXR_0313_1.png"
+    ],
+    "MCUCXR_0316_1.png": [
+      "CXR_png/MCUCXR_0316_1.png",
+      "ManualMask/leftMask/MCUCXR_0316_1.png",
+      "ManualMask/rightMask/MCUCXR_0316_1.png"
+    ],
+    "MCUCXR_0331_1.png": [
+      "CXR_png/MCUCXR_0331_1.png",
+      "ManualMask/leftMask/MCUCXR_0331_1.png",
+      "ManualMask/rightMask/MCUCXR_0331_1.png"
+    ],
+    "MCUCXR_0334_1.png": [
+      "CXR_png/MCUCXR_0334_1.png",
+      "ManualMask/leftMask/MCUCXR_0334_1.png",
+      "ManualMask/rightMask/MCUCXR_0334_1.png"
+    ],
+    "MCUCXR_0338_1.png": [
+      "CXR_png/MCUCXR_0338_1.png",
+      "ManualMask/leftMask/MCUCXR_0338_1.png",
+      "ManualMask/rightMask/MCUCXR_0338_1.png"
+    ],
+    "MCUCXR_0348_1.png": [
+      "CXR_png/MCUCXR_0348_1.png",
+      "ManualMask/leftMask/MCUCXR_0348_1.png",
+      "ManualMask/rightMask/MCUCXR_0348_1.png"
+    ],
+    "MCUCXR_0350_1.png": [
+      "CXR_png/MCUCXR_0350_1.png",
+      "ManualMask/leftMask/MCUCXR_0350_1.png",
+      "ManualMask/rightMask/MCUCXR_0350_1.png"
+    ],
+    "MCUCXR_0352_1.png": [
+      "CXR_png/MCUCXR_0352_1.png",
+      "ManualMask/leftMask/MCUCXR_0352_1.png",
+      "ManualMask/rightMask/MCUCXR_0352_1.png"
+    ],
+    "MCUCXR_0354_1.png": [
+      "CXR_png/MCUCXR_0354_1.png",
+      "ManualMask/leftMask/MCUCXR_0354_1.png",
+      "ManualMask/rightMask/MCUCXR_0354_1.png"
+    ],
+    "MCUCXR_0362_1.png": [
+      "CXR_png/MCUCXR_0362_1.png",
+      "ManualMask/leftMask/MCUCXR_0362_1.png",
+      "ManualMask/rightMask/MCUCXR_0362_1.png"
+    ],
+    "MCUCXR_0367_1.png": [
+      "CXR_png/MCUCXR_0367_1.png",
+      "ManualMask/leftMask/MCUCXR_0367_1.png",
+      "ManualMask/rightMask/MCUCXR_0367_1.png"
+    ],
+    "MCUCXR_0369_1.png": [
+      "CXR_png/MCUCXR_0369_1.png",
+      "ManualMask/leftMask/MCUCXR_0369_1.png",
+      "ManualMask/rightMask/MCUCXR_0369_1.png"
+    ],
+    "MCUCXR_0372_1.png": [
+      "CXR_png/MCUCXR_0372_1.png",
+      "ManualMask/leftMask/MCUCXR_0372_1.png",
+      "ManualMask/rightMask/MCUCXR_0372_1.png"
+    ],
+    "MCUCXR_0375_1.png": [
+      "CXR_png/MCUCXR_0375_1.png",
+      "ManualMask/leftMask/MCUCXR_0375_1.png",
+      "ManualMask/rightMask/MCUCXR_0375_1.png"
+    ],
+    "MCUCXR_0383_1.png": [
+      "CXR_png/MCUCXR_0383_1.png",
+      "ManualMask/leftMask/MCUCXR_0383_1.png",
+      "ManualMask/rightMask/MCUCXR_0383_1.png"
+    ],
+    "MCUCXR_0387_1.png": [
+      "CXR_png/MCUCXR_0387_1.png",
+      "ManualMask/leftMask/MCUCXR_0387_1.png",
+      "ManualMask/rightMask/MCUCXR_0387_1.png"
+    ],
+    "MCUCXR_0390_1.png": [
+      "CXR_png/MCUCXR_0390_1.png",
+      "ManualMask/leftMask/MCUCXR_0390_1.png",
+      "ManualMask/rightMask/MCUCXR_0390_1.png"
+    ],
+    "MCUCXR_0393_1.png": [
+      "CXR_png/MCUCXR_0393_1.png",
+      "ManualMask/leftMask/MCUCXR_0393_1.png",
+      "ManualMask/rightMask/MCUCXR_0393_1.png"
+    ],
+    "MCUCXR_0399_1.png": [
+      "CXR_png/MCUCXR_0399_1.png",
+      "ManualMask/leftMask/MCUCXR_0399_1.png",
+      "ManualMask/rightMask/MCUCXR_0399_1.png"
+    ]
+  },
+  "exact_duplicate_groups": [],
+  "global_observed_max": 255,
+  "global_observed_min": 0,
+  "image_count": 138,
+  "image_formats": {
+    ".png": 138
+  },
+  "label_counts": {
+    "abnormal_tb_consistent": 58,
+    "normal": 80
+  },
+  "modes": {
+    "L": 138
+  },
+  "near_duplicate_candidates": [],
+  "near_duplicate_method": "256-bit difference hash on grayscale 17x16 thumbnail; candidates have Hamming distance <= 8 and require human review",
+  "patient_group_ids_available": false,
+  "raw_bytes": 618581055,
+  "raw_exact_duplicate_groups": [
+    {
+      "checksum_sha256": "02ca85c40782e1be3adafd581d49f07cb43723c42f1b4187b165788ae4697438",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0005_0.txt",
+        "ClinicalReadings/MCUCXR_0019_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "054177caf10955b91de9398b5d20500b4074785aff765b8fcb6df866f17a0dd2",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0044_0.txt",
+        "ClinicalReadings/MCUCXR_0063_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "080e171561f53c37c3e2e0c11188c027cf88b7bf418a6772e4c822d435d108b4",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0013_0.txt",
+        "ClinicalReadings/MCUCXR_0064_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "1b5e09468c23811b5af947f1d8cc7834f48f71d429f232e6972d2341de5d8c59",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0047_0.txt",
+        "ClinicalReadings/MCUCXR_0059_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "1bf521330d0f6bdbd85817e4b757a75820c9ecf742e3b720f5e9e862141433ae",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0061_0.txt",
+        "ClinicalReadings/MCUCXR_0077_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "1fa143c13d7c6c56b5d0bd7dfc9e2223753b6f85adf48e891295c5c86e321625",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0058_0.txt",
+        "ClinicalReadings/MCUCXR_0087_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "30b0b239b372d1c4f449739367dc77f0fe5615aad1126d2437d138c0b8e3a839",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0004_0.txt",
+        "ClinicalReadings/MCUCXR_0041_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "45e29ae4596f02dbd9e676c4427e42ffb486dae6bf7054a9d91324fbb76b7406",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0079_0.txt",
+        "ClinicalReadings/MCUCXR_0089_0.txt",
+        "ClinicalReadings/MCUCXR_0090_0.txt",
+        "ClinicalReadings/MCUCXR_0092_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "4bbbf597aa90d423c33f9ce2e9cbfca642360d2baaca92a0a30e5576e526868c",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0045_0.txt",
+        "ClinicalReadings/MCUCXR_0083_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "6091a797841a51e32717b48bfeb177e77b1bf3a73bedcd7dd9416c85a77141ea",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0054_0.txt",
+        "ClinicalReadings/MCUCXR_0062_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "60c1c49ba350c3f6a8886079ae23eb20cd9dbc1abb20147c98d23fa47f33f762",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0046_0.txt",
+        "ClinicalReadings/MCUCXR_0097_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "686775ac05f005d976e42f3dd8e2cd0ebac077763f2266bf3d9d7a206a4e34c0",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0049_0.txt",
+        "ClinicalReadings/MCUCXR_0086_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "70f499f3fe22d85693ad4b7c89236a763dab157bc7f6a97c03b6283ffba511de",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0072_0.txt",
+        "ClinicalReadings/MCUCXR_0084_0.txt",
+        "ClinicalReadings/MCUCXR_0096_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "77f99283244e2029164bac0d3d9ebcc01403aed85ee3481c86451cd172132cbc",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0056_0.txt",
+        "ClinicalReadings/MCUCXR_0057_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "7c94444defd24ffc27f17832064ace9856e5f694f341706c2afe1c0c9e4f84fc",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0030_0.txt",
+        "ClinicalReadings/MCUCXR_0031_0.txt",
+        "ClinicalReadings/MCUCXR_0095_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "81f178753304109135fc44ff0f487e9b96ec0681bf6f0df67876e57f93f10feb",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0254_1.txt",
+        "ClinicalReadings/MCUCXR_0255_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "8cac431397a839944cf91b8eacc360a00e6f4d36656dc48eb8cbab49ca261af7",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0035_0.txt",
+        "ClinicalReadings/MCUCXR_0082_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "ad09becc9d08ee3487efec66342338fe0366e68dfdac2e502f8d6416825190cd",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0052_0.txt",
+        "ClinicalReadings/MCUCXR_0053_0.txt",
+        "ClinicalReadings/MCUCXR_0099_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "d3343851a6ef33453587ce2a7b34cda7c3da1ad5c13890d68e3782a1787e182a",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0015_0.txt",
+        "ClinicalReadings/MCUCXR_0043_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "d7779ddb198ef1b5295dea88dc60a3b4122cce79c3d845bd8f43faca491330ee",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0028_0.txt",
+        "ClinicalReadings/MCUCXR_0038_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "ec1bf6697a95be05dc119d04b17bc52d3ef81e2e5e0c1d713e642171724ece4b",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0022_0.txt",
+        "ClinicalReadings/MCUCXR_0023_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "f1d69568c4e74b4b25bd0c9b7c6cd93280c58db7dce62ac87061cf4fb8e6f871",
+      "paths": [
+        "ClinicalReadings/MCUCXR_0068_0.txt",
+        "ClinicalReadings/MCUCXR_0074_0.txt",
+        "ClinicalReadings/MCUCXR_0085_0.txt"
+      ]
+    }
+  ],
+  "raw_file_count": 555,
+  "retrieval_date": "2026-09-19",
+  "source_url": "https://data.lhncbc.nlm.nih.gov/public/Tuberculosis-Chest-X-ray-Datasets/Montgomery-County-CXR-Set/MontgomerySet/index.html",
+  "unexpected_image_files": []
+}

@@ -1,0 +1,24 @@
+{
+  "archive_bytes": 3306757175,
+  "archive_path": "C:\\Projects\\CV-Generalization\\data\\raw\\TBX11K.zip",
+  "archive_sha256": "890d309b7ecaead989f527ff6eb756194cd89200cbe71c7287d1895ef0b2beab",
+  "bad_member": null,
+  "compressed_bytes": 3304302307,
+  "extensions": {
+    ".jpg": 105,
+    ".json": 10,
+    ".md": 1,
+    ".pdf": 1,
+    ".png": 12174,
+    ".py": 2,
+    ".sh": 1,
+    ".txt": 7,
+    ".xml": 800
+  },
+  "file_count": 13101,
+  "member_count": 13119,
+  "top_level_counts": {
+    "TBX11K": 13101
+  },
+  "uncompressed_bytes": 4252079748
+}

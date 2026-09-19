@@ -1,0 +1,3300 @@
+{
+  "all_file_extensions": {
+    ".csv": 3,
+    ".docx": 3,
+    ".json": 675,
+    ".png": 3992,
+    ".txt": 662
+  },
+  "annotations_linked": 336,
+  "canonical_label_counts": {
+    "0": 326,
+    "1": 336
+  },
+  "clinical_readings_present": 662,
+  "corrupt_images": [],
+  "dataset": "shenzhen",
+  "dimensions": {
+    "1130x948": 1,
+    "1225x1149": 1,
+    "1233x1110": 1,
+    "1250x1136": 1,
+    "1255x989": 1,
+    "1285x1468": 1,
+    "1286x1252": 1,
+    "1418x1551": 1,
+    "1521x1341": 1,
+    "1571x1583": 1,
+    "1615x1772": 1,
+    "1671x1761": 1,
+    "1767x2143": 1,
+    "1814x2034": 1,
+    "1836x1811": 1,
+    "1872x1887": 1,
+    "1893x1679": 1,
+    "1936x2205": 1,
+    "1954x1993": 1,
+    "1964x2202": 1,
+    "2039x2400": 1,
+    "2048x2374": 1,
+    "2057x2283": 1,
+    "2096x2549": 1,
+    "2107x2521": 1,
+    "2110x2568": 1,
+    "2119x2080": 1,
+    "2128x2334": 1,
+    "2128x2405": 1,
+    "2136x2174": 1,
+    "2146x2363": 1,
+    "2163x2629": 1,
+    "2184x2308": 1,
+    "2202x2460": 1,
+    "2205x2009": 1,
+    "2221x2179": 1,
+    "2227x2066": 1,
+    "2227x2611": 1,
+    "2234x2525": 1,
+    "2235x2465": 1,
+    "2238x2554": 1,
+    "2238x2946": 1,
+    "2248x2711": 1,
+    "2252x2626": 1,
+    "2253x1737": 1,
+    "2254x2398": 1,
+    "2260x2203": 1,
+    "2266x2324": 1,
+    "2268x2427": 1,
+    "2271x2768": 1,
+    "2272x2283": 1,
+    "2276x2622": 1,
+    "2281x2581": 1,
+    "2282x2261": 1,
+    "2282x2386": 1,
+    "2299x2539": 1,
+    "2300x2248": 1,
+    "2301x2278": 1,
+    "2306x2320": 1,
+    "2307x2550": 1,
+    "2308x2308": 1,
+    "2312x2743": 1,
+    "2316x2582": 1,
+    "2324x2344": 1,
+    "2324x2940": 1,
+    "2324x2953": 1,
+    "2328x2752": 1,
+    "2330x2418": 1,
+    "2331x2581": 1,
+    "2336x2550": 1,
+    "2339x2511": 1,
+    "2339x2940": 1,
+    "2344x2482": 1,
+    "2344x2730": 1,
+    "2344x2854": 1,
+    "2346x2751": 1,
+    "2350x2841": 1,
+    "2351x2726": 1,
+    "2356x2506": 1,
+    "2357x2461": 1,
+    "2358x2466": 1,
+    "2365x2889": 1,
+    "2368x2804": 1,
+    "2369x2942": 1,
+    "2370x2843": 1,
+    "2371x2448": 1,
+    "2372x2406": 1,
+    "2377x2240": 1,
+    "2377x2658": 1,
+    "2383x2303": 1,
+    "2383x2488": 1,
+    "2384x2319": 1,
+    "2384x2452": 1,
+    "2384x2733": 1,
+    "2387x2730": 1,
+    "2387x2793": 1,
+    "2389x2677": 1,
+    "2395x2600": 1,
+    "2396x2533": 1,
+    "2397x2924": 1,
+    "2399x2952": 1,
+    "2400x2289": 1,
+    "2400x2503": 1,
+    "2400x2599": 1,
+    "2401x2334": 1,
+    "2401x2608": 1,
+    "2403x2449": 1,
+    "2406x2705": 1,
+    "2406x2970": 1,
+    "2407x2388": 1,
+    "2408x2867": 1,
+    "2408x2906": 1,
+    "2409x2805": 1,
+    "2410x2962": 1,
+    "2411x2732": 1,
+    "2415x2804": 1,
+    "2416x2660": 1,
+    "2416x2700": 1,
+    "2419x2548": 1,
+    "2419x2562": 1,
+    "2419x2609": 1,
+    "2420x2403": 1,
+    "2421x2645": 1,
+    "2421x2735": 1,
+    "2422x2782": 1,
+    "2423x2733": 1,
+    "2423x2804": 1,
+    "2427x2698": 1,
+    "2427x2942": 1,
+    "2430x2571": 1,
+    "2430x2651": 1,
+    "2434x2556": 1,
+    "2435x2620": 1,
+    "2437x2806": 1,
+    "2441x2690": 1,
+    "2442x2475": 1,
+    "2443x2453": 1,
+    "2443x2527": 1,
+    "2450x2945": 1,
+    "2450x2977": 1,
+    "2452x2694": 1,
+    "2452x2947": 1,
+    "2457x2501": 1,
+    "2458x2808": 1,
+    "2459x2635": 1,
+    "2460x2788": 1,
+    "2460x2926": 1,
+    "2461x2366": 1,
+    "2464x2304": 1,
+    "2464x2317": 1,
+    "2464x2562": 1,
+    "2464x2815": 1,
+    "2464x2861": 1,
+    "2464x2928": 1,
+    "2472x2742": 1,
+    "2477x2954": 1,
+    "2478x2382": 1,
+    "2478x2758": 1,
+    "2479x2417": 1,
+    "2479x2680": 1,
+    "2481x2614": 1,
+    "2485x2787": 1,
+    "2485x2944": 1,
+    "2486x2617": 1,
+    "2488x2818": 1,
+    "2491x2868": 1,
+    "2493x2684": 1,
+    "2493x2957": 1,
+    "2493x2990": 1,
+    "2495x2608": 1,
+    "2495x2638": 1,
+    "2495x2854": 1,
+    "2497x2588": 1,
+    "2497x2606": 1,
+    "2498x2481": 1,
+    "2499x2485": 1,
+    "2499x2897": 1,
+    "2500x2873": 1,
+    "2501x2537": 1,
+    "2503x2640": 1,
+    "2503x2988": 1,
+    "2504x2530": 1,
+    "2504x2826": 1,
+    "2509x2937": 1,
+    "2511x2666": 1,
+    "2511x2931": 1,
+    "2512x2601": 1,
+    "2512x2638": 1,
+    "2515x2528": 1,
+    "2516x2590": 1,
+    "2516x2603": 1,
+    "2516x2942": 1,
+    "2517x2988": 1,
+    "2519x2988": 1,
+    "2520x2905": 1,
+    "2521x2751": 1,
+    "2521x2959": 1,
+    "2523x2875": 1,
+    "2524x2743": 1,
+    "2524x2959": 1,
+    "2525x2493": 1,
+    "2529x2786": 1,
+    "2531x2890": 1,
+    "2532x2228": 1,
+    "2533x2416": 1,
+    "2536x2843": 1,
+    "2536x2854": 1,
+    "2537x2631": 1,
+    "2537x2788": 1,
+    "2537x2986": 1,
+    "2540x2813": 1,
+    "2542x2939": 1,
+    "2542x2978": 1,
+    "2544x2693": 1,
+    "2545x2691": 1,
+    "2546x2672": 1,
+    "2549x2710": 1,
+    "2550x2829": 1,
+    "2552x2892": 1,
+    "2554x2575": 1,
+    "2554x2789": 1,
+    "2556x2365": 1,
+    "2560x2614": 1,
+    "2562x2783": 1,
+    "2566x2566": 1,
+    "2566x2903": 1,
+    "2569x2424": 1,
+    "2571x2914": 1,
+    "2572x2722": 1,
+    "2573x2493": 1,
+    "2573x2917": 1,
+    "2573x2921": 1,
+    "2573x2998": 1,
+    "2576x2947": 1,
+    "2580x2917": 1,
+    "2581x2688": 1,
+    "2584x2630": 1,
+    "2585x2970": 1,
+    "2587x2968": 1,
+    "2588x2994": 1,
+    "2589x2667": 1,
+    "2594x2931": 1,
+    "2598x2795": 1,
+    "2599x2559": 1,
+    "2599x2567": 1,
+    "2599x2896": 1,
+    "2599x2903": 1,
+    "2600x2930": 1,
+    "2600x2994": 1,
+    "2602x2988": 1,
+    "2604x2968": 1,
+    "2607x2572": 1,
+    "2607x2871": 1,
+    "2609x2489": 1,
+    "2609x2979": 1,
+    "2609x2991": 1,
+    "2610x2533": 1,
+    "2610x2823": 1,
+    "2610x2948": 1,
+    "2611x2955": 1,
+    "2612x2771": 1,
+    "2613x2595": 1,
+    "2615x2639": 1,
+    "2617x2838": 1,
+    "2618x2417": 1,
+    "2618x2931": 1,
+    "2619x2641": 1,
+    "2619x2988": 1,
+    "2621x2945": 1,
+    "2622x2843": 1,
+    "2623x2670": 1,
+    "2624x2900": 1,
+    "2627x2750": 1,
+    "2628x2976": 1,
+    "2628x2987": 1,
+    "2629x2701": 1,
+    "2630x2958": 1,
+    "2631x2406": 1,
+    "2631x2974": 1,
+    "2632x2787": 1,
+    "2632x2868": 1,
+    "2638x2833": 1,
+    "2643x2735": 1,
+    "2646x2690": 1,
+    "2646x2992": 1,
+    "2653x2834": 1,
+    "2655x2904": 1,
+    "2658x2977": 1,
+    "2659x2988": 1,
+    "2662x2898": 1,
+    "2671x2897": 1,
+    "2674x2685": 1,
+    "2674x3001": 1,
+    "2676x2988": 1,
+    "2678x2916": 1,
+    "2678x2954": 1,
+    "2679x2843": 1,
+    "2679x2967": 1,
+    "2679x3001": 1,
+    "2682x2869": 1,
+    "2689x2955": 1,
+    "2689x3001": 1,
+    "2692x2930": 1,
+    "2693x2953": 1,
+    "2697x2880": 1,
+    "2698x2988": 1,
+    "2699x2927": 1,
+    "2704x2948": 1,
+    "2707x2750": 1,
+    "2709x2639": 1,
+    "2710x2750": 1,
+    "2713x2792": 1,
+    "2715x2904": 1,
+    "2715x2946": 1,
+    "2716x2889": 1,
+    "2720x2944": 1,
+    "2724x2876": 1,
+    "2725x2776": 1,
+    "2725x2987": 1,
+    "2729x2989": 1,
+    "2730x2941": 1,
+    "2733x2731": 1,
+    "2734x2933": 1,
+    "2735x2883": 1,
+    "2735x2929": 1,
+    "2738x2977": 1,
+    "2739x2941": 1,
+    "2739x2944": 1,
+    "2739x2986": 1,
+    "2743x2989": 1,
+    "2744x2955": 1,
+    "2744x3000": 1,
+    "2746x2916": 1,
+    "2747x2957": 1,
+    "2749x2639": 1,
+    "2751x2990": 1,
+    "2758x2938": 1,
+    "2759x2988": 1,
+    "2760x2555": 1,
+    "2761x2894": 1,
+    "2761x2961": 1,
+    "2763x2713": 1,
+    "2763x3001": 1,
+    "2772x2937": 1,
+    "2773x2925": 1,
+    "2773x2930": 1,
+    "2775x2948": 1,
+    "2776x2889": 1,
+    "2776x2960": 1,
+    "2779x2987": 1,
+    "2786x2931": 1,
+    "2786x2989": 1,
+    "2788x2954": 1,
+    "2789x2908": 1,
+    "2791x2854": 1,
+    "2792x2585": 1,
+    "2792x2955": 1,
+    "2792x2959": 1,
+    "2793x2929": 1,
+    "2793x2945": 1,
+    "2793x2999": 1,
+    "2796x2652": 1,
+    "2797x2990": 1,
+    "2800x2958": 1,
+    "2801x2914": 1,
+    "2804x2947": 1,
+    "2804x2960": 1,
+    "2808x2810": 1,
+    "2814x2945": 1,
+    "2824x2951": 1,
+    "2831x2951": 1,
+    "2844x3000": 1,
+    "2844x3001": 1,
+    "2849x2921": 1,
+    "2851x2954": 1,
+    "2868x2953": 1,
+    "2879x2951": 1,
+    "2896x2929": 1,
+    "2897x2953": 1,
+    "2903x2990": 1,
+    "2962x2948": 1,
+    "2967x2993": 1,
+    "2967x3001": 1,
+    "2972x2943": 1,
+    "2975x2941": 1,
+    "2978x2977": 1,
+    "2980x2940": 1,
+    "2980x2944": 1,
+    "2980x2987": 1,
+    "2982x2992": 1,
+    "2983x2959": 1,
+    "2983x2967": 1,
+    "2985x2931": 1,
+    "2985x2935": 1,
+    "2985x2939": 1,
+    "2985x2953": 1,
+    "2985x2959": 1,
+    "2985x2975": 1,
+    "2986x2960": 1,
+    "2986x2992": 2,
+    "2987x2929": 1,
+    "2987x2933": 1,
+    "2987x2935": 1,
+    "2987x2945": 1,
+    "2987x2963": 1,
+    "2987x2990": 1,
+    "2987x2994": 1,
+    "2988x2978": 1,
+    "2988x2989": 1,
+    "2988x2990": 1,
+    "2988x2993": 1,
+    "2988x2995": 1,
+    "2989x2939": 1,
+    "2989x2943": 1,
+    "2989x2949": 1,
+    "2989x2951": 1,
+    "2989x2978": 1,
+    "2989x2985": 1,
+    "2989x2995": 1,
+    "2989x2998": 1,
+    "2990x2947": 1,
+    "2990x2978": 1,
+    "2990x2982": 1,
+    "2990x2989": 1,
+    "2990x2990": 1,
+    "2990x2991": 1,
+    "2990x2993": 2,
+    "2990x2995": 1,
+    "2990x2996": 1,
+    "2990x3001": 1,
+    "2991x2907": 1,
+    "2991x2935": 1,
+    "2991x2947": 1,
+    "2991x2958": 1,
+    "2991x2982": 1,
+    "2991x2989": 1,
+    "2991x2991": 1,
+    "2991x2992": 4,
+    "2991x2993": 3,
+    "2991x2994": 1,
+    "2991x2995": 2,
+    "2992x2945": 1,
+    "2992x2958": 1,
+    "2992x2985": 1,
+    "2992x2989": 2,
+    "2992x2992": 1,
+    "2992x2994": 2,
+    "2993x2943": 1,
+    "2993x2945": 1,
+    "2993x2951": 1,
+    "2993x2952": 1,
+    "2993x2989": 1,
+    "2993x2990": 1,
+    "2993x2995": 1,
+    "2994x2944": 1,
+    "2994x2946": 1,
+    "2994x2955": 1,
+    "2995x2944": 1,
+    "2995x2986": 2,
+    "2996x2931": 1,
+    "2996x2941": 2,
+    "2996x2945": 1,
+    "2996x2977": 1,
+    "2996x2988": 1,
+    "2996x2989": 2,
+    "2996x2991": 1,
+    "2996x2999": 1,
+    "2997x2457": 1,
+    "2997x2921": 1,
+    "2997x2925": 1,
+    "2997x2933": 2,
+    "2997x2937": 1,
+    "2997x2943": 3,
+    "2997x2957": 1,
+    "2997x2981": 1,
+    "2997x2985": 1,
+    "2997x2987": 1,
+    "2997x2990": 1,
+    "2998x2857": 1,
+    "3000x2915": 1,
+    "3000x2919": 2,
+    "3000x2921": 1,
+    "3000x2925": 3,
+    "3000x2927": 3,
+    "3000x2931": 6,
+    "3000x2933": 7,
+    "3000x2935": 5,
+    "3000x2937": 11,
+    "3000x2939": 15,
+    "3000x2941": 10,
+    "3000x2943": 11,
+    "3000x2945": 15,
+    "3000x2947": 12,
+    "3000x2949": 11,
+    "3000x2951": 11,
+    "3000x2953": 4,
+    "3000x2955": 3,
+    "3000x2957": 1,
+    "3000x2959": 2,
+    "3000x2963": 1,
+    "3000x2965": 2,
+    "3000x2967": 3,
+    "3000x2971": 1,
+    "3000x2975": 1,
+    "3000x2985": 1,
+    "3000x2993": 1,
+    "3000x2995": 1,
+    "3000x2999": 1,
+    "3000x3001": 2,
+    "3001x2320": 1,
+    "3001x2929": 1,
+    "3001x2935": 1,
+    "3001x2942": 1,
+    "3001x2953": 1,
+    "3001x2956": 1,
+    "3001x2958": 1,
+    "3001x2963": 1,
+    "3001x2967": 1,
+    "3001x2970": 1,
+    "3001x2977": 1,
+    "3001x2980": 1,
+    "3001x2987": 1,
+    "3001x2988": 2,
+    "3001x2989": 2,
+    "3001x3001": 2
+  },
+  "duplicate_basenames": {
+    "CHNCXR_0327_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0327_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0327_1.json"
+    ],
+    "CHNCXR_0328_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0328_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0328_1.json"
+    ],
+    "CHNCXR_0329_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0329_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0329_1.json"
+    ],
+    "CHNCXR_0330_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0330_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0330_1.json"
+    ],
+    "CHNCXR_0331_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0331_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0331_1.json"
+    ],
+    "CHNCXR_0332_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0332_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0332_1.json"
+    ],
+    "CHNCXR_0333_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0333_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0333_1.json"
+    ],
+    "CHNCXR_0333_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0333_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0333_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0334_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0334_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0334_1.json"
+    ],
+    "CHNCXR_0335_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0335_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0335_1.json"
+    ],
+    "CHNCXR_0336_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0336_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0336_1.json"
+    ],
+    "CHNCXR_0337_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0337_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0337_1.json"
+    ],
+    "CHNCXR_0337_1_Moderate_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0337_1_Moderate_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0337_1_Moderate_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0337_1_Pleural_Effusion_2.png": [
+      "Annotations-2/masks/CHNCXR_0337_1_Pleural_Effusion_2.png",
+      "Annotations/masks/CHNCXR_0337_1_Pleural_Effusion_2.png"
+    ],
+    "CHNCXR_0338_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0338_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0338_1.json"
+    ],
+    "CHNCXR_0338_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0338_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0338_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0339_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0339_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0339_1.json"
+    ],
+    "CHNCXR_0340_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0340_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0340_1.json"
+    ],
+    "CHNCXR_0341_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0341_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0341_1.json"
+    ],
+    "CHNCXR_0342_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0342_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0342_1.json"
+    ],
+    "CHNCXR_0342_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0342_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0342_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0343_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0343_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0343_1.json"
+    ],
+    "CHNCXR_0343_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0343_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0343_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0344_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0344_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0344_1.json"
+    ],
+    "CHNCXR_0344_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0344_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0344_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0345_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0345_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0345_1.json"
+    ],
+    "CHNCXR_0345_1_Linear_Density_3.png": [
+      "Annotations-2/masks/CHNCXR_0345_1_Linear_Density_3.png",
+      "Annotations/masks/CHNCXR_0345_1_Linear_Density_3.png"
+    ],
+    "CHNCXR_0346_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0346_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0346_1.json"
+    ],
+    "CHNCXR_0347_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0347_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0347_1.json"
+    ],
+    "CHNCXR_0348_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0348_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0348_1.json"
+    ],
+    "CHNCXR_0349_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0349_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0349_1.json"
+    ],
+    "CHNCXR_0349_1_Pleural_Effusion_2.png": [
+      "Annotations-2/masks/CHNCXR_0349_1_Pleural_Effusion_2.png",
+      "Annotations/masks/CHNCXR_0349_1_Pleural_Effusion_2.png"
+    ],
+    "CHNCXR_0350_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0350_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0350_1.json"
+    ],
+    "CHNCXR_0351_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0351_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0351_1.json"
+    ],
+    "CHNCXR_0352_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0352_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0352_1.json"
+    ],
+    "CHNCXR_0353_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0353_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0353_1.json"
+    ],
+    "CHNCXR_0354_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0354_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0354_1.json"
+    ],
+    "CHNCXR_0354_1_Calcified_Nodule_2.png": [
+      "Annotations-2/masks/CHNCXR_0354_1_Calcified_Nodule_2.png",
+      "Annotations/masks/CHNCXR_0354_1_Calcified_Nodule_2.png"
+    ],
+    "CHNCXR_0354_1_Calcified_Nodule_3.png": [
+      "Annotations-2/masks/CHNCXR_0354_1_Calcified_Nodule_3.png",
+      "Annotations/masks/CHNCXR_0354_1_Calcified_Nodule_3.png"
+    ],
+    "CHNCXR_0355_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0355_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0355_1.json"
+    ],
+    "CHNCXR_0355_1_Moderate_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0355_1_Moderate_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0355_1_Moderate_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0356_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0356_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0356_1.json"
+    ],
+    "CHNCXR_0356_1_Calcified_Nodule_4.png": [
+      "Annotations-2/masks/CHNCXR_0356_1_Calcified_Nodule_4.png",
+      "Annotations/masks/CHNCXR_0356_1_Calcified_Nodule_4.png"
+    ],
+    "CHNCXR_0356_1_Clustered_Nodule_(2mm-5mm_apart)_2.png": [
+      "Annotations-2/masks/CHNCXR_0356_1_Clustered_Nodule_(2mm-5mm_apart)_2.png",
+      "Annotations/masks/CHNCXR_0356_1_Clustered_Nodule_(2mm-5mm_apart)_2.png"
+    ],
+    "CHNCXR_0357_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0357_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0357_1.json"
+    ],
+    "CHNCXR_0358_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0358_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0358_1.json"
+    ],
+    "CHNCXR_0359_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0359_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0359_1.json"
+    ],
+    "CHNCXR_0360_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0360_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0360_1.json"
+    ],
+    "CHNCXR_0360_1_Single_Nodule_(non-calcified)_2.png": [
+      "Annotations-2/masks/CHNCXR_0360_1_Single_Nodule_(non-calcified)_2.png",
+      "Annotations/masks/CHNCXR_0360_1_Single_Nodule_(non-calcified)_2.png"
+    ],
+    "CHNCXR_0361_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0361_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0361_1.json"
+    ],
+    "CHNCXR_0361_1_Pleural_Effusion_3.png": [
+      "Annotations-2/masks/CHNCXR_0361_1_Pleural_Effusion_3.png",
+      "Annotations/masks/CHNCXR_0361_1_Pleural_Effusion_3.png"
+    ],
+    "CHNCXR_0362_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0362_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0362_1.json"
+    ],
+    "CHNCXR_0363_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0363_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0363_1.json"
+    ],
+    "CHNCXR_0364_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0364_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0364_1.json"
+    ],
+    "CHNCXR_0365_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0365_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0365_1.json"
+    ],
+    "CHNCXR_0366_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0366_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0366_1.json"
+    ],
+    "CHNCXR_0367_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0367_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0367_1.json"
+    ],
+    "CHNCXR_0368_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0368_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0368_1.json"
+    ],
+    "CHNCXR_0368_1_Adenopathy_2.png": [
+      "Annotations-2/masks/CHNCXR_0368_1_Adenopathy_2.png",
+      "Annotations/masks/CHNCXR_0368_1_Adenopathy_2.png"
+    ],
+    "CHNCXR_0369_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0369_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0369_1.json"
+    ],
+    "CHNCXR_0370_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0370_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0370_1.json"
+    ],
+    "CHNCXR_0371_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0371_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0371_1.json"
+    ],
+    "CHNCXR_0372_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0372_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0372_1.json"
+    ],
+    "CHNCXR_0373_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0373_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0373_1.json"
+    ],
+    "CHNCXR_0374_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0374_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0374_1.json"
+    ],
+    "CHNCXR_0374_1_Clustered_Nodule_(2mm-5mm_apart)_4.png": [
+      "Annotations-2/masks/CHNCXR_0374_1_Clustered_Nodule_(2mm-5mm_apart)_4.png",
+      "Annotations/masks/CHNCXR_0374_1_Clustered_Nodule_(2mm-5mm_apart)_4.png"
+    ],
+    "CHNCXR_0374_1_Clustered_Nodule_(2mm-5mm_apart)_5.png": [
+      "Annotations-2/masks/CHNCXR_0374_1_Clustered_Nodule_(2mm-5mm_apart)_5.png",
+      "Annotations/masks/CHNCXR_0374_1_Clustered_Nodule_(2mm-5mm_apart)_5.png"
+    ],
+    "CHNCXR_0375_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0375_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0375_1.json"
+    ],
+    "CHNCXR_0376_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0376_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0376_1.json"
+    ],
+    "CHNCXR_0376_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0376_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0376_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0377_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0377_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0377_1.json"
+    ],
+    "CHNCXR_0378_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0378_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0378_1.json"
+    ],
+    "CHNCXR_0378_1_Apical_Thickening_1.png": [
+      "Annotations-2/masks/CHNCXR_0378_1_Apical_Thickening_1.png",
+      "Annotations/masks/CHNCXR_0378_1_Apical_Thickening_1.png"
+    ],
+    "CHNCXR_0378_1_Linear_Density_3.png": [
+      "Annotations-2/masks/CHNCXR_0378_1_Linear_Density_3.png",
+      "Annotations/masks/CHNCXR_0378_1_Linear_Density_3.png"
+    ],
+    "CHNCXR_0379_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0379_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0379_1.json"
+    ],
+    "CHNCXR_0380_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0380_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0380_1.json"
+    ],
+    "CHNCXR_0381_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0381_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0381_1.json"
+    ],
+    "CHNCXR_0381_1_Pleural_Effusion_2.png": [
+      "Annotations-2/masks/CHNCXR_0381_1_Pleural_Effusion_2.png",
+      "Annotations/masks/CHNCXR_0381_1_Pleural_Effusion_2.png"
+    ],
+    "CHNCXR_0382_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0382_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0382_1.json"
+    ],
+    "CHNCXR_0382_1_Small_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0382_1_Small_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0382_1_Small_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0383_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0383_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0383_1.json"
+    ],
+    "CHNCXR_0384_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0384_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0384_1.json"
+    ],
+    "CHNCXR_0385_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0385_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0385_1.json"
+    ],
+    "CHNCXR_0386_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0386_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0386_1.json"
+    ],
+    "CHNCXR_0387_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0387_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0387_1.json"
+    ],
+    "CHNCXR_0388_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0388_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0388_1.json"
+    ],
+    "CHNCXR_0389_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0389_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0389_1.json"
+    ],
+    "CHNCXR_0389_1_Moderate_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0389_1_Moderate_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0389_1_Moderate_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0390_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0390_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0390_1.json"
+    ],
+    "CHNCXR_0391_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0391_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0391_1.json"
+    ],
+    "CHNCXR_0391_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0391_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0391_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0392_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0392_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0392_1.json"
+    ],
+    "CHNCXR_0393_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0393_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0393_1.json"
+    ],
+    "CHNCXR_0393_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0393_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0393_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0394_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0394_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0394_1.json"
+    ],
+    "CHNCXR_0394_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0394_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0394_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0395_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0395_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0395_1.json"
+    ],
+    "CHNCXR_0396_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0396_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0396_1.json"
+    ],
+    "CHNCXR_0396_1_Apical_Thickening_2.png": [
+      "Annotations-2/masks/CHNCXR_0396_1_Apical_Thickening_2.png",
+      "Annotations/masks/CHNCXR_0396_1_Apical_Thickening_2.png"
+    ],
+    "CHNCXR_0397_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0397_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0397_1.json"
+    ],
+    "CHNCXR_0398_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0398_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0398_1.json"
+    ],
+    "CHNCXR_0398_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0398_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0398_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0399_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0399_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0399_1.json"
+    ],
+    "CHNCXR_0400_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0400_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0400_1.json"
+    ],
+    "CHNCXR_0401_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0401_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0401_1.json"
+    ],
+    "CHNCXR_0402_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0402_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0402_1.json"
+    ],
+    "CHNCXR_0403_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0403_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0403_1.json"
+    ],
+    "CHNCXR_0403_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0403_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0403_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0404_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0404_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0404_1.json"
+    ],
+    "CHNCXR_0404_1_Small_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0404_1_Small_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0404_1_Small_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0405_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0405_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0405_1.json"
+    ],
+    "CHNCXR_0405_1_Calcified_Nodule_1.png": [
+      "Annotations-2/masks/CHNCXR_0405_1_Calcified_Nodule_1.png",
+      "Annotations/masks/CHNCXR_0405_1_Calcified_Nodule_1.png"
+    ],
+    "CHNCXR_0406_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0406_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0406_1.json"
+    ],
+    "CHNCXR_0406_1_Clustered_Nodule_(2mm-5mm_apart)_4.png": [
+      "Annotations-2/masks/CHNCXR_0406_1_Clustered_Nodule_(2mm-5mm_apart)_4.png",
+      "Annotations/masks/CHNCXR_0406_1_Clustered_Nodule_(2mm-5mm_apart)_4.png"
+    ],
+    "CHNCXR_0406_1_Clustered_Nodule_(2mm-5mm_apart)_5.png": [
+      "Annotations-2/masks/CHNCXR_0406_1_Clustered_Nodule_(2mm-5mm_apart)_5.png",
+      "Annotations/masks/CHNCXR_0406_1_Clustered_Nodule_(2mm-5mm_apart)_5.png"
+    ],
+    "CHNCXR_0407_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0407_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0407_1.json"
+    ],
+    "CHNCXR_0407_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0407_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0407_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0408_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0408_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0408_1.json"
+    ],
+    "CHNCXR_0409_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0409_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0409_1.json"
+    ],
+    "CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_2.png": [
+      "Annotations-2/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_2.png",
+      "Annotations/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_2.png"
+    ],
+    "CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_3.png": [
+      "Annotations-2/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_3.png",
+      "Annotations/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_3.png"
+    ],
+    "CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_4.png": [
+      "Annotations-2/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_4.png",
+      "Annotations/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_4.png"
+    ],
+    "CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_5.png": [
+      "Annotations-2/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_5.png",
+      "Annotations/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_5.png"
+    ],
+    "CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_6.png": [
+      "Annotations-2/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_6.png",
+      "Annotations/masks/CHNCXR_0409_1_Clustered_Nodule_(2mm-5mm_apart)_6.png"
+    ],
+    "CHNCXR_0410_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0410_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0410_1.json"
+    ],
+    "CHNCXR_0411_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0411_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0411_1.json"
+    ],
+    "CHNCXR_0411_1_Small_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0411_1_Small_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0411_1_Small_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0412_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0412_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0412_1.json"
+    ],
+    "CHNCXR_0413_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0413_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0413_1.json"
+    ],
+    "CHNCXR_0414_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0414_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0414_1.json"
+    ],
+    "CHNCXR_0415_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0415_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0415_1.json"
+    ],
+    "CHNCXR_0415_1_Clustered_Nodule_(2mm-5mm_apart)_6.png": [
+      "Annotations-2/masks/CHNCXR_0415_1_Clustered_Nodule_(2mm-5mm_apart)_6.png",
+      "Annotations/masks/CHNCXR_0415_1_Clustered_Nodule_(2mm-5mm_apart)_6.png"
+    ],
+    "CHNCXR_0416_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0416_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0416_1.json"
+    ],
+    "CHNCXR_0417_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0417_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0417_1.json"
+    ],
+    "CHNCXR_0418_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0418_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0418_1.json"
+    ],
+    "CHNCXR_0419_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0419_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0419_1.json"
+    ],
+    "CHNCXR_0420_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0420_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0420_1.json"
+    ],
+    "CHNCXR_0421_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0421_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0421_1.json"
+    ],
+    "CHNCXR_0421_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0421_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0421_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0421_1_Clustered_Nodule_(2mm-5mm_apart)_6.png": [
+      "Annotations-2/masks/CHNCXR_0421_1_Clustered_Nodule_(2mm-5mm_apart)_6.png",
+      "Annotations/masks/CHNCXR_0421_1_Clustered_Nodule_(2mm-5mm_apart)_6.png"
+    ],
+    "CHNCXR_0422_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0422_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0422_1.json"
+    ],
+    "CHNCXR_0422_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0422_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0422_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0423_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0423_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0423_1.json"
+    ],
+    "CHNCXR_0424_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0424_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0424_1.json"
+    ],
+    "CHNCXR_0424_1_Pleural_Effusion_5.png": [
+      "Annotations-2/masks/CHNCXR_0424_1_Pleural_Effusion_5.png",
+      "Annotations/masks/CHNCXR_0424_1_Pleural_Effusion_5.png"
+    ],
+    "CHNCXR_0425_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0425_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0425_1.json"
+    ],
+    "CHNCXR_0426_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0426_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0426_1.json"
+    ],
+    "CHNCXR_0427_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0427_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0427_1.json"
+    ],
+    "CHNCXR_0428_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0428_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0428_1.json"
+    ],
+    "CHNCXR_0429_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0429_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0429_1.json"
+    ],
+    "CHNCXR_0429_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0429_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0429_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0430_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0430_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0430_1.json"
+    ],
+    "CHNCXR_0430_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0430_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0430_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0431_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0431_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0431_1.json"
+    ],
+    "CHNCXR_0431_1_Small_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0431_1_Small_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0431_1_Small_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0432_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0432_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0432_1.json"
+    ],
+    "CHNCXR_0433_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0433_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0433_1.json"
+    ],
+    "CHNCXR_0433_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0433_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0433_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0434_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0434_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0434_1.json"
+    ],
+    "CHNCXR_0435_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0435_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0435_1.json"
+    ],
+    "CHNCXR_0436_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0436_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0436_1.json"
+    ],
+    "CHNCXR_0437_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0437_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0437_1.json"
+    ],
+    "CHNCXR_0438_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0438_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0438_1.json"
+    ],
+    "CHNCXR_0439_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0439_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0439_1.json"
+    ],
+    "CHNCXR_0439_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0439_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0439_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0440_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0440_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0440_1.json"
+    ],
+    "CHNCXR_0440_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0440_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0440_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0441_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0441_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0441_1.json"
+    ],
+    "CHNCXR_0442_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0442_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0442_1.json"
+    ],
+    "CHNCXR_0443_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0443_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0443_1.json"
+    ],
+    "CHNCXR_0443_1_Moderate_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0443_1_Moderate_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0443_1_Moderate_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0444_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0444_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0444_1.json"
+    ],
+    "CHNCXR_0445_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0445_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0445_1.json"
+    ],
+    "CHNCXR_0446_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0446_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0446_1.json"
+    ],
+    "CHNCXR_0447_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0447_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0447_1.json"
+    ],
+    "CHNCXR_0448_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0448_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0448_1.json"
+    ],
+    "CHNCXR_0449_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0449_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0449_1.json"
+    ],
+    "CHNCXR_0450_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0450_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0450_1.json"
+    ],
+    "CHNCXR_0451_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0451_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0451_1.json"
+    ],
+    "CHNCXR_0452_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0452_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0452_1.json"
+    ],
+    "CHNCXR_0452_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0452_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0452_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0453_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0453_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0453_1.json"
+    ],
+    "CHNCXR_0454_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0454_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0454_1.json"
+    ],
+    "CHNCXR_0455_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0455_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0455_1.json"
+    ],
+    "CHNCXR_0455_1_Pleural_Effusion_1.png": [
+      "Annotations-2/masks/CHNCXR_0455_1_Pleural_Effusion_1.png",
+      "Annotations/masks/CHNCXR_0455_1_Pleural_Effusion_1.png"
+    ],
+    "CHNCXR_0455_1_Pleural_Effusion_3.png": [
+      "Annotations-2/masks/CHNCXR_0455_1_Pleural_Effusion_3.png",
+      "Annotations/masks/CHNCXR_0455_1_Pleural_Effusion_3.png"
+    ],
+    "CHNCXR_0456_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0456_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0456_1.json"
+    ],
+    "CHNCXR_0456_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0456_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0456_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0457_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0457_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0457_1.json"
+    ],
+    "CHNCXR_0458_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0458_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0458_1.json"
+    ],
+    "CHNCXR_0459_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0459_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0459_1.json"
+    ],
+    "CHNCXR_0460_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0460_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0460_1.json"
+    ],
+    "CHNCXR_0461_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0461_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0461_1.json"
+    ],
+    "CHNCXR_0462_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0462_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0462_1.json"
+    ],
+    "CHNCXR_0463_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0463_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0463_1.json"
+    ],
+    "CHNCXR_0464_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0464_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0464_1.json"
+    ],
+    "CHNCXR_0465_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0465_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0465_1.json"
+    ],
+    "CHNCXR_0466_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0466_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0466_1.json"
+    ],
+    "CHNCXR_0467_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0467_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0467_1.json"
+    ],
+    "CHNCXR_0468_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0468_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0468_1.json"
+    ],
+    "CHNCXR_0469_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0469_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0469_1.json"
+    ],
+    "CHNCXR_0469_1_Small_Infiltrate_(non-linear)_4.png": [
+      "Annotations-2/masks/CHNCXR_0469_1_Small_Infiltrate_(non-linear)_4.png",
+      "Annotations/masks/CHNCXR_0469_1_Small_Infiltrate_(non-linear)_4.png"
+    ],
+    "CHNCXR_0470_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0470_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0470_1.json"
+    ],
+    "CHNCXR_0471_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0471_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0471_1.json"
+    ],
+    "CHNCXR_0472_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0472_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0472_1.json"
+    ],
+    "CHNCXR_0472_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0472_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0472_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0472_1_Single_Nodule_(non-calcified)_2.png": [
+      "Annotations-2/masks/CHNCXR_0472_1_Single_Nodule_(non-calcified)_2.png",
+      "Annotations/masks/CHNCXR_0472_1_Single_Nodule_(non-calcified)_2.png"
+    ],
+    "CHNCXR_0473_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0473_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0473_1.json"
+    ],
+    "CHNCXR_0473_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0473_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0473_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0474_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0474_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0474_1.json"
+    ],
+    "CHNCXR_0475_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0475_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0475_1.json"
+    ],
+    "CHNCXR_0476_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0476_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0476_1.json"
+    ],
+    "CHNCXR_0477_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0477_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0477_1.json"
+    ],
+    "CHNCXR_0478_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0478_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0478_1.json"
+    ],
+    "CHNCXR_0479_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0479_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0479_1.json"
+    ],
+    "CHNCXR_0480_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0480_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0480_1.json"
+    ],
+    "CHNCXR_0481_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0481_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0481_1.json"
+    ],
+    "CHNCXR_0481_1_Moderate_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0481_1_Moderate_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0481_1_Moderate_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0482_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0482_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0482_1.json"
+    ],
+    "CHNCXR_0483_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0483_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0483_1.json"
+    ],
+    "CHNCXR_0483_1_Pleural_Thickening_(non-apical)_4.png": [
+      "Annotations-2/masks/CHNCXR_0483_1_Pleural_Thickening_(non-apical)_4.png",
+      "Annotations/masks/CHNCXR_0483_1_Pleural_Thickening_(non-apical)_4.png"
+    ],
+    "CHNCXR_0483_1_Small_Infiltrate_(non-linear)_3.png": [
+      "Annotations-2/masks/CHNCXR_0483_1_Small_Infiltrate_(non-linear)_3.png",
+      "Annotations/masks/CHNCXR_0483_1_Small_Infiltrate_(non-linear)_3.png"
+    ],
+    "CHNCXR_0484_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0484_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0484_1.json"
+    ],
+    "CHNCXR_0485_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0485_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0485_1.json"
+    ],
+    "CHNCXR_0486_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0486_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0486_1.json"
+    ],
+    "CHNCXR_0487_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0487_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0487_1.json"
+    ],
+    "CHNCXR_0487_1_Cavity_1.png": [
+      "Annotations-2/masks/CHNCXR_0487_1_Cavity_1.png",
+      "Annotations/masks/CHNCXR_0487_1_Cavity_1.png"
+    ],
+    "CHNCXR_0488_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0488_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0488_1.json"
+    ],
+    "CHNCXR_0489_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0489_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0489_1.json"
+    ],
+    "CHNCXR_0490_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0490_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0490_1.json"
+    ],
+    "CHNCXR_0491_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0491_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0491_1.json"
+    ],
+    "CHNCXR_0492_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0492_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0492_1.json"
+    ],
+    "CHNCXR_0492_1_Moderate_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0492_1_Moderate_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0492_1_Moderate_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0493_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0493_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0493_1.json"
+    ],
+    "CHNCXR_0494_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0494_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0494_1.json"
+    ],
+    "CHNCXR_0494_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0494_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0494_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0495_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0495_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0495_1.json"
+    ],
+    "CHNCXR_0496_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0496_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0496_1.json"
+    ],
+    "CHNCXR_0497_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0497_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0497_1.json"
+    ],
+    "CHNCXR_0498_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0498_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0498_1.json"
+    ],
+    "CHNCXR_0499_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0499_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0499_1.json"
+    ],
+    "CHNCXR_0499_1_Pleural_Effusion_3.png": [
+      "Annotations-2/masks/CHNCXR_0499_1_Pleural_Effusion_3.png",
+      "Annotations/masks/CHNCXR_0499_1_Pleural_Effusion_3.png"
+    ],
+    "CHNCXR_0500_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0500_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0500_1.json"
+    ],
+    "CHNCXR_0500_1_Small_Infiltrate_(non-linear)_3.png": [
+      "Annotations-2/masks/CHNCXR_0500_1_Small_Infiltrate_(non-linear)_3.png",
+      "Annotations/masks/CHNCXR_0500_1_Small_Infiltrate_(non-linear)_3.png"
+    ],
+    "CHNCXR_0501_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0501_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0501_1.json"
+    ],
+    "CHNCXR_0501_1_Linear_Density_2.png": [
+      "Annotations-2/masks/CHNCXR_0501_1_Linear_Density_2.png",
+      "Annotations/masks/CHNCXR_0501_1_Linear_Density_2.png"
+    ],
+    "CHNCXR_0502_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0502_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0502_1.json"
+    ],
+    "CHNCXR_0503_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0503_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0503_1.json"
+    ],
+    "CHNCXR_0503_1_Moderate_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0503_1_Moderate_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0503_1_Moderate_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0504_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0504_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0504_1.json"
+    ],
+    "CHNCXR_0505_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0505_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0505_1.json"
+    ],
+    "CHNCXR_0506_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0506_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0506_1.json"
+    ],
+    "CHNCXR_0507_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0507_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0507_1.json"
+    ],
+    "CHNCXR_0507_1_Single_Nodule_(non-calcified)_3.png": [
+      "Annotations-2/masks/CHNCXR_0507_1_Single_Nodule_(non-calcified)_3.png",
+      "Annotations/masks/CHNCXR_0507_1_Single_Nodule_(non-calcified)_3.png"
+    ],
+    "CHNCXR_0508_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0508_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0508_1.json"
+    ],
+    "CHNCXR_0509_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0509_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0509_1.json"
+    ],
+    "CHNCXR_0510_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0510_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0510_1.json"
+    ],
+    "CHNCXR_0510_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0510_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0510_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0511_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0511_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0511_1.json"
+    ],
+    "CHNCXR_0511_1_Cavity_2.png": [
+      "Annotations-2/masks/CHNCXR_0511_1_Cavity_2.png",
+      "Annotations/masks/CHNCXR_0511_1_Cavity_2.png"
+    ],
+    "CHNCXR_0512_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0512_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0512_1.json"
+    ],
+    "CHNCXR_0513_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0513_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0513_1.json"
+    ],
+    "CHNCXR_0514_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0514_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0514_1.json"
+    ],
+    "CHNCXR_0514_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0514_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0514_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0515_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0515_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0515_1.json"
+    ],
+    "CHNCXR_0516_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0516_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0516_1.json"
+    ],
+    "CHNCXR_0516_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0516_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0516_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0517_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0517_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0517_1.json"
+    ],
+    "CHNCXR_0518_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0518_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0518_1.json"
+    ],
+    "CHNCXR_0519_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0519_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0519_1.json"
+    ],
+    "CHNCXR_0520_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0520_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0520_1.json"
+    ],
+    "CHNCXR_0520_1_Moderate_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0520_1_Moderate_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0520_1_Moderate_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0521_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0521_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0521_1.json"
+    ],
+    "CHNCXR_0522_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0522_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0522_1.json"
+    ],
+    "CHNCXR_0522_1_Clustered_Nodule_(2mm-5mm_apart)_4.png": [
+      "Annotations-2/masks/CHNCXR_0522_1_Clustered_Nodule_(2mm-5mm_apart)_4.png",
+      "Annotations/masks/CHNCXR_0522_1_Clustered_Nodule_(2mm-5mm_apart)_4.png"
+    ],
+    "CHNCXR_0522_1_Moderate_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0522_1_Moderate_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0522_1_Moderate_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0523_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0523_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0523_1.json"
+    ],
+    "CHNCXR_0524_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0524_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0524_1.json"
+    ],
+    "CHNCXR_0525_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0525_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0525_1.json"
+    ],
+    "CHNCXR_0526_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0526_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0526_1.json"
+    ],
+    "CHNCXR_0527_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0527_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0527_1.json"
+    ],
+    "CHNCXR_0528_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0528_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0528_1.json"
+    ],
+    "CHNCXR_0529_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0529_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0529_1.json"
+    ],
+    "CHNCXR_0529_1_Clustered_Nodule_(2mm-5mm_apart)_2.png": [
+      "Annotations-2/masks/CHNCXR_0529_1_Clustered_Nodule_(2mm-5mm_apart)_2.png",
+      "Annotations/masks/CHNCXR_0529_1_Clustered_Nodule_(2mm-5mm_apart)_2.png"
+    ],
+    "CHNCXR_0530_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0530_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0530_1.json"
+    ],
+    "CHNCXR_0531_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0531_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0531_1.json"
+    ],
+    "CHNCXR_0532_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0532_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0532_1.json"
+    ],
+    "CHNCXR_0532_1_Calcified_Nodule_2.png": [
+      "Annotations-2/masks/CHNCXR_0532_1_Calcified_Nodule_2.png",
+      "Annotations/masks/CHNCXR_0532_1_Calcified_Nodule_2.png"
+    ],
+    "CHNCXR_0533_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0533_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0533_1.json"
+    ],
+    "CHNCXR_0533_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0533_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0533_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0534_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0534_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0534_1.json"
+    ],
+    "CHNCXR_0534_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0534_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0534_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0535_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0535_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0535_1.json"
+    ],
+    "CHNCXR_0536_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0536_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0536_1.json"
+    ],
+    "CHNCXR_0537_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0537_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0537_1.json"
+    ],
+    "CHNCXR_0538_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0538_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0538_1.json"
+    ],
+    "CHNCXR_0538_1_Calcified_Nodule_2.png": [
+      "Annotations-2/masks/CHNCXR_0538_1_Calcified_Nodule_2.png",
+      "Annotations/masks/CHNCXR_0538_1_Calcified_Nodule_2.png"
+    ],
+    "CHNCXR_0539_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0539_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0539_1.json"
+    ],
+    "CHNCXR_0539_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0539_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0539_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0540_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0540_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0540_1.json"
+    ],
+    "CHNCXR_0541_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0541_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0541_1.json"
+    ],
+    "CHNCXR_0542_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0542_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0542_1.json"
+    ],
+    "CHNCXR_0543_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0543_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0543_1.json"
+    ],
+    "CHNCXR_0544_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0544_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0544_1.json"
+    ],
+    "CHNCXR_0544_1_Moderate_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0544_1_Moderate_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0544_1_Moderate_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0545_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0545_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0545_1.json"
+    ],
+    "CHNCXR_0545_1_Linear_Density_4.png": [
+      "Annotations-2/masks/CHNCXR_0545_1_Linear_Density_4.png",
+      "Annotations/masks/CHNCXR_0545_1_Linear_Density_4.png"
+    ],
+    "CHNCXR_0546_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0546_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0546_1.json"
+    ],
+    "CHNCXR_0547_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0547_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0547_1.json"
+    ],
+    "CHNCXR_0548_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0548_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0548_1.json"
+    ],
+    "CHNCXR_0548_1_Pleural_Thickening_(non-apical)_1.png": [
+      "Annotations-2/masks/CHNCXR_0548_1_Pleural_Thickening_(non-apical)_1.png",
+      "Annotations/masks/CHNCXR_0548_1_Pleural_Thickening_(non-apical)_1.png"
+    ],
+    "CHNCXR_0549_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0549_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0549_1.json"
+    ],
+    "CHNCXR_0549_1_Single_Nodule_(non-calcified)_4.png": [
+      "Annotations-2/masks/CHNCXR_0549_1_Single_Nodule_(non-calcified)_4.png",
+      "Annotations/masks/CHNCXR_0549_1_Single_Nodule_(non-calcified)_4.png"
+    ],
+    "CHNCXR_0550_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0550_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0550_1.json"
+    ],
+    "CHNCXR_0551_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0551_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0551_1.json"
+    ],
+    "CHNCXR_0551_1_Calcified_Nodule_1.png": [
+      "Annotations-2/masks/CHNCXR_0551_1_Calcified_Nodule_1.png",
+      "Annotations/masks/CHNCXR_0551_1_Calcified_Nodule_1.png"
+    ],
+    "CHNCXR_0552_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0552_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0552_1.json"
+    ],
+    "CHNCXR_0552_1_Pleural_Thickening_(non-apical)_3.png": [
+      "Annotations-2/masks/CHNCXR_0552_1_Pleural_Thickening_(non-apical)_3.png",
+      "Annotations/masks/CHNCXR_0552_1_Pleural_Thickening_(non-apical)_3.png"
+    ],
+    "CHNCXR_0553_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0553_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0553_1.json"
+    ],
+    "CHNCXR_0554_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0554_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0554_1.json"
+    ],
+    "CHNCXR_0554_1_Calcified_Nodule_1.png": [
+      "Annotations-2/masks/CHNCXR_0554_1_Calcified_Nodule_1.png",
+      "Annotations/masks/CHNCXR_0554_1_Calcified_Nodule_1.png"
+    ],
+    "CHNCXR_0555_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0555_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0555_1.json"
+    ],
+    "CHNCXR_0555_1_Clustered_Nodule_(2mm-5mm_apart)_3.png": [
+      "Annotations-2/masks/CHNCXR_0555_1_Clustered_Nodule_(2mm-5mm_apart)_3.png",
+      "Annotations/masks/CHNCXR_0555_1_Clustered_Nodule_(2mm-5mm_apart)_3.png"
+    ],
+    "CHNCXR_0556_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0556_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0556_1.json"
+    ],
+    "CHNCXR_0556_1_Single_Nodule_(non-calcified)_3.png": [
+      "Annotations-2/masks/CHNCXR_0556_1_Single_Nodule_(non-calcified)_3.png",
+      "Annotations/masks/CHNCXR_0556_1_Single_Nodule_(non-calcified)_3.png"
+    ],
+    "CHNCXR_0557_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0557_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0557_1.json"
+    ],
+    "CHNCXR_0557_1_Clustered_Nodule_(2mm-5mm_apart)_2.png": [
+      "Annotations-2/masks/CHNCXR_0557_1_Clustered_Nodule_(2mm-5mm_apart)_2.png",
+      "Annotations/masks/CHNCXR_0557_1_Clustered_Nodule_(2mm-5mm_apart)_2.png"
+    ],
+    "CHNCXR_0558_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0558_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0558_1.json"
+    ],
+    "CHNCXR_0559_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0559_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0559_1.json"
+    ],
+    "CHNCXR_0560_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0560_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0560_1.json"
+    ],
+    "CHNCXR_0561_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0561_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0561_1.json"
+    ],
+    "CHNCXR_0562_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0562_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0562_1.json"
+    ],
+    "CHNCXR_0563_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0563_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0563_1.json"
+    ],
+    "CHNCXR_0564_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0564_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0564_1.json"
+    ],
+    "CHNCXR_0564_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0564_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0564_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0565_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0565_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0565_1.json"
+    ],
+    "CHNCXR_0566_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0566_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0566_1.json"
+    ],
+    "CHNCXR_0566_1_Pleural_Thickening_(non-apical)_2.png": [
+      "Annotations-2/masks/CHNCXR_0566_1_Pleural_Thickening_(non-apical)_2.png",
+      "Annotations/masks/CHNCXR_0566_1_Pleural_Thickening_(non-apical)_2.png"
+    ],
+    "CHNCXR_0567_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0567_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0567_1.json"
+    ],
+    "CHNCXR_0568_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0568_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0568_1.json"
+    ],
+    "CHNCXR_0569_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0569_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0569_1.json"
+    ],
+    "CHNCXR_0569_1_Linear_Density_2.png": [
+      "Annotations-2/masks/CHNCXR_0569_1_Linear_Density_2.png",
+      "Annotations/masks/CHNCXR_0569_1_Linear_Density_2.png"
+    ],
+    "CHNCXR_0570_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0570_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0570_1.json"
+    ],
+    "CHNCXR_0571_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0571_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0571_1.json"
+    ],
+    "CHNCXR_0571_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0571_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0571_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0572_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0572_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0572_1.json"
+    ],
+    "CHNCXR_0573_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0573_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0573_1.json"
+    ],
+    "CHNCXR_0574_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0574_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0574_1.json"
+    ],
+    "CHNCXR_0575_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0575_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0575_1.json"
+    ],
+    "CHNCXR_0576_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0576_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0576_1.json"
+    ],
+    "CHNCXR_0577_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0577_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0577_1.json"
+    ],
+    "CHNCXR_0578_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0578_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0578_1.json"
+    ],
+    "CHNCXR_0579_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0579_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0579_1.json"
+    ],
+    "CHNCXR_0580_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0580_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0580_1.json"
+    ],
+    "CHNCXR_0581_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0581_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0581_1.json"
+    ],
+    "CHNCXR_0582_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0582_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0582_1.json"
+    ],
+    "CHNCXR_0582_1_Linear_Density_2.png": [
+      "Annotations-2/masks/CHNCXR_0582_1_Linear_Density_2.png",
+      "Annotations/masks/CHNCXR_0582_1_Linear_Density_2.png"
+    ],
+    "CHNCXR_0583_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0583_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0583_1.json"
+    ],
+    "CHNCXR_0584_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0584_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0584_1.json"
+    ],
+    "CHNCXR_0585_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0585_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0585_1.json"
+    ],
+    "CHNCXR_0585_1_Linear_Density_2.png": [
+      "Annotations-2/masks/CHNCXR_0585_1_Linear_Density_2.png",
+      "Annotations/masks/CHNCXR_0585_1_Linear_Density_2.png"
+    ],
+    "CHNCXR_0586_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0586_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0586_1.json"
+    ],
+    "CHNCXR_0586_1_Calcified_Nodule_11.png": [
+      "Annotations-2/masks/CHNCXR_0586_1_Calcified_Nodule_11.png",
+      "Annotations/masks/CHNCXR_0586_1_Calcified_Nodule_11.png"
+    ],
+    "CHNCXR_0587_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0587_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0587_1.json"
+    ],
+    "CHNCXR_0588_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0588_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0588_1.json"
+    ],
+    "CHNCXR_0589_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0589_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0589_1.json"
+    ],
+    "CHNCXR_0590_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0590_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0590_1.json"
+    ],
+    "CHNCXR_0591_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0591_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0591_1.json"
+    ],
+    "CHNCXR_0592_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0592_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0592_1.json"
+    ],
+    "CHNCXR_0592_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0592_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0592_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0593_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0593_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0593_1.json"
+    ],
+    "CHNCXR_0594_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0594_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0594_1.json"
+    ],
+    "CHNCXR_0595_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0595_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0595_1.json"
+    ],
+    "CHNCXR_0595_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0595_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0595_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0596_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0596_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0596_1.json"
+    ],
+    "CHNCXR_0597_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0597_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0597_1.json"
+    ],
+    "CHNCXR_0597_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0597_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0597_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0598_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0598_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0598_1.json"
+    ],
+    "CHNCXR_0598_1_Moderate_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0598_1_Moderate_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0598_1_Moderate_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0599_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0599_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0599_1.json"
+    ],
+    "CHNCXR_0600_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0600_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0600_1.json"
+    ],
+    "CHNCXR_0600_1_Miliary_1.png": [
+      "Annotations-2/masks/CHNCXR_0600_1_Miliary_1.png",
+      "Annotations/masks/CHNCXR_0600_1_Miliary_1.png"
+    ],
+    "CHNCXR_0600_1_Miliary_2.png": [
+      "Annotations-2/masks/CHNCXR_0600_1_Miliary_2.png",
+      "Annotations/masks/CHNCXR_0600_1_Miliary_2.png"
+    ],
+    "CHNCXR_0600_1_Moderate_Infiltrate_(non-linear)_3.png": [
+      "Annotations-2/masks/CHNCXR_0600_1_Moderate_Infiltrate_(non-linear)_3.png",
+      "Annotations/masks/CHNCXR_0600_1_Moderate_Infiltrate_(non-linear)_3.png"
+    ],
+    "CHNCXR_0601_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0601_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0601_1.json"
+    ],
+    "CHNCXR_0602_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0602_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0602_1.json"
+    ],
+    "CHNCXR_0602_1_Clustered_Nodule_(2mm-5mm_apart)_3.png": [
+      "Annotations-2/masks/CHNCXR_0602_1_Clustered_Nodule_(2mm-5mm_apart)_3.png",
+      "Annotations/masks/CHNCXR_0602_1_Clustered_Nodule_(2mm-5mm_apart)_3.png"
+    ],
+    "CHNCXR_0603_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0603_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0603_1.json"
+    ],
+    "CHNCXR_0604_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0604_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0604_1.json"
+    ],
+    "CHNCXR_0605_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0605_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0605_1.json"
+    ],
+    "CHNCXR_0606_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0606_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0606_1.json"
+    ],
+    "CHNCXR_0607_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0607_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0607_1.json"
+    ],
+    "CHNCXR_0608_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0608_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0608_1.json"
+    ],
+    "CHNCXR_0609_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0609_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0609_1.json"
+    ],
+    "CHNCXR_0610_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0610_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0610_1.json"
+    ],
+    "CHNCXR_0610_1_Moderate_Infiltrate_(non-linear)_5.png": [
+      "Annotations-2/masks/CHNCXR_0610_1_Moderate_Infiltrate_(non-linear)_5.png",
+      "Annotations/masks/CHNCXR_0610_1_Moderate_Infiltrate_(non-linear)_5.png"
+    ],
+    "CHNCXR_0611_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0611_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0611_1.json"
+    ],
+    "CHNCXR_0612_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0612_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0612_1.json"
+    ],
+    "CHNCXR_0613_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0613_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0613_1.json"
+    ],
+    "CHNCXR_0614_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0614_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0614_1.json"
+    ],
+    "CHNCXR_0615_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0615_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0615_1.json"
+    ],
+    "CHNCXR_0615_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0615_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0615_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0615_1_Clustered_Nodule_(2mm-5mm_apart)_2.png": [
+      "Annotations-2/masks/CHNCXR_0615_1_Clustered_Nodule_(2mm-5mm_apart)_2.png",
+      "Annotations/masks/CHNCXR_0615_1_Clustered_Nodule_(2mm-5mm_apart)_2.png"
+    ],
+    "CHNCXR_0616_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0616_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0616_1.json"
+    ],
+    "CHNCXR_0617_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0617_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0617_1.json"
+    ],
+    "CHNCXR_0617_1_Linear_Density_2.png": [
+      "Annotations-2/masks/CHNCXR_0617_1_Linear_Density_2.png",
+      "Annotations/masks/CHNCXR_0617_1_Linear_Density_2.png"
+    ],
+    "CHNCXR_0618_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0618_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0618_1.json"
+    ],
+    "CHNCXR_0618_1_Small_Infiltrate_(non-linear)_4.png": [
+      "Annotations-2/masks/CHNCXR_0618_1_Small_Infiltrate_(non-linear)_4.png",
+      "Annotations/masks/CHNCXR_0618_1_Small_Infiltrate_(non-linear)_4.png"
+    ],
+    "CHNCXR_0619_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0619_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0619_1.json"
+    ],
+    "CHNCXR_0620_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0620_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0620_1.json"
+    ],
+    "CHNCXR_0620_1_Single_Nodule_(non-calcified)_4.png": [
+      "Annotations-2/masks/CHNCXR_0620_1_Single_Nodule_(non-calcified)_4.png",
+      "Annotations/masks/CHNCXR_0620_1_Single_Nodule_(non-calcified)_4.png"
+    ],
+    "CHNCXR_0620_1_Single_Nodule_(non-calcified)_5.png": [
+      "Annotations-2/masks/CHNCXR_0620_1_Single_Nodule_(non-calcified)_5.png",
+      "Annotations/masks/CHNCXR_0620_1_Single_Nodule_(non-calcified)_5.png"
+    ],
+    "CHNCXR_0620_1_Single_Nodule_(non-calcified)_8.png": [
+      "Annotations-2/masks/CHNCXR_0620_1_Single_Nodule_(non-calcified)_8.png",
+      "Annotations/masks/CHNCXR_0620_1_Single_Nodule_(non-calcified)_8.png"
+    ],
+    "CHNCXR_0621_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0621_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0621_1.json"
+    ],
+    "CHNCXR_0622_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0622_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0622_1.json"
+    ],
+    "CHNCXR_0622_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0622_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0622_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0623_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0623_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0623_1.json"
+    ],
+    "CHNCXR_0623_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0623_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0623_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0624_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0624_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0624_1.json"
+    ],
+    "CHNCXR_0625_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0625_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0625_1.json"
+    ],
+    "CHNCXR_0626_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0626_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0626_1.json"
+    ],
+    "CHNCXR_0627_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0627_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0627_1.json"
+    ],
+    "CHNCXR_0627_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0627_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0627_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0628_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0628_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0628_1.json"
+    ],
+    "CHNCXR_0629_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0629_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0629_1.json"
+    ],
+    "CHNCXR_0629_1_Moderate_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0629_1_Moderate_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0629_1_Moderate_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0629_1_Moderate_Infiltrate_(non-linear)_3.png": [
+      "Annotations-2/masks/CHNCXR_0629_1_Moderate_Infiltrate_(non-linear)_3.png",
+      "Annotations/masks/CHNCXR_0629_1_Moderate_Infiltrate_(non-linear)_3.png"
+    ],
+    "CHNCXR_0630_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0630_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0630_1.json"
+    ],
+    "CHNCXR_0630_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0630_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0630_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0630_1_Small_Infiltrate_(non-linear)_5.png": [
+      "Annotations-2/masks/CHNCXR_0630_1_Small_Infiltrate_(non-linear)_5.png",
+      "Annotations/masks/CHNCXR_0630_1_Small_Infiltrate_(non-linear)_5.png"
+    ],
+    "CHNCXR_0631_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0631_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0631_1.json"
+    ],
+    "CHNCXR_0632_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0632_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0632_1.json"
+    ],
+    "CHNCXR_0632_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0632_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0632_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0632_1_Single_Nodule_(non-calcified)_2.png": [
+      "Annotations-2/masks/CHNCXR_0632_1_Single_Nodule_(non-calcified)_2.png",
+      "Annotations/masks/CHNCXR_0632_1_Single_Nodule_(non-calcified)_2.png"
+    ],
+    "CHNCXR_0633_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0633_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0633_1.json"
+    ],
+    "CHNCXR_0634_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0634_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0634_1.json"
+    ],
+    "CHNCXR_0634_1_Clustered_Nodule_(2mm-5mm_apart)_1.png": [
+      "Annotations-2/masks/CHNCXR_0634_1_Clustered_Nodule_(2mm-5mm_apart)_1.png",
+      "Annotations/masks/CHNCXR_0634_1_Clustered_Nodule_(2mm-5mm_apart)_1.png"
+    ],
+    "CHNCXR_0635_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0635_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0635_1.json"
+    ],
+    "CHNCXR_0635_1_Severe_Infiltrate_(Consolidation)_1.png": [
+      "Annotations-2/masks/CHNCXR_0635_1_Severe_Infiltrate_(Consolidation)_1.png",
+      "Annotations/masks/CHNCXR_0635_1_Severe_Infiltrate_(Consolidation)_1.png"
+    ],
+    "CHNCXR_0636_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0636_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0636_1.json"
+    ],
+    "CHNCXR_0636_1_Calcified_Nodule_2.png": [
+      "Annotations-2/masks/CHNCXR_0636_1_Calcified_Nodule_2.png",
+      "Annotations/masks/CHNCXR_0636_1_Calcified_Nodule_2.png"
+    ],
+    "CHNCXR_0636_1_Calcified_Nodule_3.png": [
+      "Annotations-2/masks/CHNCXR_0636_1_Calcified_Nodule_3.png",
+      "Annotations/masks/CHNCXR_0636_1_Calcified_Nodule_3.png"
+    ],
+    "CHNCXR_0636_1_Calcified_Nodule_4.png": [
+      "Annotations-2/masks/CHNCXR_0636_1_Calcified_Nodule_4.png",
+      "Annotations/masks/CHNCXR_0636_1_Calcified_Nodule_4.png"
+    ],
+    "CHNCXR_0637_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0637_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0637_1.json"
+    ],
+    "CHNCXR_0638_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0638_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0638_1.json"
+    ],
+    "CHNCXR_0639_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0639_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0639_1.json"
+    ],
+    "CHNCXR_0640_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0640_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0640_1.json"
+    ],
+    "CHNCXR_0640_1_Calcified_Nodule_3.png": [
+      "Annotations-2/masks/CHNCXR_0640_1_Calcified_Nodule_3.png",
+      "Annotations/masks/CHNCXR_0640_1_Calcified_Nodule_3.png"
+    ],
+    "CHNCXR_0641_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0641_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0641_1.json"
+    ],
+    "CHNCXR_0641_1_Calcified_Nodule_1.png": [
+      "Annotations-2/masks/CHNCXR_0641_1_Calcified_Nodule_1.png",
+      "Annotations/masks/CHNCXR_0641_1_Calcified_Nodule_1.png"
+    ],
+    "CHNCXR_0642_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0642_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0642_1.json"
+    ],
+    "CHNCXR_0643_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0643_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0643_1.json"
+    ],
+    "CHNCXR_0644_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0644_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0644_1.json"
+    ],
+    "CHNCXR_0645_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0645_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0645_1.json"
+    ],
+    "CHNCXR_0645_1_Small_Infiltrate_(non-linear)_2.png": [
+      "Annotations-2/masks/CHNCXR_0645_1_Small_Infiltrate_(non-linear)_2.png",
+      "Annotations/masks/CHNCXR_0645_1_Small_Infiltrate_(non-linear)_2.png"
+    ],
+    "CHNCXR_0646_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0646_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0646_1.json"
+    ],
+    "CHNCXR_0647_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0647_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0647_1.json"
+    ],
+    "CHNCXR_0647_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0647_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0647_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0648_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0648_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0648_1.json"
+    ],
+    "CHNCXR_0648_1_Cavity_1.png": [
+      "Annotations-2/masks/CHNCXR_0648_1_Cavity_1.png",
+      "Annotations/masks/CHNCXR_0648_1_Cavity_1.png"
+    ],
+    "CHNCXR_0648_1_Cavity_2.png": [
+      "Annotations-2/masks/CHNCXR_0648_1_Cavity_2.png",
+      "Annotations/masks/CHNCXR_0648_1_Cavity_2.png"
+    ],
+    "CHNCXR_0649_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0649_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0649_1.json"
+    ],
+    "CHNCXR_0650_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0650_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0650_1.json"
+    ],
+    "CHNCXR_0650_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0650_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0650_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0651_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0651_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0651_1.json"
+    ],
+    "CHNCXR_0651_1_Single_Nodule_(non-calcified)_1.png": [
+      "Annotations-2/masks/CHNCXR_0651_1_Single_Nodule_(non-calcified)_1.png",
+      "Annotations/masks/CHNCXR_0651_1_Single_Nodule_(non-calcified)_1.png"
+    ],
+    "CHNCXR_0652_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0652_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0652_1.json"
+    ],
+    "CHNCXR_0652_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0652_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0652_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0653_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0653_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0653_1.json"
+    ],
+    "CHNCXR_0654_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0654_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0654_1.json"
+    ],
+    "CHNCXR_0654_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0654_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0654_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "CHNCXR_0655_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0655_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0655_1.json"
+    ],
+    "CHNCXR_0656_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0656_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0656_1.json"
+    ],
+    "CHNCXR_0656_1_Severe_Infiltrate_(Consolidation)_1.png": [
+      "Annotations-2/masks/CHNCXR_0656_1_Severe_Infiltrate_(Consolidation)_1.png",
+      "Annotations/masks/CHNCXR_0656_1_Severe_Infiltrate_(Consolidation)_1.png"
+    ],
+    "CHNCXR_0657_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0657_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0657_1.json"
+    ],
+    "CHNCXR_0658_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0658_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0658_1.json"
+    ],
+    "CHNCXR_0659_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0659_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0659_1.json"
+    ],
+    "CHNCXR_0660_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0660_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0660_1.json"
+    ],
+    "CHNCXR_0660_1_Small_Infiltrate_(non-linear)_3.png": [
+      "Annotations-2/masks/CHNCXR_0660_1_Small_Infiltrate_(non-linear)_3.png",
+      "Annotations/masks/CHNCXR_0660_1_Small_Infiltrate_(non-linear)_3.png"
+    ],
+    "CHNCXR_0661_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0661_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0661_1.json"
+    ],
+    "CHNCXR_0661_1_Pleural_Effusion_4.png": [
+      "Annotations-2/masks/CHNCXR_0661_1_Pleural_Effusion_4.png",
+      "Annotations/masks/CHNCXR_0661_1_Pleural_Effusion_4.png"
+    ],
+    "CHNCXR_0662_1.json": [
+      "Annotations-2/Annotations_json/SeparateFiles/CHNCXR_0662_1.json",
+      "Annotations/Annotations_json/SeparateFiles/CHNCXR_0662_1.json"
+    ],
+    "CHNCXR_0662_1_Small_Infiltrate_(non-linear)_1.png": [
+      "Annotations-2/masks/CHNCXR_0662_1_Small_Infiltrate_(non-linear)_1.png",
+      "Annotations/masks/CHNCXR_0662_1_Small_Infiltrate_(non-linear)_1.png"
+    ],
+    "Readme.docx": [
+      "Annotations/Readme.docx",
+      "Annotations-2/Readme.docx"
+    ]
+  },
+  "exact_duplicate_groups": [],
+  "global_observed_max": 255,
+  "global_observed_min": 0,
+  "image_count": 662,
+  "image_formats": {
+    ".png": 662
+  },
+  "label_counts": {
+    "abnormal_tb_consistent": 336,
+    "normal": 326
+  },
+  "modes": {
+    "P": 635,
+    "RGB": 27
+  },
+  "near_duplicate_candidates": [],
+  "near_duplicate_method": "256-bit difference hash on grayscale 17x16 thumbnail; candidates have Hamming distance <= 8 and require human review",
+  "patient_group_ids_available": false,
+  "raw_bytes": 3798829017,
+  "raw_exact_duplicate_groups": [
+    {
+      "checksum_sha256": "0235eb1898b7b22ecedc95fe281dc7ee3ed3314033f83d2ccaa0d68f6728aca0",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0474_1.txt",
+        "ClinicalReadings/CHNCXR_0502_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "0268f3fecd959e601c178effcf8c4c12f3d23301731b5db91cbe06ad1278373e",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0384_1.txt",
+        "ClinicalReadings/CHNCXR_0406_1.txt",
+        "ClinicalReadings/CHNCXR_0594_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "0bdadc63de42cc65ce6d7be98fbe432458db84a897c9932f26899bb94f927c92",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0043_0.txt",
+        "ClinicalReadings/CHNCXR_0320_0.txt",
+        "ClinicalReadings/CHNCXR_0322_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "0f125fa6415420c872d0db1f0d7a396748127043218bb0ea2f2e122650b0c308",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0451_1.txt",
+        "ClinicalReadings/CHNCXR_0473_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "103dbc31798a4a53c31841ec115fa51556184c905f08cfca822e24125cf069f2",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0099_0.txt",
+        "ClinicalReadings/CHNCXR_0118_0.txt",
+        "ClinicalReadings/CHNCXR_0172_0.txt",
+        "ClinicalReadings/CHNCXR_0199_0.txt",
+        "ClinicalReadings/CHNCXR_0244_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "10fb75772811c0f3814827ec51305269f1e1d6c98d92e55d7b1f621b5261de34",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0109_0.txt",
+        "ClinicalReadings/CHNCXR_0289_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "11c499cd5448ac778d59c0ce4ef07ad69457e5a67269ebfe1b50eb8dc5969889",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0256_0.txt",
+        "ClinicalReadings/CHNCXR_0299_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "12488e86cac89529212b0acb58aeacca63153d61b4d340621fca29b95f6f0b41",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0132_0.txt",
+        "ClinicalReadings/CHNCXR_0319_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "193a59ae8207462fcbeab3eaf88334d884b931e32e076c63fc4cde271fe420e9",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0477_1.txt",
+        "ClinicalReadings/CHNCXR_0605_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "1b3258c60d27302819331837c7e615cd0780f05ebff8c86ebd40afe53ec02769",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0039_0.txt",
+        "ClinicalReadings/CHNCXR_0101_0.txt",
+        "ClinicalReadings/CHNCXR_0162_0.txt",
+        "ClinicalReadings/CHNCXR_0187_0.txt",
+        "ClinicalReadings/CHNCXR_0194_0.txt",
+        "ClinicalReadings/CHNCXR_0232_0.txt",
+        "ClinicalReadings/CHNCXR_0234_0.txt",
+        "ClinicalReadings/CHNCXR_0245_0.txt",
+        "ClinicalReadings/CHNCXR_0266_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "1f8de911a171f9090655954c72c73639325dbf1918eab6b02db459ddbb49bb9a",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0372_1.txt",
+        "ClinicalReadings/CHNCXR_0621_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "22cf8801eba837261f804264e5522331dfbbff640b013f22b443c3969ae20faf",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0433_1.txt",
+        "ClinicalReadings/CHNCXR_0505_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "256709b30d970a7abc2fa5e7f4a267f29a7eedc891ee079681a37743a15c1c7c",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0147_0.txt",
+        "ClinicalReadings/CHNCXR_0170_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "2cfb6e35917b4996982f23d4b77c4ef0264e590494a65f375bc00101a1164387",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0037_0.txt",
+        "ClinicalReadings/CHNCXR_0137_0.txt",
+        "ClinicalReadings/CHNCXR_0148_0.txt",
+        "ClinicalReadings/CHNCXR_0192_0.txt",
+        "ClinicalReadings/CHNCXR_0200_0.txt",
+        "ClinicalReadings/CHNCXR_0204_0.txt",
+        "ClinicalReadings/CHNCXR_0218_0.txt",
+        "ClinicalReadings/CHNCXR_0236_0.txt",
+        "ClinicalReadings/CHNCXR_0305_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "2db9ccd5233999bdaabc37ac2cb0636ddaffd910c306395c63c786bf730f65c0",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0493_1.txt",
+        "ClinicalReadings/CHNCXR_0558_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "307842ed908174b55ce6f514ee029c454a3525bea49c4e7ddac760f1ae342162",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0097_0.txt",
+        "ClinicalReadings/CHNCXR_0208_0.txt",
+        "ClinicalReadings/CHNCXR_0294_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "3411701c59b58aaf505458e6bca5294b20ff9444500c19755ccacd91601592cf",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0491_1.txt",
+        "ClinicalReadings/CHNCXR_0602_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "3566650b19ba98d4cb069acd7f675d32cbe9a0fb94faa74eedf789b506ced4f7",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0123_0.txt",
+        "ClinicalReadings/CHNCXR_0176_0.txt",
+        "ClinicalReadings/CHNCXR_0274_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "366fd385a1beccdf8cbd72875f3bc23138f6029f616025817cd8f5bc4fd9610f",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0079_0.txt",
+        "ClinicalReadings/CHNCXR_0088_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "3aa7a451e7827964081b387e61c38c50cdbb2be0e10264c5651033846c616112",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0560_1.txt",
+        "ClinicalReadings/CHNCXR_0573_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "3d4af6d552c96e39ae3650059bf00bd695901a437c36ed16293e43658593b343",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0080_0.txt",
+        "ClinicalReadings/CHNCXR_0089_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "3dd163d8a4b9ae2582432ad0d6705d70f72e2d2d12b9550f3184e405def904d8",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0167_0.txt",
+        "ClinicalReadings/CHNCXR_0277_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "41c914a56354d4694cdf35b6f6c61017d2b256b74644c2098ed4a882df4f313f",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0375_1.txt",
+        "ClinicalReadings/CHNCXR_0587_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "42105636fbfafd61e495e6a1222d941c77e4187d78e3d54e7f13050ce6125ee4",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0358_1.txt",
+        "ClinicalReadings/CHNCXR_0412_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "474f6c24e2d9b3d3e4ae7b6bb780e3791a0846e21670ef0a1f699f7bfdc77cdf",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0580_1.txt",
+        "ClinicalReadings/CHNCXR_0581_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "476da1169bc61a6dcbc7ff61714f4271de4551c6b4e70fe001db9188a84b35c0",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0068_0.txt",
+        "ClinicalReadings/CHNCXR_0078_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "4a0bd6a1ab511d0f38a3479bb6c5c55245ccea5ed5864b52d967d1b8e11a7348",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0111_0.txt",
+        "ClinicalReadings/CHNCXR_0185_0.txt",
+        "ClinicalReadings/CHNCXR_0186_0.txt",
+        "ClinicalReadings/CHNCXR_0230_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "4ca95b868bb2fe0db039d66c29d56c6fdb2be3d2f245d04893534238f7cc000e",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0415_1.txt",
+        "ClinicalReadings/CHNCXR_0541_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "4d83679af9b2adbafb1d3e79c4c8e75f7d654f313a3019cffb259b9baa27262f",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0020_0.txt",
+        "ClinicalReadings/CHNCXR_0023_0.txt",
+        "ClinicalReadings/CHNCXR_0041_0.txt",
+        "ClinicalReadings/CHNCXR_0183_0.txt",
+        "ClinicalReadings/CHNCXR_0212_0.txt",
+        "ClinicalReadings/CHNCXR_0275_0.txt",
+        "ClinicalReadings/CHNCXR_0308_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "5115f32dc0c7c4641c7d2772c966f3f80dccd97b722455d5c6cd88dd7b0b16b1",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0153_0.txt",
+        "ClinicalReadings/CHNCXR_0291_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "5174791cc81658c26534d38f1ced7ac826ea4637c5c5ac3dd349aeec8627914c",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0184_0.txt",
+        "ClinicalReadings/CHNCXR_0242_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "55460f22082b3763233c0fa33303fcbc40a63c61fcb3a558f8d7d4e28016903e",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0164_0.txt",
+        "ClinicalReadings/CHNCXR_0254_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "56441825afef6c9dda9f96bb301b8333816315c1aee822b9f3adcb72fbc7822a",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0382_1.txt",
+        "ClinicalReadings/CHNCXR_0522_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "575e03083c3eaa8f2b3e3fe3be8bac333dc50864a76ead7dab5fbfbb3488226d",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0064_0.txt",
+        "ClinicalReadings/CHNCXR_0066_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "5bd80fb79ccb40cfa5b74dcfe0a1147a670a93cd7ca0dc9eb94300ef83f7076c",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0077_0.txt",
+        "ClinicalReadings/CHNCXR_0087_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "5dff4846daae00fcf43f5b4b533ee50422f0a1032f7f27a4914e1988b19cb6b9",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0191_0.txt",
+        "ClinicalReadings/CHNCXR_0219_0.txt",
+        "ClinicalReadings/CHNCXR_0231_0.txt",
+        "ClinicalReadings/CHNCXR_0255_0.txt",
+        "ClinicalReadings/CHNCXR_0268_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "5e3ea9998abf3484828acc3221f92f0202e0244adcdea4eb012a034461fabe7f",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0016_0.txt",
+        "ClinicalReadings/CHNCXR_0027_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "6114bfe245488b9ef2d6e0a2273be25713c278a91166a1b7993275ad01859721",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0017_0.txt",
+        "ClinicalReadings/CHNCXR_0246_0.txt",
+        "ClinicalReadings/CHNCXR_0250_0.txt",
+        "ClinicalReadings/CHNCXR_0285_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "63a9020ca9a78ebfb973ffec3de42c170306c9a4c55ba89eb87aeeff6da55c56",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0012_0.txt",
+        "ClinicalReadings/CHNCXR_0014_0.txt",
+        "ClinicalReadings/CHNCXR_0028_0.txt",
+        "ClinicalReadings/CHNCXR_0165_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "64801af00ced4a51f8c6ec0de00404b24ad75bb8f6803be3f12aa19035fe7c00",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0519_1.txt",
+        "ClinicalReadings/CHNCXR_0604_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "64e60e0582f9ccb2dc6574a7c443cdca337ad7fc7fd67affba16e8b2c5c0ce28",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0005_0.txt",
+        "ClinicalReadings/CHNCXR_0128_0.txt",
+        "ClinicalReadings/CHNCXR_0133_0.txt",
+        "ClinicalReadings/CHNCXR_0163_0.txt",
+        "ClinicalReadings/CHNCXR_0173_0.txt",
+        "ClinicalReadings/CHNCXR_0270_0.txt",
+        "ClinicalReadings/CHNCXR_0281_0.txt",
+        "ClinicalReadings/CHNCXR_0288_0.txt",
+        "ClinicalReadings/CHNCXR_0323_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "673e0635c62e1255ad36fb2725c5db1df5528beea1667ea992bb0da9f244b56d",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0182_0.txt",
+        "ClinicalReadings/CHNCXR_0298_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "6806a41c8375f0019ce28d6a94bebc06367fbd0ad1893c7021243ea44014eb5d",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0033_0.txt",
+        "ClinicalReadings/CHNCXR_0124_0.txt",
+        "ClinicalReadings/CHNCXR_0190_0.txt",
+        "ClinicalReadings/CHNCXR_0237_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "68afc38428508a9813b9c7856f1fc2f625b7e97b7b3989b94599b33b0339d7ec",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0008_0.txt",
+        "ClinicalReadings/CHNCXR_0117_0.txt",
+        "ClinicalReadings/CHNCXR_0276_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "6b26bbaf80cfcecf08e576a2e4d0e11aae8b3b29e94d2757275c76b7be15b86e",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0456_1.txt",
+        "ClinicalReadings/CHNCXR_0514_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "6befa362c3489addfe8ff4430e294d5ad5905ba11acb38a06f0ca36b3ba30437",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0036_0.txt",
+        "ClinicalReadings/CHNCXR_0106_0.txt",
+        "ClinicalReadings/CHNCXR_0130_0.txt",
+        "ClinicalReadings/CHNCXR_0195_0.txt",
+        "ClinicalReadings/CHNCXR_0196_0.txt",
+        "ClinicalReadings/CHNCXR_0198_0.txt",
+        "ClinicalReadings/CHNCXR_0240_0.txt",
+        "ClinicalReadings/CHNCXR_0271_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "71ac1eb28d94880f9b0e432854c4d2e82d728cd7ad1f63fa43e7531f683fcca5",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0011_0.txt",
+        "ClinicalReadings/CHNCXR_0029_0.txt",
+        "ClinicalReadings/CHNCXR_0104_0.txt",
+        "ClinicalReadings/CHNCXR_0213_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "71eccd1049d727b9aafc17eade4fa719e10d22481362448ec7858f4ca3f8b913",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0578_1.txt",
+        "ClinicalReadings/CHNCXR_0583_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "726a7f93639ee913d2bd5b1f7d7ff775e959e1383843e41fc856f763c09f0b9d",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0013_0.txt",
+        "ClinicalReadings/CHNCXR_0233_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "7399f6f018a2b17135fbda4b6415af6a3858ca6da74b12c37227f55de6abd03c",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0094_0.txt",
+        "ClinicalReadings/CHNCXR_0127_0.txt",
+        "ClinicalReadings/CHNCXR_0152_0.txt",
+        "ClinicalReadings/CHNCXR_0193_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "78703e04669d50587fb2a63e9a15b5405b2d5bea008589b0bf17ae683525017d",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0143_0.txt",
+        "ClinicalReadings/CHNCXR_0312_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "79f2d1850a847bf8f72c51ee7389c8bc4235f74892442c3fd692e5720218ead5",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0524_1.txt",
+        "ClinicalReadings/CHNCXR_0576_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "7aba433578b54fab1544f45e9dba1541d8b71a1e3e963a819513dead3473a850",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0523_1.txt",
+        "ClinicalReadings/CHNCXR_0526_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "7c601d4ec0a7bbad660a9985a90670aa11b3feaeaacfeef90db29db0d0c78e90",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0469_1.txt",
+        "ClinicalReadings/CHNCXR_0500_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "7d383e34afae2f7b8af14a195646f6b4073c022821c353d3759bbda177944385",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0144_0.txt",
+        "ClinicalReadings/CHNCXR_0154_0.txt",
+        "ClinicalReadings/CHNCXR_0214_0.txt",
+        "ClinicalReadings/CHNCXR_0249_0.txt",
+        "ClinicalReadings/CHNCXR_0269_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "7f216cc4aef94382e0dcf6e89c19cabd56185f448a50fbafccc99a687f5ffa6f",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0516_1.txt",
+        "ClinicalReadings/CHNCXR_0620_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "812507ae00408cd0346ca7f34bb3a52695e61872b421acc1f01843ff49ef0905",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0197_0.txt",
+        "ClinicalReadings/CHNCXR_0262_0.txt",
+        "ClinicalReadings/CHNCXR_0293_0.txt",
+        "ClinicalReadings/CHNCXR_0300_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "878c488b51f3a498559e0686ae2d9702a2271ca4595df179758d47d27eb17eae",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0205_0.txt",
+        "ClinicalReadings/CHNCXR_0228_0.txt",
+        "ClinicalReadings/CHNCXR_0297_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "87f37ffe32ed9aeeefbf66e8c8443c89fa2bda2808514f18d4799df6434765e7",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0102_0.txt",
+        "ClinicalReadings/CHNCXR_0103_0.txt",
+        "ClinicalReadings/CHNCXR_0261_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "88a8889e520b41e4187adbc67a801cb769f2bb5a72e07062bb2b8e20429efb2b",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0247_0.txt",
+        "ClinicalReadings/CHNCXR_0296_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "898b390dc55b024175eb048df24e385769db3d5adc831363fc813b05404663af",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0582_1.txt",
+        "ClinicalReadings/CHNCXR_0637_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "8a2957e444e00760fac1d8e87bd5e9153e55ef0077e82e274950197c9fc58b3c",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0166_0.txt",
+        "ClinicalReadings/CHNCXR_0235_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "8b675896d002f65170471b7ea05ca5ac7d0c2d50e8f91076f29b2f3131cc3494",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0206_0.txt",
+        "ClinicalReadings/CHNCXR_0303_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "8c3b322f9c190123b0af881d3ce0dd7ff0948026c3df3960f461146627a55497",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0472_1.txt",
+        "ClinicalReadings/CHNCXR_0559_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "8f98e1698a3d6c5f35ef8ac9c18cc52929cefa4723ee07ee3547c505fa9e0692",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0010_0.txt",
+        "ClinicalReadings/CHNCXR_0035_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "917f4f7b8ed448e0f827561a8c7e282b475392c366d923fc16c936f56568ece5",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0120_0.txt",
+        "ClinicalReadings/CHNCXR_0131_0.txt",
+        "ClinicalReadings/CHNCXR_0171_0.txt",
+        "ClinicalReadings/CHNCXR_0177_0.txt",
+        "ClinicalReadings/CHNCXR_0304_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "954af80fc707ad92187c46a06f1eaaff7d55d2d5898528a93515c17fec2e3580",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0015_0.txt",
+        "ClinicalReadings/CHNCXR_0217_0.txt",
+        "ClinicalReadings/CHNCXR_0292_0.txt",
+        "ClinicalReadings/CHNCXR_0302_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "9d45305bbda1aa52a2fd84d1afc3dbfbc96741b273b9006bdbad4611a38197cd",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0356_1.txt",
+        "ClinicalReadings/CHNCXR_0606_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "a22397bc25b4a763f9eed31158944589db88ba17892c3f1c19cd751dccb9be9e",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0049_0.txt",
+        "ClinicalReadings/CHNCXR_0052_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "a3d29077f3121681527d0cc31d28dd5e5c4f2b27b95c9f79a89dc387bdbafd78",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0390_1.txt",
+        "ClinicalReadings/CHNCXR_0499_1.txt",
+        "ClinicalReadings/CHNCXR_0503_1.txt",
+        "ClinicalReadings/CHNCXR_0509_1.txt",
+        "ClinicalReadings/CHNCXR_0551_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "a6c6c3b09cbf15dbd0bb224adf367882c428ceb02a672f7ed6501c28d800db26",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0129_0.txt",
+        "ClinicalReadings/CHNCXR_0181_0.txt",
+        "ClinicalReadings/CHNCXR_0316_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "a82f505fa6fb21544310bb67f0d801feaf663ffedcfa453238d69ec4ec48c1d4",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0414_1.txt",
+        "ClinicalReadings/CHNCXR_0445_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "a9e4bab7ba1b1d506f213dd480da3d6c9cb441c91e82197de5015896eaf47c7c",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0397_1.txt",
+        "ClinicalReadings/CHNCXR_0614_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "aa4f8eef25b937c58442faad8b0ae4386e0e52370366f077b8f5b1139c70b86e",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0508_1.txt",
+        "ClinicalReadings/CHNCXR_0511_1.txt",
+        "ClinicalReadings/CHNCXR_0561_1.txt",
+        "ClinicalReadings/CHNCXR_0569_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "adf20fb8dda4bddb726b0c7a1bbf2b6712ad242188b39ab67775660719073548",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0114_0.txt",
+        "ClinicalReadings/CHNCXR_0119_0.txt",
+        "ClinicalReadings/CHNCXR_0135_0.txt",
+        "ClinicalReadings/CHNCXR_0223_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "b254aa3769d4dd223f07ae945e76234776a95d5a6b529a8b24f40ded8980944f",
+      "paths": [
+        "Annotations-2/masks/CHNCXR_0379_1_Linear_Density_3.png",
+        "Annotations-2/masks/CHNCXR_0379_1_Linear_Density_4.png"
+      ]
+    },
+    {
+      "checksum_sha256": "b2b1c0f3d6c0eafa5140beeadad76f728f96dc3fcf3f62e8a48420df5093c0a2",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0113_0.txt",
+        "ClinicalReadings/CHNCXR_0125_0.txt",
+        "ClinicalReadings/CHNCXR_0136_0.txt",
+        "ClinicalReadings/CHNCXR_0225_0.txt",
+        "ClinicalReadings/CHNCXR_0239_0.txt",
+        "ClinicalReadings/CHNCXR_0258_0.txt",
+        "ClinicalReadings/CHNCXR_0314_0.txt",
+        "ClinicalReadings/CHNCXR_0315_0.txt",
+        "ClinicalReadings/CHNCXR_0317_0.txt",
+        "ClinicalReadings/CHNCXR_0321_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "b594342f7386c957c9d0485606f8b29eb033c3e2e91f6ea50f8c827cc33651a0",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0407_1.txt",
+        "ClinicalReadings/CHNCXR_0536_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "b77fe8f66cda5c3ebedc0f79c4ee17e63cc09a64ae1d05423137e672772524b9",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0007_0.txt",
+        "ClinicalReadings/CHNCXR_0032_0.txt",
+        "ClinicalReadings/CHNCXR_0267_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "b783f2bef0d116591fc6b8b8d990dbf1c2a6b5f1d774f0cc2f1a61a5985afa93",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0081_0.txt",
+        "ClinicalReadings/CHNCXR_0083_0.txt",
+        "ClinicalReadings/CHNCXR_0092_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "b94ed5fd8c5ad8374ebc88d8d39d26ac2e9fa55774b434b70f78934d21c2f317",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0355_1.txt",
+        "ClinicalReadings/CHNCXR_0565_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "bbdef47590db334c289c7e4ef67094748426b30e8a09fae7be49258867f23afb",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0364_1.txt",
+        "ClinicalReadings/CHNCXR_0547_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "c40537dde3918c999f2aad176501a4e4ce805e9f721ff4a51ae4a218a99a8f9b",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0001_0.txt",
+        "ClinicalReadings/CHNCXR_0145_0.txt",
+        "ClinicalReadings/CHNCXR_0150_0.txt",
+        "ClinicalReadings/CHNCXR_0220_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "c6f0dc28b2fe7f3a3d46e06c3310e261f3b0406cba0ad817843bb89841778110",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0510_1.txt",
+        "ClinicalReadings/CHNCXR_0528_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "cbd82aaaa1b78594516cb27bef5b436ebf3ca0f3c4927ef3ef15c941c230606f",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0031_0.txt",
+        "ClinicalReadings/CHNCXR_0264_0.txt",
+        "ClinicalReadings/CHNCXR_0309_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "d5f7ab4a454c76a1e63ac0c20a18aa9769b2a61dcfa1d526fd8b165117f76718",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0021_0.txt",
+        "ClinicalReadings/CHNCXR_0307_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "d955e8b3140e19de036f7e227d0bb7c741a46ca9c599d3a13da40a618fff4f87",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0024_0.txt",
+        "ClinicalReadings/CHNCXR_0105_0.txt",
+        "ClinicalReadings/CHNCXR_0108_0.txt",
+        "ClinicalReadings/CHNCXR_0142_0.txt",
+        "ClinicalReadings/CHNCXR_0179_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "d9f18e7075b894f2ba8387c7e3e6a1b48558204b5d235d082aff4966821c9e98",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0100_0.txt",
+        "ClinicalReadings/CHNCXR_0188_0.txt",
+        "ClinicalReadings/CHNCXR_0203_0.txt",
+        "ClinicalReadings/CHNCXR_0207_0.txt",
+        "ClinicalReadings/CHNCXR_0209_0.txt",
+        "ClinicalReadings/CHNCXR_0222_0.txt",
+        "ClinicalReadings/CHNCXR_0224_0.txt",
+        "ClinicalReadings/CHNCXR_0226_0.txt",
+        "ClinicalReadings/CHNCXR_0252_0.txt",
+        "ClinicalReadings/CHNCXR_0283_0.txt",
+        "ClinicalReadings/CHNCXR_0318_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "e045131f28833b9aac6229cb7b4623062ad1be41258809e44114af6f3bf3aa55",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0107_0.txt",
+        "ClinicalReadings/CHNCXR_0141_0.txt",
+        "ClinicalReadings/CHNCXR_0158_0.txt",
+        "ClinicalReadings/CHNCXR_0180_0.txt",
+        "ClinicalReadings/CHNCXR_0310_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "e16b457f165af790c8e79a68bd2f983e371ffaf44dce7764bbe42f2637d3acce",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0115_0.txt",
+        "ClinicalReadings/CHNCXR_0201_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "e19ac7df800dc3626e7f54704b53591165fabefad51220851541f02a2c7b1438",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0019_0.txt",
+        "ClinicalReadings/CHNCXR_0038_0.txt",
+        "ClinicalReadings/CHNCXR_0168_0.txt",
+        "ClinicalReadings/CHNCXR_0210_0.txt",
+        "ClinicalReadings/CHNCXR_0211_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "e597bfbaa596021a45cc45c2eee4fface39755d644ff118b5407078f7eca52c0",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0025_0.txt",
+        "ClinicalReadings/CHNCXR_0026_0.txt",
+        "ClinicalReadings/CHNCXR_0221_0.txt",
+        "ClinicalReadings/CHNCXR_0280_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "e7f77a2705c5f0e77d7156ee2f91baeecd505ce703e0ead4d7ccfd1dcca0c66c",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0461_1.txt",
+        "ClinicalReadings/CHNCXR_0485_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "f3228a44ff5a1890c24e6f572421bcf1701e90735ef2aa36c0df33b51b711205",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0110_0.txt",
+        "ClinicalReadings/CHNCXR_0238_0.txt",
+        "ClinicalReadings/CHNCXR_0257_0.txt",
+        "ClinicalReadings/CHNCXR_0290_0.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "f4c3b69d7df089599c94a57bc0d7d17163b7038fd485f2e09673e00165f2edc4",
+      "paths": [
+        "Annotations-2/masks/CHNCXR_0556_1_Single_Nodule_(non-calcified)_5.png",
+        "Annotations-2/masks/CHNCXR_0556_1_Single_Nodule_(non-calcified)_6.png"
+      ]
+    },
+    {
+      "checksum_sha256": "f84f067c51b186a894ee053a953bd782af25606bd50c04e00f19cf9782afb553",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0413_1.txt",
+        "ClinicalReadings/CHNCXR_0611_1.txt"
+      ]
+    },
+    {
+      "checksum_sha256": "fe2f4b24c2de440303bf0a439a21e4ec9925ad83c8737b4deed150c551f238b9",
+      "paths": [
+        "ClinicalReadings/CHNCXR_0048_0.txt",
+        "ClinicalReadings/CHNCXR_0061_0.txt"
+      ]
+    }
+  ],
+  "raw_file_count": 5335,
+  "retrieval_date": "2026-09-19",
+  "source_url": "https://data.lhncbc.nlm.nih.gov/public/Tuberculosis-Chest-X-ray-Datasets/Shenzhen-Hospital-CXR-Set/index.html",
+  "unexpected_image_files": []
+}
