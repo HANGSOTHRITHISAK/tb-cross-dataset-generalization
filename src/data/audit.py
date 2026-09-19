@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 import numpy as np
 import pandas as pd
@@ -45,7 +45,7 @@ def difference_hash(image: Image.Image, hash_size: int = 8) -> str:
 def border_mean(gray: np.ndarray, fraction: float = 0.05) -> float:
     """Mean intensity of an outer image border, useful for detecting framing artifacts."""
     height, width = gray.shape
-    border = max(1, int(round(min(height, width) * fraction)))
+    border = max(1, round(min(height, width) * fraction))
     mask = np.zeros_like(gray, dtype=bool)
     mask[:border, :] = True
     mask[-border:, :] = True
@@ -69,7 +69,9 @@ def laplacian_variance(gray: np.ndarray) -> float:
     return float(laplacian.var())
 
 
-def histogram_features(gray: np.ndarray, bins: int = HISTOGRAM_BINS) -> dict[str, float]:
+def histogram_features(
+    gray: np.ndarray, bins: int = HISTOGRAM_BINS
+) -> dict[str, float]:
     counts, _ = np.histogram(gray, bins=bins, range=(0, 256))
     total = counts.sum()
     values = counts / total if total else counts.astype(np.float64)
@@ -138,7 +140,9 @@ def standardized_mean_differences(valid: pd.DataFrame) -> list[tuple[str, float]
 
     first = labeled[labeled["label"] == labels[0]]
     second = labeled[labeled["label"] == labels[1]]
-    feature_names = AUDIT_FEATURES + [f"hist_bin_{i:02d}" for i in range(HISTOGRAM_BINS)]
+    feature_names = AUDIT_FEATURES + [
+        f"hist_bin_{i:02d}" for i in range(HISTOGRAM_BINS)
+    ]
     effects: list[tuple[str, float]] = []
 
     for feature in feature_names:
@@ -194,11 +198,13 @@ def summarize(manifest: pd.DataFrame) -> str:
             "",
             "## Interpretation notes",
             "",
-            "Identical perceptual hashes are only candidates for visual duplication; inspect them before exclusion. "
-            "Large border, sharpness, histogram, file-size, or aspect-ratio class differences deserve provenance "
-            "investigation because a model may exploit acquisition/processing shortcuts. This generic audit cannot "
-            "infer patient identity or diagnostic validity; dataset-specific metadata must be joined before "
-            "patient-level splitting or final clearance.",
+            (
+                "Identical perceptual hashes are only candidates for visual duplication; inspect them before exclusion. "
+                "Large border, sharpness, histogram, file-size, or aspect-ratio class differences deserve provenance "
+                "investigation because a model may exploit acquisition/processing shortcuts. This generic audit cannot "
+                "infer patient identity or diagnostic validity; dataset-specific metadata must be joined before "
+                "patient-level splitting or final clearance."
+            ),
             "",
         ]
     )
@@ -206,8 +212,12 @@ def summarize(manifest: pd.DataFrame) -> str:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Inventory and audit a local image dataset.")
-    parser.add_argument("root", type=Path, help="Root directory containing dataset images")
+    parser = argparse.ArgumentParser(
+        description="Inventory and audit a local image dataset."
+    )
+    parser.add_argument(
+        "root", type=Path, help="Root directory containing dataset images"
+    )
     parser.add_argument("--manifest", type=Path, default=Path("audit-manifest.csv"))
     parser.add_argument("--summary", type=Path, default=Path("audit-summary.md"))
     return parser.parse_args()
