@@ -19,7 +19,7 @@
   "annotation_xml_count": 800,
   "archive": {
     "archive_bytes": 3306757175,
-    "archive_path": "C:\\Projects\\CV-Generalization\\data\\raw\\TBX11K.zip",
+    "archive_path": "data/raw/TBX11K.zip",
     "archive_sha256": "890d309b7ecaead989f527ff6eb756194cd89200cbe71c7287d1895ef0b2beab",
     "bad_member": null,
     "compressed_bytes": 3304302307,
@@ -1799,6 +1799,6 @@
   "raw_bytes": 4252079748,
   "raw_file_count": 13101,
   "release_path_image_count_including_mixed_test": 11702,
-  "release_root": "C:\\Projects\\CV-Generalization\\data\\raw\\tbx11k\\TBX11K",
+  "release_root": "data/raw/tbx11k/TBX11K",
   "test_ground_truth_available": false
 }

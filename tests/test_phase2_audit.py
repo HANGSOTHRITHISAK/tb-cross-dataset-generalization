@@ -60,3 +60,48 @@ def test_cross_dataset_exact_duplicate_report(sample_records, tmp_path: Path) ->
     rows = write_cross_dataset_duplicates([first, second], tmp_path / "duplicates.csv")
     assert len(rows) == 1
     assert rows[0]["datasets"] == "montgomery;shenzhen"
+
+
+def test_blank_tbx11k_label_round_trips_as_none(tmp_path: Path) -> None:
+    from src.data.manifest import save_manifest
+    from src.data.schema import SampleRecord
+
+    path = tmp_path / "tbx11k.csv"
+    save_manifest(
+        [
+            SampleRecord(
+                sample_id="tbx11k:unreleased/sample.png",
+                image_path=Path("unreleased/sample.png"),
+                dataset="tbx11k",
+                original_label="unreleased",
+                canonical_label=None,
+            )
+        ],
+        path,
+    )
+    assert load_manifest(path)[0].canonical_label is None
+
+
+def test_supervised_dataset_rejects_unlabeled_sample(tmp_path: Path) -> None:
+    import pytest
+    import torch
+
+    from src.data.datasets import ManifestDataset
+    from src.data.schema import SampleRecord
+
+    image_path = tmp_path / "unreleased.png"
+    Image.new("L", (2, 2)).save(image_path)
+    dataset = ManifestDataset(
+        [
+            SampleRecord(
+                sample_id="tbx11k:unreleased.png",
+                image_path=image_path,
+                dataset="tbx11k",
+                original_label="unreleased",
+                canonical_label=None,
+            )
+        ],
+        transform=lambda image: torch.zeros(1),
+    )
+    with pytest.raises(ValueError, match="no released canonical label"):
+        dataset[0]

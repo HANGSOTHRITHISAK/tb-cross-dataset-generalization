@@ -42,32 +42,6 @@ def hamming_distance(left: str, right: str) -> int:
     return (int(left, 16) ^ int(right, 16)).bit_count()
 
 
-def parse_nlm_clinical_reading(path: Path) -> dict[str, Any]:
-    text = path.read_text(encoding="utf-8", errors="replace").strip()
-    first_line = text.splitlines()[0] if text else ""
-    sex_match = re.search(r"\b(male|female)\b", first_line, re.IGNORECASE)
-    short_sex_match = re.search(r"Patient's Sex:\s*([MF])\b", text, re.IGNORECASE)
-    age_match = re.search(r"\b(\d{1,3})\s*(?:yrs?|years?)\b", first_line, re.IGNORECASE)
-    coded_age_match = re.search(r"Patient's Age:\s*0*(\d{1,3})Y\b", text, re.IGNORECASE)
-    if sex_match:
-        sex_source = sex_match.group(1).casefold()
-    elif short_sex_match:
-        sex_source = {"m": "male", "f": "female"}[short_sex_match.group(1).casefold()]
-    else:
-        sex_source = None
-    return {
-        "age_years": (
-            int(age_match.group(1))
-            if age_match
-            else int(coded_age_match.group(1))
-            if coded_age_match
-            else None
-        ),
-        "sex_source": sex_source,
-        "clinical_reading_sha256": sha256_file(path),
-    }
-
-
 def audit_nlm_dataset(
     raw_root: str | Path,
     dataset: str,
@@ -91,6 +65,7 @@ def audit_nlm_dataset(
     perceptual: dict[str, str] = {}
     dimensions: Counter[str] = Counter()
     modes: Counter[str] = Counter()
+    clinical_readings_present = 0
     for path in sorted(image_dir.glob("*")):
         if not path.is_file():
             continue
@@ -136,14 +111,8 @@ def audit_nlm_dataset(
         reading = reading_dir / f"{path.stem}.txt"
         if not reading.is_file():
             flags.append("missing_clinical_reading")
-            reading_metadata: dict[str, Any] = {}
         else:
-            reading_metadata = parse_nlm_clinical_reading(reading)
-            if (
-                reading_metadata["age_years"] is None
-                or reading_metadata["sex_source"] is None
-            ):
-                flags.append("unparsed_demographics")
+            clinical_readings_present += 1
         annotation_candidates = sorted(raw_root.rglob(f"{path.stem}*.json"))
         if dataset == "montgomery":
             annotation_candidates = sorted(raw_root.glob(f"ManualMask/**/*{path.name}"))
@@ -174,11 +143,8 @@ def audit_nlm_dataset(
                 if annotation_candidates
                 else None
             ),
-            clinical_reading_path=(
-                Path("..") / "raw" / dataset / "ClinicalReadings" / reading.name
-                if reading.is_file()
-                else None
-            ),
+            clinical_reading_path=None,
+
             width=width,
             height=height,
             image_mode=mode,
@@ -196,7 +162,6 @@ def audit_nlm_dataset(
                     ).as_posix()
                     for candidate in annotation_candidates
                 ],
-                **reading_metadata,
             },
         )
         records.append(record)
@@ -280,9 +245,8 @@ def audit_nlm_dataset(
             ),
             default=None,
         ),
-        "clinical_readings_present": sum(
-            r.clinical_reading_path is not None for r in records
-        ),
+        "clinical_readings_present": clinical_readings_present,
+
         "annotations_linked": sum(r.annotation_path is not None for r in records),
         "patient_group_ids_available": False,
         "unexpected_image_files": unexpected,
