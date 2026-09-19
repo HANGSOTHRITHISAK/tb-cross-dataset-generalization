@@ -105,15 +105,15 @@ def perceptual_candidates(
 
     left_rows: list[tuple[str, object, str]] = []
     for row in left.itertuples(index=False):
-        dhash = _clean_hash(getattr(row, "dhash"))
+        dhash = _clean_hash(row.dhash)
         if dhash is not None:
-            left_rows.append((getattr(row, "path"), getattr(row, "label", None), dhash))
+            left_rows.append((row.path, getattr(row, "label", None), dhash))
 
     right_rows: list[tuple[str, object, str]] = []
     for row in right.itertuples(index=False):
-        dhash = _clean_hash(getattr(row, "dhash"))
+        dhash = _clean_hash(row.dhash)
         if dhash is not None:
-            right_rows.append((getattr(row, "path"), getattr(row, "label", None), dhash))
+            right_rows.append((row.path, getattr(row, "label", None), dhash))
 
     matches: list[dict[str, object]] = []
     for left_path, left_label, left_hash in left_rows:
@@ -175,8 +175,16 @@ def summarize_matches(
     right_name: str,
     max_dhash_distance: int,
 ) -> str:
-    exact = matches[matches["match_type"] == "exact_sha256"] if not matches.empty else matches
-    near = matches[matches["match_type"] == "dhash_candidate"] if not matches.empty else matches
+    exact = (
+        matches[matches["match_type"] == "exact_sha256"]
+        if not matches.empty
+        else matches
+    )
+    near = (
+        matches[matches["match_type"] == "dhash_candidate"]
+        if not matches.empty
+        else matches
+    )
     unique_left = matches["path_left"].nunique() if not matches.empty else 0
     unique_right = matches["path_right"].nunique() if not matches.empty else 0
     return "\n".join(
@@ -199,7 +207,9 @@ def summarize_matches(
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Compare two dataset audit manifests for overlap.")
+    parser = argparse.ArgumentParser(
+        description="Compare two dataset audit manifests for overlap."
+    )
     parser.add_argument("left_manifest", type=Path)
     parser.add_argument("right_manifest", type=Path)
     parser.add_argument("--left-name", default="left")
@@ -220,7 +230,9 @@ def main() -> None:
     args.summary.parent.mkdir(parents=True, exist_ok=True)
     matches.to_csv(args.matches, index=False)
     args.summary.write_text(
-        summarize_matches(matches, args.left_name, args.right_name, args.max_dhash_distance),
+        summarize_matches(
+            matches, args.left_name, args.right_name, args.max_dhash_distance
+        ),
         encoding="utf-8",
     )
     print(f"Wrote {args.matches} and {args.summary}")
