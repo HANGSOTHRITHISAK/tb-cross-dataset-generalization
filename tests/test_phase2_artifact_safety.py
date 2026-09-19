@@ -6,7 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 PHASE2_ARTIFACTS = (ROOT / "data" / "manifests", ROOT / "data" / "audit")
 MACHINE_LOCAL_PATH = re.compile(
-    r"(?i)(?:\\b[a-z]:[\\\\/]+(?:projects|users)[\\\\/]+|"
+    r"(?i)(?:\b[a-z]:[\\/]+(?:projects|users)[\\/]+|"
     r"(?<![:/])/(?:home|users|mnt|tmp|workspaces?)/)"
 )
 RESTRICTED_NLM_METADATA = re.compile(
@@ -44,8 +44,8 @@ def test_nlm_public_artifacts_omit_derived_clinical_metadata() -> None:
 
 def test_machine_local_path_detector_covers_windows_and_posix() -> None:
     local_examples = [
+        r"C:\Projects\CV-Generalization\data\audit.json",
         r"C:\\Projects\\CV-Generalization\\data\\audit.json",
-        r"C:\\\\Projects\\\\CV-Generalization\\\\data\\\\audit.json",
         "/home/alice/project/data/audit.json",
         "/Users/alice/project/data/audit.json",
         "/mnt/data/project/data/audit.json",
