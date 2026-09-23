@@ -115,7 +115,7 @@ The final split implementation must ensure:
 Phase 2 should be considered formally closed only after:
 
 - [ ] deterministic exact-deduplication logic is implemented;
-- [ ] conflicting labels inside an exact-duplicate group hard-fail;
+- [ ] conflicting 3-class internal labels inside an exact-duplicate group hard-fail;
 - [ ] the final stratified train/validation/internal-test split is implemented;
 - [ ] split manifest(s) are saved/versioned where redistribution permits;
 - [ ] tests cover duplicate isolation, determinism, label conflicts, and split integrity;
