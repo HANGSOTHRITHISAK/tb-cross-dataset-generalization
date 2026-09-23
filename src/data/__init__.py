@@ -12,9 +12,9 @@ from .schema import SampleRecord
 from .splits import assert_disjoint, deterministic_group_split
 
 __all__ = [
+    "TBX11K_INTERNAL_CLASS_NAMES",
     "ManifestDataset",
     "SampleRecord",
-    "TBX11K_INTERNAL_CLASS_NAMES",
     "assert_disjoint",
     "deterministic_group_split",
     "harmonize_tbx11k_internal_to_binary",
