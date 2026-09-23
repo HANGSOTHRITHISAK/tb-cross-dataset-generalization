@@ -16,23 +16,23 @@ The repository is being structured so that the course project can remain managea
 
 ## Planned experimental design
 
-The initial baseline will use at least two independent public chest X-ray datasets with tuberculosis labels.
+The locked course-project baseline uses **TBX11K** as the development domain and **Shenzhen** plus **Montgomery County** as untouched external evaluation domains.
 
-For datasets `A` and `B`:
+The internal TBX11K task is **3-class classification**:
 
-| Train on | Evaluate on | Purpose |
-|---|---|---|
-| A | A | In-domain baseline |
-| A | B | Cross-dataset generalization |
-| B | B | In-domain baseline |
-| B | A | Cross-dataset generalization |
+- Healthy
+- Sick non-TB
+- TB
 
-A stronger extension may add a third independent dataset and/or pooled training:
+The audited release does not expose trustworthy active/latent/active+latent subtype labels separately for the labeled train/validation TB images, so those subtypes are not inferred.
 
-- `A + B -> C`
+For external evaluation, the label space is harmonized to **TB vs non-TB** by combining Healthy + Sick non-TB into non-TB. The selected DenseNet-121 model is frozen before evaluation on Shenzhen and Montgomery.
+
+Optional extensions, only after the baseline is reproducible:
+
 - architecture comparison
 - augmentation / robustness experiments
-- dataset-shift analysis
+- dataset-shift or acquisition-statistics analysis
 - qualitative error analysis and Grad-CAM visualization
 
 ## Research principles
@@ -40,7 +40,7 @@ A stronger extension may add a third independent dataset and/or pooled training:
 This project will prioritize:
 
 - **Independent dataset provenance** — avoid treating repackaged or overlapping data as separate domains.
-- **Patient-level separation** — prevent leakage when multiple images from the same patient exist.
+- **Patient/group separation when verified metadata exist** — do not claim patient-level splitting when genuine grouping identifiers are unavailable.
 - **Reproducibility** — fixed seeds, explicit configs, saved split manifests, and documented environments.
 - **External validation** — evaluate models outside the dataset on which they were trained.
 - **Clinically meaningful metrics** — AUROC, sensitivity, specificity, precision, F1, and confusion matrices rather than accuracy alone.
