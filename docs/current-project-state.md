@@ -1,6 +1,6 @@
 # Current Project State
 
-**Updated:** 2026-09-20
+**Updated:** 2026-09-23
 
 This document is the concise, public-facing checkpoint for the current state of the project. It is intended to help collaborators and future sessions resume work without relying on private local-machine or chat history.
 
@@ -12,11 +12,14 @@ How well does a tuberculosis chest X-ray classifier trained on one source datase
 
 The current proposal-aligned core experiment is:
 
-1. develop a binary TB classifier on a cleaned TBX11K development pool;
-2. evaluate on a held-out TBX11K internal test split;
+1. develop a **3-class** classifier on a cleaned TBX11K development pool using **Healthy / Sick non-TB / TB**;
+2. evaluate the 3-class model on a held-out TBX11K internal test split;
 3. freeze the selected model and protocol;
-4. evaluate externally on Shenzhen;
-5. evaluate externally on Montgomery County as an additional external stress test.
+4. harmonize Healthy + Sick non-TB into **non-TB**, leaving TB as the positive class;
+5. evaluate the frozen binary-harmonized output externally on Shenzhen;
+6. evaluate externally on Montgomery County as an additional external stress test.
+
+This 3-class internal design was approved on 2026-09-23 after the dataset audit showed that the released train/validation material does not expose trustworthy active/latent/active+latent TB subtype labels separately. Those subtype labels are not inferred.
 
 The project remains provenance-first and leakage-aware. External datasets must not influence training, early stopping, hyperparameter selection, threshold tuning, or checkpoint selection.
 
@@ -37,10 +40,11 @@ The repository contains versioned manifests, integrity/audit evidence, and cross
 The current primary labeled pool contains:
 
 - **8,400 rows total**
-- **7,600 canonical label 0**
-- **800 canonical label 1**
+- **3,800 Healthy**
+- **3,800 Sick non-TB**
+- **800 TB**
 
-The pool is drawn from the labeled TBX11K `health/`, `sick/`, and `tb/` content used for the planned binary experiment.
+The pool is drawn from the labeled TBX11K `health/`, `sick/`, and `tb/` content. The existing manifest's canonical binary label remains useful for cross-dataset harmonization, while the internal training task uses a separate 3-class mapping derived from the released folder/list labels.
 
 No trustworthy patient/group identifiers are currently available. The project therefore must not claim patient-level splitting unless genuine grouping metadata are later established.
 
@@ -92,7 +96,7 @@ The current proposed split is:
 - **70% train**
 - **15% validation**
 - **15% internal test**
-- stratified by the binary canonical label
+- stratified by the 3-class internal label (Healthy / Sick non-TB / TB)
 - fixed random seed: **42**
 
 This remains a proposed policy until it is implemented, tested, documented, and versioned.
@@ -147,18 +151,11 @@ Large baseline training should wait until this smoke test succeeds.
 
 ## Baseline model and evaluation
 
-The current baseline in the experimental protocol is an **ImageNet-pretrained DenseNet-121 adapted for binary classification**.
+The locked baseline is an **ImageNet-pretrained DenseNet-121 adapted for 3-class internal classification**.
 
-Primary metrics:
+Internal TBX11K reporting should include accuracy, macro-F1, per-class recall, and a 3x3 confusion matrix.
 
-- AUROC
-- sensitivity / recall
-- specificity
-- precision
-- F1
-- confusion matrix
-
-Accuracy may be reported as a supplementary metric. Where feasible, uncertainty should be reported using bootstrap confidence intervals.
+For Shenzhen/Montgomery, predictions are harmonized to **TB vs non-TB** and reported with AUROC, sensitivity/recall, specificity, precision, F1, and a binary confusion matrix. Any threshold must be selected using TBX11K development data only and frozen before external evaluation. Where feasible, uncertainty should be reported using bootstrap confidence intervals.
 
 Optional architecture comparisons, stronger augmentation, additional datasets, acquisition-shift analysis, qualitative error analysis, or Grad-CAM should wait until the baseline pipeline is complete and reproducible.
 
