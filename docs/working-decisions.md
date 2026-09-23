@@ -148,33 +148,3 @@ This preserves the multi-class intent of the accepted proposal without fabricati
 ### Scope boundary
 
 Do not redesign the project around unreleased subtype labels. Do not use external datasets for tuning. Finish the duplicate-safe TBX11K split and reproducible baseline before optional acquisition-shift, Grad-CAM, augmentation, or architecture-comparison extensions.
-
-
----
-
-## 2026-09-23 — Label design v4: three-class internal, binary external
-
-### Trigger
-
-The accepted proposal called for multi-class TBX11K classification followed by broader TB-vs-non-TB external evaluation. The completed dataset audit showed that the released TBX11K train/validation path/list files expose labeled content as `health/`, `sick/`, and a single `tb/` category. The exact Active/Latent/Active+Latent subtype for the 800 labeled TB train/validation images is not recoverable from the release and will not be inferred.
-
-The lecturer approved adjusting the internal label space to match the labels that are actually recoverable from the audited release.
-
-### Locked decision
-
-The project will use:
-
-- **Internal TBX11K task:** Healthy / Sick non-TB / TB
-- **Internal model:** ImageNet-pretrained DenseNet-121 with a 3-class head
-- **External harmonization:** Healthy + Sick non-TB -> non-TB; TB -> TB
-- **External datasets:** Shenzhen and Montgomery County, held out from all model-development decisions
-
-The existing binary canonical labels in the audit manifests remain valid as the cross-dataset harmonized label space. A separate explicit TBX11K internal mapping is used for the 3-class task.
-
-### Why
-
-This preserves the multi-class intent of the accepted proposal without fabricating unavailable TB subtype labels. It also makes the healthy-versus-sick-negative distinction directly measurable while retaining a compatible TB/non-TB endpoint for Shenzhen and Montgomery.
-
-### Scope boundary
-
-Do not redesign the project around unreleased subtype labels. Do not use external datasets for tuning. Finish the duplicate-safe TBX11K split and reproducible baseline before optional acquisition-shift, Grad-CAM, augmentation, or architecture-comparison extensions.
