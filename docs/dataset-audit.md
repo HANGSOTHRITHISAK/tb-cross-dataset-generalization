@@ -1,5 +1,7 @@
 # Dataset Audit
 
+> **Status update — 2026-09-23:** this file preserves the earlier dataset-selection investigation. The current project decision is now locked to audited **TBX11K** for development with **Shenzhen** and **Montgomery County** as external evaluation domains. The internal TBX11K label space is **Healthy / Sick non-TB / TB**; external evaluation is harmonized to **TB vs non-TB**. See [current-project-state.md](current-project-state.md) and [experimental-protocol.md](experimental-protocol.md) for the current source of truth.
+
 > **Working draft — 16 September 2026.** This is a provenance-first audit, not a final dataset selection. Counts and access conditions should be rechecked against the original distribution when the data are downloaded.
 
 This document records the provenance and suitability of candidate tuberculosis chest X-ray datasets before any training begins. The main goal is to prevent a superficially strong cross-dataset experiment from being invalidated by duplicated images, repackaged source collections, patient leakage, or class-conditional acquisition artifacts.
