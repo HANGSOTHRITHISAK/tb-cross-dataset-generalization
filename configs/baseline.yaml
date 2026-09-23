@@ -1,22 +1,31 @@
 project:
   name: tb-cross-dataset-generalization
-  task: binary_classification
-  positive_class: tuberculosis
+  task: tbx11k_internal_3class_with_binary_external_evaluation
 
 seed: 42
 
 data:
   image_size: 224
   channels: 3
-  train_dataset: null
-  external_test_datasets: []
-  patient_level_split: true
+  train_dataset: tbx11k
+  internal_classes:
+    - healthy
+    - sick_non_tb
+    - tb
+  external_label_space:
+    negative_class: non_tb
+    positive_class: tuberculosis
+  external_test_datasets:
+    - shenzhen
+    - montgomery
+  patient_level_split: false
+  patient_level_split_reason: no_trustworthy_patient_group_identifiers_in_released_tbx11k
   normalize: imagenet
 
 model:
   architecture: densenet121
   pretrained: true
-  num_classes: 1
+  num_classes: 3
 
 training:
   epochs: 20
@@ -27,15 +36,27 @@ training:
   early_stopping_patience: 5
 
 evaluation:
-  threshold: 0.5
-  metrics:
-    - auroc
-    - sensitivity
-    - specificity
-    - precision
-    - f1
-    - confusion_matrix
+  internal_multiclass:
+    metrics:
+      - accuracy
+      - macro_f1
+      - per_class_recall
+      - confusion_matrix
+  external_binary:
+    threshold: null
+    threshold_policy: freeze_using_tbx11k_validation_only
+    metrics:
+      - auroc
+      - sensitivity
+      - specificity
+      - precision
+      - f1
+      - confusion_matrix
 
 notes: >-
-  Placeholder baseline configuration. Dataset-specific values should be filled in
-  only after the dataset audit and split protocol are finalized.
+  Approved project design as of 2026-09-23: train/evaluate DenseNet-121 on
+  released TBX11K labels as healthy, sick non-TB, and TB. The released
+  train/validation files do not expose trustworthy active/latent subtype labels,
+  so those subtypes are not inferred. For Shenzhen and Montgomery external
+  evaluation, healthy and sick non-TB are harmonized to non-TB and TB remains
+  the positive class. Final split manifests remain a Phase 2 task.
