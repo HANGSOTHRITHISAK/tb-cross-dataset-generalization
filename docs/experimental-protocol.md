@@ -76,14 +76,29 @@ Any decision threshold used for external classification must be selected using T
 
 Where feasible, report bootstrap confidence intervals.
 
+## Partition roles and terminology
+
+- **Training:** fits model parameters and any data-derived preprocessing parameters.
+- **Tuning/validation:** supports early stopping, hyperparameter selection, checkpoint selection, and any threshold selection.
+- **Held-out internal testing:** estimates final in-domain performance after development decisions are frozen.
+- **External testing:** Shenzhen and Montgomery estimate cross-dataset performance after the model and development protocol are frozen.
+
+The held-out internal test set and both external test sets must not influence training, preprocessing choices, early stopping, hyperparameter selection, checkpoint selection, or threshold selection.
+
 ## Leakage and provenance controls
 
 - Do not use Shenzhen or Montgomery for model-development decisions.
 - Audit candidate datasets for exact and perceptual overlap before calling them independent domains.
-- Exact duplicate copies must not cross TBX11K train/validation/internal-test partitions.
-- Preserve split manifests so experiments can be reproduced exactly.
-- Do not claim patient-level splitting because trustworthy patient/group identifiers are not available in the released TBX11K material currently used by the project.
+- Deduplicate the primary labeled TBX11K pool by exact SHA-256 before splitting, after hard-failing on any checksum group with conflicting 3-class labels.
+- Manually adjudicate the 17 primary-pool dHash candidate pairs listed in `data/audit/tbx11k_audit.json` before the split is frozen. The candidates are not confirmed duplicates. Confirmed transformed/re-exported copies are handled as one duplicate family; visually similar but distinct radiographs remain separate.
+- Exact or confirmed transformed duplicate copies must not cross TBX11K training/tuning/internal-test partitions.
+- Fit any data-derived preprocessing parameters on the training partition only, then apply them unchanged to all other partitions and datasets.
+- Apply stochastic augmentation only to the training partition.
+- Preserve split and adjudication manifests so experiments can be reproduced exactly.
+- Claim only **image-level split independence after duplicate controls**. Do not claim patient-level independence because trustworthy patient/group identifiers are not available in the released TBX11K material currently used by the project.
 - Do not infer unreleased TB subtype labels.
+
+See `docs/phase2-evidence-hardening.md` for the verified counts, evidence basis, and bounded stop decision.
 
 ## Optional analysis after the baseline
 
