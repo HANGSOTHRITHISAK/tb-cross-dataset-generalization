@@ -1,31 +1,51 @@
-# Phase 2 local audit status
+# Phase 2 audit status
 
-This branch imports reproducible, file-level audit evidence from the local
-implementation. It does not alter the canonical experimental protocol or make
-an overlap-adjudication, duplicate-handling, or split decision.
+**Status:** open; evidence hardened on 2026-09-24.
 
-The versioned manifests and reports contain metadata, paths relative to the
-repository data layout, checksums, image statistics, and audit findings. They
-do not contain raw radiographs. Raw datasets remain ignored under `data/raw/`.
+Phase 2 has reproducible file-level audit evidence for TBX11K, Shenzhen, and Montgomery, but the duplicate-safe TBX11K split is not yet implemented or frozen.
 
-## Scope of the imported evidence
+The versioned manifests and reports contain metadata, repository-relative paths, checksums, image statistics, and audit findings. They do not contain raw radiographs. Raw datasets remain ignored under `data/raw/`.
 
-- Shenzhen and Montgomery acquisition provenance, per-image manifests, and
-  image-integrity audits.
-- TBX11K archive provenance, manifest, annotation inventory, integrity audit,
-  and cross-dataset exact/perceptual candidate reports.
-- Reproducible exclusion and pending-review lists. These lists are evidence
-  artifacts, not a finalized cleaning policy.
+## Verified primary-pool state
 
-## Required review before methodological use
+The source of truth is `data/audit/tbx11k_audit.json`:
 
-- Manually adjudicate the TBX11K perceptual candidates against Shenzhen and
-  Montgomery.
-- Decide how to handle internal TBX11K duplicate groups.
-- Decide the split policy only after the overlap decision is documented.
-- Do not use Shenzhen or Montgomery to tune any development choice.
+- 8,400 primary labeled TBX11K rows;
+- 126 exact SHA-256 duplicate groups;
+- 252 rows participating in those groups;
+- 8,274 unique SHA-256 checksums before perceptual-candidate adjudication;
+- 27 internal dHash candidate pairs;
+- 17 dHash candidate pairs wholly within the primary labeled pool, all Sick non-TB;
+- 10 dHash candidate pairs connecting a primary Sick non-TB image to unreleased TBX11K test content;
+- no trustworthy patient/group identifiers.
 
-The imported TBX11K manifest represents the release's unreleased-test labels
-as blank canonical labels. The typed manifest contract permits this explicit
-unknown state and dataset consumers must reject it if a labeled sample is
-required.
+dHash candidates are not confirmed duplicates. GitHub does not contain the raw radiographs, so visual adjudication cannot be completed from repository metadata alone.
+
+## Frozen dataset roles
+
+- TBX11K is the development domain for Healthy / Sick non-TB / TB classification.
+- DenseNet-121 with ImageNet initialization and a 3-class head remains the baseline.
+- Shenzhen and Montgomery remain untouched external-test datasets.
+- Healthy + Sick non-TB are harmonized to non-TB for external testing.
+- External data must not influence training, preprocessing choices, early stopping, hyperparameter selection, checkpoint selection, or threshold selection.
+
+## Required sequence before Phase 2 closure
+
+1. Manually adjudicate the 17 primary-pool dHash candidate pairs using the original images.
+2. Record each pair as a confirmed transformed/re-exported copy or a similar-but-distinct radiograph.
+3. Treat confirmed copies as one duplicate family; otherwise retain both samples.
+4. Verify every exact or confirmed duplicate family has a consistent 3-class label.
+5. Deduplicate deterministically and generate the proposed stratified 70/15/15 split with seed 42.
+6. Save versioned adjudication and split manifests without raw images or machine-local paths.
+7. Test determinism, class stratification, duplicate isolation, label-conflict failure, and split integrity.
+8. Verify that data-derived preprocessing is fitted on training only and stochastic augmentation is training-only.
+9. Run the targeted test suite and Ruff.
+10. Update status/decision documentation and explicitly record Phase 2 closure.
+
+After duplicate controls, reporting may claim image-level split independence. It must not claim patient-level independence because trustworthy patient/group IDs are unavailable.
+
+## Evidence boundary and stop rule
+
+The targeted literature check supports the bounded adjudication gate and the explicit leakage controls above. It does not support changing the project direction, dataset roles, label design, baseline, proposed split ratio, or seed.
+
+See `docs/phase2-evidence-hardening.md` for references and rationale. No broader dataset-audit research is warranted unless adjudication reveals a systematic issue, the dataset release changes, or integrity checks fail.
