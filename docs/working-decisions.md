@@ -148,3 +148,43 @@ This preserves the multi-class intent of the accepted proposal without fabricati
 ### Scope boundary
 
 Do not redesign the project around unreleased subtype labels. Do not use external datasets for tuning. Finish the duplicate-safe TBX11K split and reproducible baseline before optional acquisition-shift, Grad-CAM, augmentation, or architecture-comparison extensions.
+
+---
+
+## 2026-09-24 — Phase 2 evidence hardening: adjudicate primary-pool perceptual candidates
+
+### Trigger
+
+A bounded evidence review checked the current audit artifacts against medical-imaging leakage, external-testing, and chest-radiograph dataset-shift evidence before the proposed TBX11K split is frozen.
+
+### Verified state
+
+- The primary labeled TBX11K pool contains 8,400 rows.
+- Exact SHA-256 screening reports 126 duplicate groups involving 252 rows and 8,274 unique checksums.
+- The audit reports 27 internal dHash candidate pairs. Exactly 17 pairs have both images in the primary labeled pool, all within Sick non-TB; the other 10 connect primary Sick non-TB images to unreleased TBX11K test content.
+- dHash candidates are screening hits, not confirmed duplicates.
+- The raw radiographs are not versioned in GitHub, so this evidence review did not perform or claim visual adjudication.
+
+### Decision
+
+Before freezing the proposed 70/15/15, seed-42 split:
+
+1. manually adjudicate the 17 primary-pool dHash candidate pairs using the original radiographs;
+2. treat only confirmed transformed/re-exported copies as one duplicate family, retaining one deterministic representative before splitting;
+3. retain similar-but-distinct radiographs as separate samples;
+4. version the adjudication outcome without committing radiographs or machine-local paths.
+
+The 10 candidates involving unreleased test content remain documented but do not block the primary-pool split because that content is outside the development pool.
+
+The final protocol also explicitly requires training-only fitting of data-derived preprocessing, training-only stochastic augmentation, and the terminology training / tuning-validation / held-out internal testing / external testing. After duplicate controls, the project may claim image-level split independence, not patient-level independence.
+
+### Evidence conclusion
+
+The literature supports these clarifications but does not justify changing the research question, dataset roles, 3-class label design, DenseNet-121 baseline, proposed split ratio, or seed. CLAIM 2024 recommends explicit reporting of partition independence and internal versus external testing; radiology leakage studies show that correlated samples and preprocessing fitted outside training can inflate performance; chest-radiograph studies demonstrate acquisition shortcuts and cross-hospital shift.
+
+Full references and rationale are recorded in `docs/phase2-evidence-hardening.md`.
+
+### Stop rule
+
+Do not expand the dataset audit. Complete the 17-pair adjudication, then implement and verify the already planned duplicate-safe split. Reopen audit research only if adjudication exposes a larger systematic problem, dataset files change, or integrity checks fail.
+
