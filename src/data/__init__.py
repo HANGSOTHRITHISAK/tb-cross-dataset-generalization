@@ -10,16 +10,28 @@ from .labels import (
 from .manifest import load_manifest, save_manifest
 from .schema import SampleRecord
 from .splits import assert_disjoint, deterministic_group_split
+from .tbx11k_split import (
+    DeduplicatedRecord,
+    deduplicate_primary_tbx11k,
+    load_adjudication,
+    split_counts,
+    stratified_split,
+)
 
 __all__ = [
     "TBX11K_INTERNAL_CLASS_NAMES",
+    "DeduplicatedRecord",
     "ManifestDataset",
     "SampleRecord",
     "assert_disjoint",
+    "deduplicate_primary_tbx11k",
     "deterministic_group_split",
     "harmonize_tbx11k_internal_to_binary",
+    "load_adjudication",
     "load_manifest",
     "normalize_label",
     "normalize_tbx11k_internal_label",
     "save_manifest",
+    "split_counts",
+    "stratified_split",
 ]
