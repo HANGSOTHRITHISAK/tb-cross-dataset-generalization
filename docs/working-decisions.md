@@ -155,19 +155,19 @@ Do not redesign the project around unreleased subtype labels. Do not use externa
 
 ### Trigger
 
-A bounded evidence review checked the current audit artifacts against medical-imaging leakage, external-testing, and chest-radiograph dataset-shift evidence before the proposed TBX11K split is frozen.
+A bounded evidence review checked the current audit artifacts against medical-imaging leakage, external-testing, and chest-radiograph dataset-shift evidence before the then-proposed TBX11K split was frozen.
 
 ### Verified state
 
 - The primary labeled TBX11K pool contains 8,400 rows.
 - Exact SHA-256 screening reports 126 duplicate groups involving 252 rows and 8,274 unique checksums.
 - The audit reports 27 internal dHash candidate pairs. Exactly 17 pairs have both images in the primary labeled pool, all within Sick non-TB; the other 10 connect primary Sick non-TB images to unreleased TBX11K test content.
-- dHash candidates are screening hits, not confirmed duplicates.
+- At that point, the dHash candidates were screening hits rather than confirmed duplicates.
 - The raw radiographs are not versioned in GitHub, so this evidence review did not perform or claim visual adjudication.
 
 ### Decision
 
-Before freezing the proposed 70/15/15, seed-42 split:
+Before freezing the then-proposed 70/15/15, seed-42 split:
 
 1. manually adjudicate the 17 primary-pool dHash candidate pairs using the original radiographs;
 2. treat only confirmed transformed/re-exported copies as one duplicate family, retaining one deterministic representative before splitting;
@@ -180,11 +180,43 @@ The final protocol also explicitly requires training-only fitting of data-derive
 
 ### Evidence conclusion
 
-The literature supports these clarifications but does not justify changing the research question, dataset roles, 3-class label design, DenseNet-121 baseline, proposed split ratio, or seed. CLAIM 2024 recommends explicit reporting of partition independence and internal versus external testing; radiology leakage studies show that correlated samples and preprocessing fitted outside training can inflate performance; chest-radiograph studies demonstrate acquisition shortcuts and cross-hospital shift.
+The literature supports these clarifications but does not justify changing the research question, dataset roles, 3-class label design, DenseNet-121 baseline, split ratio, or seed. CLAIM 2024 recommends explicit reporting of partition independence and internal versus external testing; radiology leakage studies show that correlated samples and preprocessing fitted outside training can inflate performance; chest-radiograph studies demonstrate acquisition shortcuts and cross-hospital shift.
 
 Full references and rationale are recorded in `docs/phase2-evidence-hardening.md`.
 
 ### Stop rule
 
 Do not expand the dataset audit. Complete the 17-pair adjudication, then implement and verify the already planned duplicate-safe split. Reopen audit research only if adjudication exposes a larger systematic problem, dataset files change, or integrity checks fail.
+
+This gate was completed on 2026-09-26 and is superseded by the finalization decision below.
+
+---
+
+## 2026-09-26 — Phase 2 finalized: duplicate-controlled TBX11K split frozen
+
+### Trigger
+
+Manual visual adjudication of all 17 primary-pool dHash candidate pairs was completed using the local raw radiographs. Every pair was confirmed as a transformed/re-exported copy of the same underlying radiograph, with matching anatomy and positioning and only minor crop, border, brightness, or re-export differences.
+
+### Final decision
+
+The adjudication decisions are versioned without raw radiographs or review contact sheets. Exact SHA-256 duplicates and confirmed transformed/re-exported copies are unioned into duplicate families, and one deterministic representative is retained per family.
+
+The 8,400 primary rows reduce to **8,257 retained unique images**, comprising **8,114 singleton families** and **143 duplicate families of size 2**. The three-class split is frozen at 70/15/15 with seed 42:
+
+| Split | Healthy | Sick non-TB | TB | Total |
+| --- | ---: | ---: | ---: | ---: |
+| Train | 2,660 | 2,560 | 560 | 5,780 |
+| Validation | 570 | 549 | 120 | 1,239 |
+| Internal test | 570 | 548 | 120 | 1,238 |
+
+Zero duplicate families cross splits. Image-level duplicate control is established; patient-level independence is **not** claimed because trustworthy patient/group identifiers are unavailable.
+
+### Verification
+
+- targeted split tests: **5 passed**;
+- full pytest suite: **23 passed**;
+- Ruff: **all checks passed**.
+
+Phase 2 is closed. Phase 3 may proceed with the frozen split manifest, beginning with the CUDA-capable environment and real-data smoke test.
 

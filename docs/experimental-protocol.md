@@ -1,6 +1,6 @@
 # Experimental Protocol
 
-**Status:** approved project design, updated 2026-09-23.
+**Status:** approved project design with frozen TBX11K split, updated 2026-09-26.
 
 ## Primary research question
 
@@ -34,8 +34,8 @@ Shenzhen and Montgomery remain untouched external test datasets and are never us
 
 ## Core experiment
 
-1. Audit and clean the labeled TBX11K development pool.
-2. Construct deterministic TBX11K train/validation/internal-test partitions after exact-duplicate handling.
+1. Use the frozen duplicate-controlled TBX11K development pool and split manifest.
+2. Preserve the deterministic train/validation/internal-test assignments exactly.
 3. Fine-tune an ImageNet-pretrained DenseNet-121 for 3-class classification.
 4. Evaluate 3-class performance on the held-out TBX11K internal test set.
 5. Freeze the selected model and all development decisions.
@@ -90,7 +90,7 @@ The held-out internal test set and both external test sets must not influence tr
 - Do not use Shenzhen or Montgomery for model-development decisions.
 - Audit candidate datasets for exact and perceptual overlap before calling them independent domains.
 - Deduplicate the primary labeled TBX11K pool by exact SHA-256 before splitting, after hard-failing on any checksum group with conflicting 3-class labels.
-- Manually adjudicate the 17 primary-pool dHash candidate pairs listed in `data/audit/tbx11k_audit.json` before the split is frozen. The candidates are not confirmed duplicates. Confirmed transformed/re-exported copies are handled as one duplicate family; visually similar but distinct radiographs remain separate.
+- The 17 primary-pool dHash candidate pairs were visually adjudicated as confirmed transformed/re-exported copies and are handled as duplicate families. The adjudication CSV contains decisions and rationales only; no raw radiographs are committed.
 - Exact or confirmed transformed duplicate copies must not cross TBX11K training/tuning/internal-test partitions.
 - Fit any data-derived preprocessing parameters on the training partition only, then apply them unchanged to all other partitions and datasets.
 - Apply stochastic augmentation only to the training partition.
@@ -99,6 +99,18 @@ The held-out internal test set and both external test sets must not influence tr
 - Do not infer unreleased TB subtype labels.
 
 See `docs/phase2-evidence-hardening.md` for the verified counts, evidence basis, and bounded stop decision.
+
+## Frozen TBX11K split
+
+The 8,400 primary labeled rows reduce to **8,257 retained unique images**: **8,114 singleton families** and **143 duplicate families of size 2**. The final split is frozen at 70/15/15 with seed 42:
+
+| Split | Healthy | Sick non-TB | TB | Total |
+| --- | ---: | ---: | ---: | ---: |
+| Train | 2,660 | 2,560 | 560 | 5,780 |
+| Validation | 570 | 549 | 120 | 1,239 |
+| Internal test | 570 | 548 | 120 | 1,238 |
+
+Zero duplicate families cross splits. This establishes image-level duplicate control, not patient-level independence.
 
 ## Optional analysis after the baseline
 

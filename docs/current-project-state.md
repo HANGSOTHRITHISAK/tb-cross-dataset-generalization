@@ -1,6 +1,6 @@
 # Current Project State
 
-**Updated:** 2026-09-23
+**Updated:** 2026-09-26
 
 This document is the concise, public-facing checkpoint for the current state of the project. It is intended to help collaborators and future sessions resume work without relying on private local-machine or chat history.
 
@@ -48,7 +48,7 @@ The pool is drawn from the labeled TBX11K `health/`, `sick/`, and `tb/` content.
 
 No trustworthy patient/group identifiers are currently available. The project therefore must not claim patient-level splitting unless genuine grouping metadata are later established.
 
-### Internal duplicate and near-duplicate state
+### Final duplicate-controlled pool and split
 
 Within the 8,400-row primary labeled TBX11K pool:
 
@@ -59,7 +59,22 @@ Within the 8,400-row primary labeled TBX11K pool:
 
 The audit contains 27 internal dHash candidate pairs in total. The other 10 connect a primary Sick non-TB image to unreleased TBX11K `test/` content and therefore do not affect the project split.
 
-The 17 primary-pool pairs are screening candidates, not confirmed duplicates. They require manual visual adjudication using the raw radiographs before the split is frozen. GitHub metadata alone cannot resolve them. Confirmed transformed/re-exported copies will be handled as one duplicate family; similar-but-distinct radiographs will remain separate.
+All 17 primary-pool dHash candidate pairs were visually adjudicated using the local raw radiographs and confirmed as transformed/re-exported copies of the same underlying radiograph. The adjudication decisions and rationales are versioned in `data/audit/tbx11k_primary_dhash_adjudication.csv`; no raw radiographs or review contact sheets are committed.
+
+After unioning exact SHA-256 duplicates with the confirmed transformed/re-exported copies and retaining one deterministic representative per family, the final development pool contains **8,257 unique images**:
+
+- **8,114 singleton families**;
+- **143 duplicate families of size 2**.
+
+The final split is frozen at **70/15/15 with seed 42**, stratified by the three-class internal label:
+
+| Split | Healthy | Sick non-TB | TB | Total |
+| --- | ---: | ---: | ---: | ---: |
+| Train | 2,660 | 2,560 | 560 | 5,780 |
+| Validation | 570 | 549 | 120 | 1,239 |
+| Internal test | 570 | 548 | 120 | 1,238 |
+
+Zero duplicate families cross splits. Image-level duplicate control is established. Patient-level independence is **not** claimed because trustworthy patient/group identifiers are unavailable.
 
 ### TBX11K overlap with Shenzhen and Montgomery
 
@@ -74,75 +89,34 @@ Therefore the intended primary TBX11K development pool is not currently affected
 
 The expensive full-dataset audit should not be rerun unless a concrete inconsistency, new data release, corrupted local copy, or methodological reason appears.
 
-## Final Phase 2 decision still pending
+## Phase 2 finalized
 
-PR #10 merged the reconciled Phase 2 implementation, manifests, audit evidence, tests, and documentation into `main`, but intentionally left the exact-duplicate handling and final TBX11K split policy unresolved.
+The duplicate-safe split policy is implemented and frozen. It:
 
-The remaining Phase 2 task is to implement and formally freeze that policy.
+- produces deterministic output;
+- combines exact SHA-256 duplicates and the 17 visually confirmed transformed/re-exported pairs into duplicate families;
+- retains the lexicographically smallest sample ID as the deterministic representative of each family;
+- hard-fails on conflicting three-class labels within a family;
+- ensures no exact or confirmed transformed duplicate family appears in more than one split;
+- preserves class stratification as closely as practical;
+- excludes unknown-label rows from the labeled experiment;
+- requires any data-derived preprocessing parameters to be fitted on training only;
+- applies stochastic augmentation only to training;
+- prevents the held-out internal test and Shenzhen/Montgomery from influencing model-development decisions;
+- distinguishes training, tuning/validation, held-out internal testing, and external testing in reporting;
+- supports only an image-level split-independence claim after duplicate controls; patient-level independence is not claimed without genuine patient/group metadata.
 
-### Intended exact-duplicate policy
+The finalized artifacts are `data/manifests/tbx11k_split.csv` and `data/audit/tbx11k_split_summary.json`. Validation on 2026-09-26 reported:
 
-The current intended policy is:
-
-1. manually adjudicate the 17 primary-pool dHash candidate pairs;
-2. combine only confirmed transformed/re-exported copies into duplicate families;
-3. group remaining primary labeled rows by SHA-256;
-4. verify that every exact or confirmed duplicate family has one consistent 3-class label;
-5. hard-fail and require manual investigation if a duplicate family maps to conflicting labels;
-6. otherwise retain one deterministic representative per duplicate family;
-7. construct the project split from the resulting unique-image pool.
-
-This is preferred over simply keeping duplicate copies in the same partition because it avoids giving repeated images extra statistical weight during training or evaluation.
-
-### Intended split policy
-
-The current proposed split is:
-
-- **70% train**
-- **15% validation**
-- **15% internal test**
-- stratified by the 3-class internal label (Healthy / Sick non-TB / TB)
-- fixed random seed: **42**
-
-This remains a proposed policy until it is implemented, tested, documented, and versioned.
-
-The final split implementation must ensure:
-
-- deterministic output;
-- no exact or confirmed transformed duplicate family appears in more than one split;
-- class stratification is preserved as closely as practical;
-- unknown-label rows are excluded from the labeled experiment;
-- any data-derived preprocessing parameters are fitted on training only;
-- stochastic augmentation is applied only to training;
-- neither the held-out internal test nor Shenzhen/Montgomery influences model-development decisions;
-- reporting distinguishes training, tuning/validation, held-out internal testing, and external testing;
-- only image-level split independence after duplicate controls is claimed; patient-level independence is not claimed without genuine patient/group metadata.
-
-## Phase 2 closure criteria
-
-Phase 2 should be considered formally closed only after:
-
-- [ ] the 17 primary-pool dHash candidate pairs are visually adjudicated and the decisions are versioned;
-- [ ] confirmed transformed/re-exported copies are represented as duplicate families;
-- [ ] deterministic exact-deduplication logic is implemented;
-- [ ] conflicting 3-class internal labels inside an exact-duplicate group hard-fail;
-- [ ] the final stratified train/validation/internal-test split is implemented;
-- [ ] split manifest(s) are saved/versioned where redistribution permits;
-- [ ] tests cover duplicate isolation, determinism, label conflicts, and split integrity;
-- [ ] the relevant protocol/decision/status documentation is updated;
-- [ ] the normal targeted test suite passes;
-- [ ] Ruff passes;
-- [ ] Git contains no raw radiographs or machine-local paths;
-- [ ] Phase 2 closure is explicitly recorded.
-
-Latest reported validation before this checkpoint:
-
-- **13 tests passed**
-- **Ruff passed**
+- targeted split tests: **5 passed**;
+- full test suite: **23 passed**;
+- Ruff: **all checks passed**;
+- duplicate-family cross-split violations: **0**;
+- no raw radiographs or machine-local paths committed.
 
 ## Phase 3 objective
 
-Immediately after Phase 2 closes, begin the compute-environment and real-data GPU smoke-test phase.
+With Phase 2 closed, begin the compute-environment and real-data GPU smoke-test phase.
 
 The goal is to establish a reproducible CUDA-capable environment and prove that the project can execute correctly on real TBX11K data before any large training run.
 
@@ -173,16 +147,11 @@ Optional architecture comparisons, stronger augmentation, additional datasets, a
 
 Resume work in this order:
 
-1. visually adjudicate the 17 primary-pool dHash candidate pairs using the raw radiographs;
-2. version the adjudication outcome without committing images or machine-local paths;
-3. implement the duplicate-safe TBX11K split policy;
-4. add/update tests for split integrity and failure cases;
-5. run targeted tests and Ruff;
-6. update the relevant research documentation and formally close Phase 2;
-7. set up the CUDA-capable development environment for Phase 3;
-8. transfer/locate ignored raw data without committing it;
-9. run the tiny real-data GPU smoke test;
-10. proceed to reproducible baseline training only after the smoke test passes.
+1. set up the CUDA-capable development environment for Phase 3;
+2. locate the ignored raw data without committing it;
+3. run the tiny real-data GPU smoke test against the frozen split;
+4. verify training-only preprocessing fitting and training-only stochastic augmentation in the executable pipeline;
+5. proceed to reproducible baseline training only after the smoke test passes.
 
 ## Related documentation
 
