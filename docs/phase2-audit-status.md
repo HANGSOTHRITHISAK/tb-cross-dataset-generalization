@@ -1,8 +1,8 @@
 # Phase 2 audit status
 
-**Status:** open; evidence hardened on 2026-09-24.
+**Status:** open; evidence hardened on 2026-09-24. Split implementation is staged, but the final split is intentionally not frozen while the 17 primary-pool dHash decisions remain pending.
 
-Phase 2 has reproducible file-level audit evidence for TBX11K, Shenzhen, and Montgomery, but the duplicate-safe TBX11K split is not yet implemented or frozen.
+Phase 2 has reproducible file-level audit evidence for TBX11K, Shenzhen, and Montgomery. The duplicate-safe split machinery now exists, but it hard-fails until every required visual adjudication row is resolved.
 
 The versioned manifests and reports contain metadata, repository-relative paths, checksums, image statistics, and audit findings. They do not contain raw radiographs. Raw datasets remain ignored under `data/raw/`.
 
@@ -29,15 +29,29 @@ dHash candidates are not confirmed duplicates. GitHub does not contain the raw r
 - Healthy + Sick non-TB are harmonized to non-TB for external testing.
 - External data must not influence training, preprocessing choices, early stopping, hyperparameter selection, checkpoint selection, or threshold selection.
 
+## Split implementation staged on 2026-09-26
+
+The staged implementation:
+
+- versions the 17 candidate rows in `data/audit/tbx11k_primary_dhash_adjudication.csv`;
+- refuses to build a final split while any decision is `pending` or lacks a rationale;
+- unions exact SHA-256 duplicates with only visually confirmed transformed/re-exported copies;
+- hard-fails if any resulting duplicate family has conflicting 3-class labels;
+- keeps one deterministic representative per duplicate family;
+- assigns the retained unique-image pool with a deterministic, 3-class-stratified 70/15/15 split using seed 42;
+- writes a metadata-only split manifest and summary, with no raw images or machine-local paths.
+
+This deliberately allows implementation work to proceed without prematurely declaring the split final.
+
 ## Required sequence before Phase 2 closure
 
 1. Manually adjudicate the 17 primary-pool dHash candidate pairs using the original images.
 2. Record each pair as a confirmed transformed/re-exported copy or a similar-but-distinct radiograph.
 3. Treat confirmed copies as one duplicate family; otherwise retain both samples.
 4. Verify every exact or confirmed duplicate family has a consistent 3-class label.
-5. Deduplicate deterministically and generate the proposed stratified 70/15/15 split with seed 42.
-6. Save versioned adjudication and split manifests without raw images or machine-local paths.
-7. Test determinism, class stratification, duplicate isolation, label-conflict failure, and split integrity.
+5. Run the staged builder to deduplicate deterministically and generate the proposed stratified 70/15/15 split with seed 42.
+6. Save/version the resolved adjudication, split manifest, and split summary without raw images or machine-local paths.
+7. Run tests covering determinism, class stratification, duplicate isolation, label-conflict failure, and split integrity.
 8. Verify that data-derived preprocessing is fitted on training only and stochastic augmentation is training-only.
 9. Run the targeted test suite and Ruff.
 10. Update status/decision documentation and explicitly record Phase 2 closure.
