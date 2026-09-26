@@ -1,0 +1,46 @@
+{
+  "confirmed_perceptual_pairs": 17,
+  "dataset": "tbx11k",
+  "duplicate_family_size_histogram": {
+    "1": 8114,
+    "2": 143
+  },
+  "image_level_duplicate_control": true,
+  "inputs": {
+    "adjudication": "data/audit/tbx11k_primary_dhash_adjudication.csv",
+    "adjudication_sha256": "bae47ecae5036b02ef9696bd6331180fff574e179d02256456f7c0f507082d5c",
+    "exclusions": "data/audit/tbx11k_exclusions.csv",
+    "exclusions_sha256": "129563eddc1c7dc066716f9c22c612eef7bed86e393ee905a43c12cc6fc5d325",
+    "manifest": "data/manifests/tbx11k.csv",
+    "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00"
+  },
+  "patient_level_independence_claimed": false,
+  "retained_unique_images": 8257,
+  "split_class_counts": {
+    "internal_test": {
+      "healthy": 570,
+      "sick_non_tb": 548,
+      "tb": 120
+    },
+    "train": {
+      "healthy": 2660,
+      "sick_non_tb": 2560,
+      "tb": 560
+    },
+    "validation": {
+      "healthy": 570,
+      "sick_non_tb": 549,
+      "tb": 120
+    }
+  },
+  "split_policy": {
+    "ratios": {
+      "internal_test": 0.15,
+      "train": 0.7,
+      "validation": 0.15
+    },
+    "representative_policy": "lexicographically smallest sample_id per duplicate family",
+    "seed": 42,
+    "stratification": "released TBX11K 3-class internal label"
+  }
+}
