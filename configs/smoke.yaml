@@ -1,0 +1,9 @@
+# Engineering settings only; not frozen baseline training hyperparameters.
+manifest: data/manifests/tbx11k.csv
+assignments: data/manifests/tbx11k_split.csv
+summary: data/audit/tbx11k_split_summary.json
+split_sha256: 4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e
+seed: 42
+image_size: 224
+learning_rate: 0.0001
+weight_decay: 0.0001

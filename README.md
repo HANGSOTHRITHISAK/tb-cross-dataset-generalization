@@ -10,9 +10,14 @@ Rather than optimizing only for in-domain performance, this project focuses on t
 
 ## Project status
 
-**Current stage:** experimental design and dataset audit.
+**Current stage:** Phase 2 split frozen; M1 DenseNet-121 execution foundation implemented.
 
-The repository is being structured so that the course project can remain manageable while also supporting a stronger research-oriented extension later.
+The pipeline joins audited metadata to the frozen 8,257-image split, preprocesses
+images, and runs one bounded training-only optimizer step with an execution receipt.
+See [M1 verification and commands](docs/m1-implementation.md) for fixture, real-image,
+and CUDA verification evidence. Full baseline training and internal/external
+evaluation remain pending. A smoke result is engineering evidence, not model
+performance evidence.
 
 ## Planned experimental design
 

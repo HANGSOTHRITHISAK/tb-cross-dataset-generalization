@@ -1,0 +1,4 @@
+# Preserve bytes used by frozen evidence hashes on every platform.
+data/manifests/tbx11k.csv -text
+data/manifests/tbx11k_split.csv -text
+data/audit/tbx11k_split_summary.json -text

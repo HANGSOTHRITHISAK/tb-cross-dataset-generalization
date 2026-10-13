@@ -26,6 +26,8 @@ class ManifestDataset(Dataset[dict[str, object]]):
     ) -> None:
         self.records = list(records)
         self.transform = transform
+        if label_space not in {"canonical_binary", "tbx11k_internal_3class"}:
+            raise ValueError(f"Unsupported label space: {label_space}")
         self.label_space = label_space
         if require_files:
             missing = [
