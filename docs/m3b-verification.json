@@ -1,0 +1,275 @@
+{
+  "corrected_demonstration_setup_issues": [
+    {
+      "cause": "relative fixture paths were rebased incorrectly; corrected to an absolute fixture root",
+      "completed_epoch": 0,
+      "local_receipt_sha256": "64d661675ed3d1a30a84e35b1df80138cda3a5be1d921d3e6c83c54bb4602e85",
+      "optimizer_steps": 0,
+      "status": "failed_before_training"
+    },
+    {
+      "cause": "standalone reference initially used eight default CPU threads rather than the approved two",
+      "observed": "model and losses matched but optimizer-state digest differed",
+      "production_controller_changed": false,
+      "resolution": "two-thread reference exactly matched the existing successful session's model, optimizer and RNG state"
+    }
+  ],
+  "cpu_temperature_probe_actual": {
+    "cpu_temperature_stop_threshold": null,
+    "independent_sensor_freshness_verified": false,
+    "limitation": "GPU telemetry does not establish CPU or whole-laptop thermal safety",
+    "provider": null,
+    "samples": [],
+    "scope": "maximum_of_provider_identified_cpu_temperature_sensors",
+    "temperature_available": false,
+    "unavailable_reason": "no_readable_cpu_temperature_sensor"
+  },
+  "early_stop_demo": {
+    "refusal": {
+      "completed_epoch": 4,
+      "experiment_finished": true,
+      "failure_reason": "experiment_already_finished",
+      "optimizer_steps": 12,
+      "session_completed": false,
+      "status": "failed",
+      "training_samples_this_epoch": 0,
+      "validation_samples_this_epoch": 0
+    },
+    "selection_metrics": "mocked constant macro_f1=0.5 and loss=1.0 after actual fixture validation",
+    "sessions": [
+      {
+        "best_epoch": 1,
+        "checkpoint_restoration": {
+          "additional_validation_passes": 0,
+          "all_state_exact": true,
+          "best_model_exact": true,
+          "continuation_sha256": "3a593eb5f4f42444fbd47b37ad1c710a158f3c07648416ce8ff2b28a343e4233",
+          "model_state_sha256": "cd0ba97dbd6fe7a21dc632ff3ac1ba67c7d744984e95e8fb4579e60330e6c9c4"
+        },
+        "checkpoints": {
+          "best": {
+            "bytes": 8093,
+            "filename": "best.pt",
+            "sha256": "dcee0ad8cc5c3b532360f0ca705f26821d8a4c4c8e6070fe37339d979db0ecba"
+          },
+          "latest": {
+            "bytes": 38615,
+            "filename": "latest.pt",
+            "sha256": "54046ecbe30ea63bfe9ca546069417fce90a6dd759ce4dd5043e40338d221386"
+          }
+        },
+        "completed_epoch": 1,
+        "duration_seconds": 2.2188958000006096,
+        "experiment_finished": false,
+        "experiment_id": "01b6f115-2bfe-469f-b768-a1aa881e8878",
+        "local_receipt_sha256": "0d6c328466413e8455757e246c7b85bf44f0033f82b81714fd3a6dd555b9d64f",
+        "optimizer_steps": 3,
+        "optimizer_steps_this_session": 3,
+        "run_id": "5e786846-da14-45b5-8fa4-3a9d707542dc",
+        "session_completed": true,
+        "session_number": 1,
+        "session_outcome": "session_complete_experiment_active",
+        "stale_epochs": 0,
+        "termination_reason": null,
+        "training_samples_this_epoch": 6,
+        "validation_samples_this_epoch": 3
+      },
+      {
+        "best_epoch": 1,
+        "checkpoint_restoration": {
+          "additional_validation_passes": 0,
+          "all_state_exact": true,
+          "best_model_exact": true,
+          "continuation_sha256": "9b7d2fa0df8eccc429f73dcfbcbb961b80ce961fb384459d01a4535b59ebc443",
+          "model_state_sha256": "34d79f783691b0bbe8cc495a3573892f85f95e004f78b8c0cee6a97c032a391d"
+        },
+        "checkpoints": {
+          "best": {
+            "bytes": 8157,
+            "filename": "best.pt",
+            "sha256": "4b46159a649dbdcf2c8dda309c5e724df99ad30a699137b10de7b22fe1b30d57"
+          },
+          "latest": {
+            "bytes": 39575,
+            "filename": "latest.pt",
+            "sha256": "723bb6efecae05556ac7461ec1780d0380caed4c5b6cb724cdd4fe324a2e046d"
+          }
+        },
+        "completed_epoch": 2,
+        "duration_seconds": 0.5493738999994093,
+        "experiment_finished": false,
+        "experiment_id": "01b6f115-2bfe-469f-b768-a1aa881e8878",
+        "local_receipt_sha256": "4247b00fa02b84fac35db2956c937c0250e551b55e27992af16dc8631ae149e9",
+        "optimizer_steps": 6,
+        "optimizer_steps_this_session": 3,
+        "run_id": "efd0e3cd-8cc9-43f0-9acd-6d98232dd3b0",
+        "session_completed": true,
+        "session_number": 2,
+        "session_outcome": "session_complete_experiment_active",
+        "stale_epochs": 1,
+        "termination_reason": null,
+        "training_samples_this_epoch": 6,
+        "validation_samples_this_epoch": 3
+      },
+      {
+        "best_epoch": 1,
+        "checkpoint_restoration": {
+          "additional_validation_passes": 0,
+          "all_state_exact": true,
+          "best_model_exact": true,
+          "continuation_sha256": "bc302ca0e6785222df3dc0a5892cd9e7cfeaa3d5aa9bbe966dbb8b4e86c5a20b",
+          "model_state_sha256": "4a6fee34e1521a2dfff6b396f926447b44f180e7996fc6c5d649745fbc8fabe8"
+        },
+        "checkpoints": {
+          "best": {
+            "bytes": 8157,
+            "filename": "best.pt",
+            "sha256": "4b46159a649dbdcf2c8dda309c5e724df99ad30a699137b10de7b22fe1b30d57"
+          },
+          "latest": {
+            "bytes": 40471,
+            "filename": "latest.pt",
+            "sha256": "6c6a04aac49f46f14ca32435ce285215f242900bfae04402f237b23e514379c7"
+          }
+        },
+        "completed_epoch": 3,
+        "duration_seconds": 0.5568868999998813,
+        "experiment_finished": false,
+        "experiment_id": "01b6f115-2bfe-469f-b768-a1aa881e8878",
+        "local_receipt_sha256": "0a003ed2065dc01a0640ae1d78fc3f3d68205eee72c733e92e3e7d0c3cd32bca",
+        "optimizer_steps": 9,
+        "optimizer_steps_this_session": 3,
+        "run_id": "96a60ad6-4597-406b-be9d-ddacba70d7c2",
+        "session_completed": true,
+        "session_number": 3,
+        "session_outcome": "session_complete_experiment_active",
+        "stale_epochs": 2,
+        "termination_reason": null,
+        "training_samples_this_epoch": 6,
+        "validation_samples_this_epoch": 3
+      },
+      {
+        "best_epoch": 1,
+        "checkpoint_restoration": {
+          "additional_validation_passes": 0,
+          "all_state_exact": true,
+          "best_model_exact": true,
+          "continuation_sha256": "ac5106958142bd534b4b19230b2c3d49f7add2842826fbc7b1948c6577246ad2",
+          "model_state_sha256": "c6c41f2b36ed775ab88684febaf2ba59ca3a3375adb822aa35e3b4c28eec43dd"
+        },
+        "checkpoints": {
+          "best": {
+            "bytes": 8157,
+            "filename": "best.pt",
+            "sha256": "4b46159a649dbdcf2c8dda309c5e724df99ad30a699137b10de7b22fe1b30d57"
+          },
+          "latest": {
+            "bytes": 41431,
+            "filename": "latest.pt",
+            "sha256": "c1d74ea0ed5073247c791e56f4f160ce54bda31ad0195c92e4ac0fe17b239acb"
+          }
+        },
+        "completed_epoch": 4,
+        "duration_seconds": 0.5087978999999905,
+        "experiment_finished": true,
+        "experiment_id": "01b6f115-2bfe-469f-b768-a1aa881e8878",
+        "local_receipt_sha256": "f7d2f0cc151a8a1531340d0ea63183b1c1b17dd9ade99f86f1eb5489c729e961",
+        "optimizer_steps": 12,
+        "optimizer_steps_this_session": 3,
+        "run_id": "fd70d76a-03da-4e56-9397-8441cbec6c0a",
+        "session_completed": true,
+        "session_number": 4,
+        "session_outcome": "experiment_finished",
+        "stale_epochs": 3,
+        "termination_reason": "early_stopping",
+        "training_samples_this_epoch": 6,
+        "validation_samples_this_epoch": 3
+      }
+    ]
+  },
+  "exact_continuation": {
+    "cpu_and_cuda_tests": "2 passed in 11.14 seconds; stochastic synthetic images only",
+    "cpu_demo": "passed",
+    "epoch2_losses_and_order_exact": true,
+    "model_state_sha256": "34d79f783691b0bbe8cc495a3573892f85f95e004f78b8c0cee6a97c032a391d",
+    "optimizer_and_rng_exact": true,
+    "optimizer_state_sha256": "65c0e36848429081ddd25ff3c79be89631eb0d65f4c86ce9fd19d8f931737693",
+    "reference_num_threads": 2,
+    "rng_state_sha256": "bfe8ac7a6a679f71442989e8e2dfd30d0d6af8afe3a3cd84ba107362b883d13e",
+    "session_budget_changed_without_compatibility_rejection": true
+  },
+  "experiment_config": {
+    "architecture": "imagenet_densenet121_3class",
+    "augmentation": "train_affine_5_degrees_translate_0.02_no_flip",
+    "batch_size": 2,
+    "image_size": 224,
+    "learning_rate": 0.0001,
+    "loss": "unweighted_cross_entropy",
+    "max_epochs": 10,
+    "normalization": "fixed_imagenet_rgb",
+    "num_threads": 2,
+    "num_workers": 0,
+    "optimizer": "adamw",
+    "patience": 3,
+    "precision": "fp32",
+    "scheduler": "none",
+    "seed": 42,
+    "selection": "validation_macro_f1_lower_loss_earlier_epoch",
+    "weight_decay": 0.0001
+  },
+  "fixture_data": {
+    "heldout_image_files": "nonexistent",
+    "image_evidence": "unverified_or_fixture_inputs",
+    "training_images": 6,
+    "validation_images": 3
+  },
+  "local_checks": {
+    "full_suite": {
+      "passed": 165,
+      "seconds": 96.33,
+      "skipped": 2
+    },
+    "maintained_file_formatting": "passed",
+    "pip_check": "passed",
+    "remote_CI": "reported separately in PR checks and final report",
+    "ruff": "passed"
+  },
+  "purpose": "M3B_implementation_and_synthetic_fixture_verification_only",
+  "real_full_data_M3B_epochs": 0,
+  "scientific_boundaries": {
+    "M3A_checkpoint_reused_as_baseline": false,
+    "frozen_data_or_previous_verification_modified": false,
+    "internal_or_external_heldout_image_bytes_opened": false,
+    "threshold_selected": false,
+    "weights_committed": false
+  },
+  "source_commit": "b7323b4aca2af5e961c7b9e8e62255e5a327a260",
+  "source_sha256": {
+    "src/__init__.py": "29f11a79a3dd2b3afce39eb451b2a2c1b8fce0fa9b2889e7560bcd87e09e5020",
+    "src/data/__init__.py": "96ee88f56588d71cb4e5994de5685f80ce12b6726e74f9e82cfc3f43694998ae",
+    "src/data/audit.py": "51f754f90e981a55391cdba760636e9621e0951d9ad5e5799c184e007b662b00",
+    "src/data/datasets.py": "e1a17f5bc65216e9a848afb8382bcb9797392960df352076f86302bc9dfb224c",
+    "src/data/frozen_split.py": "5da2cb0b7eb2794dc62abd6a503812a69f0db1269e533e9a64d2f12396ecd4f4",
+    "src/data/labels.py": "5019089fc9ad92ce42c9795f22dbd857b3319fd9a3231afd9155906cda157f34",
+    "src/data/manifest.py": "3b7ec3c9ef0a7aba0c3af842ec1fec2017b202efc3bf23b47d2290581a67f76d",
+    "src/data/overlap.py": "02e3f7c45d846bc885f8c84a6d41d1e8ee93756449e964bb0cea5b593d11baac",
+    "src/data/phase2_audit.py": "c73733db4f23e363bf99b2c54dc2d2800096f6558237f94333b950915618e5db",
+    "src/data/provenance.py": "e2374d34e75cf3a4bc10afa5a2e9bb628fc184a9a6ef67fb2e201e2beba56d94",
+    "src/data/schema.py": "80de82a3aa04f875dc66d18ab275b7d901ab420728fd0550dc17065f83dc7d39",
+    "src/data/splits.py": "972c65e5ffb813be4784a4ddf312a5af7f600ae2f4fb3f631bccae8d9f618b2a",
+    "src/data/tbx11k_split.py": "1a85c68cba29a6de3125fc3d39edfde336d2839cabcc58c299dc99d0b43cbe9c",
+    "src/data/transforms.py": "f166e8446aeccf81dd1bedde92d83c35c7f85fd3e3adf2d430e2a6ce16b161e4",
+    "src/evaluation/__init__.py": "a58b8fdc1901d08c0a6cb8196a899a4886214305a29788306b8107d630aaaa3d",
+    "src/models/__init__.py": "7beb2a5ca845373dc10d8f1cdf2db5bb0b84b7baa33fe19832a622593b36e3ce",
+    "src/models/densenet.py": "589feb60c78fc2ea0999954a4a52b838674ac612c6faa2401394a98edfc545d7",
+    "src/training/__init__.py": "2b85f7e403d75a92d83f82d56593f8ef797790f382491c3611b41e2988dc6148",
+    "src/training/baseline.py": "2a2c0c8017958454cdb74b201410e41cc2a3eca7700c349408d5a6f3d6bef4ec",
+    "src/training/baseline_session.py": "2ac4a1dd4dd97f19788c00a8404e7c3d1c851cb57fa509971975f4f107857520",
+    "src/training/cpu_temperature.py": "b8b50e8978324ec4dcf0d15573763a321ba267870b970f2a6504c48ca9231045",
+    "src/training/epoch.py": "541acb0decb704b3f00de5b6eb6b75e1a83f2e19b35ad628de98c4a8e3ce41c3",
+    "src/training/full_data.py": "d9bfabba9613e6e8bd2d09e649cc659421e363a711fa33c85e27b4b39f1b5c66",
+    "src/training/pilot.py": "d76a67eb3aa0d4e456ba2bbf06ef4c513006a6dbe9e744aa7586b54ccb5b2e1e",
+    "src/training/preflight.py": "b968aff82f251504e34383d65e5e5b6f05d3806792c8c7c890a1748c030b7e81",
+    "src/training/smoke.py": "95cb0eac1f1cf6ee59712c22fc51c4755305e499263f34c1a5bc36009d2c3654"
+  }
+}
