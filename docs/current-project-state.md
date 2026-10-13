@@ -144,6 +144,15 @@ A successful smoke test should demonstrate:
 
 Large baseline training should wait until this smoke test succeeds.
 
+M2's bounded CUDA pilot is now verified: three short epochs, 81 optimizer steps,
+54 training and 54 independent validation images, selected-checkpoint reload with
+matching validation results, 72.97 seconds total. Peak Torch memory was 402.28 MiB
+allocated / 426 MiB reserved; sampled temperature was 57–62 C. Class weighting
+was disabled. The frozen 8,257-image assignments and held-out boundaries remain
+unchanged. See [m2-pilot.md](m2-pilot.md) and the sanitized execution receipt in
+[m2-verification.json](m2-verification.json). This is engineering verification;
+subset metrics do not estimate final model performance or establish convergence.
+
 ## Baseline model and evaluation
 
 The locked baseline is an **ImageNet-pretrained DenseNet-121 adapted for 3-class internal classification**.
@@ -158,9 +167,10 @@ Optional architecture comparisons, stronger augmentation, additional datasets, a
 
 Resume work in this order:
 
-1. review M1 and its verification receipt;
-2. implement a bounded training/validation pilot, including checkpoint selection and resource accounting;
-3. document final training settings only after the pilot;
+1. review M2 implementation, fixture checks and actual CUDA receipt;
+2. approve M3's full-partition schedule and scientific choices, including epoch cap,
+   patience, class weighting and augmentation; M2 does not finalize these values;
+3. implement and execute separately bounded full baseline training only after M3 authorization;
 4. implement held-out evaluation after model and threshold decisions are frozen.
 
 ## Related documentation

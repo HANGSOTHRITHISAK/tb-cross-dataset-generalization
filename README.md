@@ -10,14 +10,16 @@ Rather than optimizing only for in-domain performance, this project focuses on t
 
 ## Project status
 
-**Current stage:** Phase 2 split frozen; M1 DenseNet-121 execution foundation implemented.
+**Current stage:** Phase 2 split frozen; M2 bounded DenseNet-121 training/validation pilot verified.
 
-The pipeline joins audited metadata to the frozen 8,257-image split, preprocesses
-images, and runs one bounded training-only optimizer step with an execution receipt.
-See [M1 verification and commands](docs/m1-implementation.md) for fixture, real-image,
-and CUDA verification evidence. Full baseline training and internal/external
-evaluation remain pending. A smoke result is engineering evidence, not model
-performance evidence.
+The pipeline preserves the frozen 8,257-image split and supports bounded multi-step
+training, independent validation, checkpoint selection and resource monitoring.
+The real-image CUDA pilot completed three short epochs and 81 optimizer steps on
+54 training / 54 validation images; the selected checkpoint reproduced its
+validation results after reload. See [M2 pilot and commands](docs/m2-pilot.md) and
+[M1 foundation](docs/m1-implementation.md) for fixture versus real-image evidence.
+Full baseline training and held-out internal/external evaluation remain pending.
+Limited-subset pilot metrics are engineering evidence, not final research findings.
 
 ## Planned experimental design
 

@@ -1,0 +1,1980 @@
+{
+  "base_commit": "086cac0",
+  "checks": {
+    "final_diff_review": "passed: partition isolation, validation-only selection, failure guards, provenance, immutable metadata and artifact privacy reviewed",
+    "format": "passed",
+    "pip_check": "passed",
+    "pytest_duration_seconds": 43.47,
+    "pytest_passed": 92,
+    "ruff": "passed"
+  },
+  "driver_version": "610.88",
+  "execution_commit": "0f0729756b04bb37855a3049a053deec7298005f",
+  "local_receipt_filename": "m2-cuda-fp32/receipt.json",
+  "original_receipt_sha256": "bfa5c32ce5876cef9b5db1ff21172e540f7a2eb5dc4ed2887c179d0edb3f0d10",
+  "purpose": "Bounded engineering verification, not final performance evidence",
+  "receipt": {
+    "best_checkpoint": {
+      "config": {
+        "batch_size": 2,
+        "class_weighted": false,
+        "epochs": 3,
+        "image_size": 224,
+        "learning_rate": 0.0001,
+        "max_cuda_reserved_mib": 5120,
+        "max_seconds": 180,
+        "max_steps": 81,
+        "num_threads": 2,
+        "patience": null,
+        "precision": "fp32",
+        "seed": 42,
+        "stop_temperature_c": 80,
+        "train_per_class": [
+          24,
+          24,
+          6
+        ],
+        "validation_per_class": [
+          24,
+          24,
+          6
+        ],
+        "weight_decay": 0.0001
+      },
+      "epoch": 3,
+      "filename": "best.pt",
+      "image_evidence": "verified_real_tbx11k",
+      "inputs": {
+        "manifest_lf_sha256": "85e6e6fe4a56ac8b7abeb29a68ac2a256ba1cc46164fd8dd6f1ab6f5187437cd",
+        "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+        "split_lf_sha256": "e4e69370c933f2b12b4b00df62b43ee5b7dee31e415ad67c75adfc84926c2227",
+        "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
+        "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
+      },
+      "model": {
+        "architecture": "densenet121",
+        "class_names": [
+          "healthy",
+          "sick_non_tb",
+          "tb"
+        ],
+        "initial_state_sha256": "e42d1b731d1ab3c2083753906ab3026ae7f29f2ab3e764b488560e4c78c409f0",
+        "initialization": "IMAGENET1K_V1",
+        "weights_sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395"
+      },
+      "optimizer_steps": 81,
+      "selection": {
+        "metric": "macro_f1",
+        "partition": "validation",
+        "tie_breaking": "lower_validation_loss_then_earliest_epoch"
+      },
+      "sha256": "c25d2a0f332edfa717edde50af9d0ac111bfc54ee6cb6ccdc3c4b20b185afd4f",
+      "state_sha256": "f1582f0574a117dda337ffa9ee3e0ba708ffe4c62e464ae29c0ceff8a45de8ce",
+      "validation": {
+        "accuracy": 0.8888888888888888,
+        "batch_seconds": [
+          0.04232159999992291,
+          0.0416302999999516,
+          0.04288659999997435,
+          0.041455700000142315,
+          0.04256519999989905,
+          0.04237149999994472,
+          0.04243269999983568,
+          0.042899199999965276,
+          0.04561080000007678,
+          0.046470300000009956,
+          0.04236809999997604,
+          0.044379199999866614,
+          0.04240540000000692,
+          0.0423571000001175,
+          0.042253500000015265,
+          0.042642500000056316,
+          0.042572099999915736,
+          0.043342699999811884,
+          0.0443536000000222,
+          0.0448857000001226,
+          0.043157699999937904,
+          0.04445149999992282,
+          0.061199900000019625,
+          0.04428230000007716,
+          0.04618170000003374,
+          0.043624999999792635,
+          0.040441299999883995
+        ],
+        "class_counts": [
+          24,
+          24,
+          6
+        ],
+        "class_names": [
+          "healthy",
+          "sick_non_tb",
+          "tb"
+        ],
+        "confusion_matrix": [
+          [
+            22,
+            2,
+            0
+          ],
+          [
+            0,
+            24,
+            0
+          ],
+          [
+            1,
+            3,
+            2
+          ]
+        ],
+        "epoch": 3,
+        "loss": 0.41462348084206935,
+        "macro_f1": 0.7806101967081492,
+        "partition": "validation",
+        "per_class_recall": [
+          0.9166666666666666,
+          1.0,
+          0.3333333333333333
+        ],
+        "sample_count": 54,
+        "zero_division": 0
+      }
+    },
+    "checkpoint_usable": true,
+    "checkpoint_validation": {
+      "accuracy": 0.8888888888888888,
+      "batch_seconds": [
+        0.09125589999985095,
+        0.08543540000005123,
+        0.08528500000011263,
+        0.06126459999995859,
+        0.042750600000090344,
+        0.043598499999916385,
+        0.04386999999996988,
+        0.04811620000009498,
+        0.06095809999987978,
+        0.07434039999998276,
+        0.07852040000011584,
+        0.07985009999993053,
+        0.05507220000004054,
+        0.04336009999997259,
+        0.044854800000166506,
+        0.041472399999975096,
+        0.04341039999985696,
+        0.04492030000005798,
+        0.041869200000064666,
+        0.041567700000086916,
+        0.04496359999984634,
+        0.04165100000000166,
+        0.04233769999996184,
+        0.043683699999974124,
+        0.04718290000005254,
+        0.04270859999996901,
+        0.04238609999993059
+      ],
+      "class_counts": [
+        24,
+        24,
+        6
+      ],
+      "class_names": [
+        "healthy",
+        "sick_non_tb",
+        "tb"
+      ],
+      "confusion_matrix": [
+        [
+          22,
+          2,
+          0
+        ],
+        [
+          0,
+          24,
+          0
+        ],
+        [
+          1,
+          3,
+          2
+        ]
+      ],
+      "loss": 0.41462348084206935,
+      "macro_f1": 0.7806101967081492,
+      "partition": "validation",
+      "per_class_recall": [
+        0.9166666666666666,
+        1.0,
+        0.3333333333333333
+      ],
+      "sample_count": 54,
+      "zero_division": 0
+    },
+    "classifier_updated": true,
+    "config": {
+      "batch_size": 2,
+      "class_weighted": false,
+      "epochs": 3,
+      "image_size": 224,
+      "learning_rate": 0.0001,
+      "max_cuda_reserved_mib": 5120,
+      "max_seconds": 180,
+      "max_steps": 81,
+      "num_threads": 2,
+      "patience": null,
+      "precision": "fp32",
+      "seed": 42,
+      "stop_temperature_c": 80,
+      "train_per_class": [
+        24,
+        24,
+        6
+      ],
+      "validation_per_class": [
+        24,
+        24,
+        6
+      ],
+      "weight_decay": 0.0001
+    },
+    "config_file_sha256": "bb8cef5c22bd6f0e842bf16ddf70aa59f77ac00c3c90276d755e29ee821091b1",
+    "cuda_peak_allocated_bytes": 421824000,
+    "cuda_peak_reserved_bytes": 446693376,
+    "determinism": {
+      "algorithms": true,
+      "amp_initial_scale": null,
+      "cublas_workspace_config": ":4096:8",
+      "cudnn_benchmark": false,
+      "num_workers": 0,
+      "shuffle_seed": 42
+    },
+    "device": "cuda",
+    "duration_seconds": 72.96707550000008,
+    "environment": {
+      "cuda_runtime": "12.6",
+      "gpu_capability": [
+        7,
+        5
+      ],
+      "gpu_name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+      "gpu_total_memory_bytes": 6442123264,
+      "packages": {
+        "Jinja2": "3.1.6",
+        "MarkupSafe": "3.0.4",
+        "PyYAML": "6.0.3",
+        "Pygments": "2.21.0",
+        "colorama": "0.4.6",
+        "filelock": "4.1.1",
+        "fsspec": "2026.9.0",
+        "iniconfig": "2.3.1",
+        "mpmath": "1.3.0",
+        "networkx": "3.7",
+        "numpy": "2.5.4",
+        "packaging": "26.3",
+        "pandas": "3.0.6",
+        "pillow": "12.3.0",
+        "pip": "25.0.1",
+        "pluggy": "1.6.0",
+        "pytest": "9.1.1",
+        "python-dateutil": "2.9.0.post0",
+        "ruff": "0.17.0",
+        "setuptools": "84.0.0",
+        "six": "1.17.0",
+        "sympy": "1.14.0",
+        "torch": "2.13.0+cu126",
+        "torchvision": "0.28.0+cu126",
+        "typing_extensions": "4.16.0",
+        "tzdata": "2026.5"
+      },
+      "platform": "Windows",
+      "python": "3.12.10"
+    },
+    "epoch": 3,
+    "final_state_sha256": "f1582f0574a117dda337ffa9ee3e0ba708ffe4c62e464ae29c0ceff8a45de8ce",
+    "gpu_monitor": {
+      "overheated": false,
+      "samples": [
+        {
+          "device_memory_used_mib": 0,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 57,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:25.008821+00:00",
+          "utilization_percent": 0
+        },
+        {
+          "device_memory_used_mib": 136,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 58,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:26.165710+00:00",
+          "utilization_percent": 2
+        },
+        {
+          "device_memory_used_mib": 530,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 58,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:27.335043+00:00",
+          "utilization_percent": 2
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 58,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:28.505059+00:00",
+          "utilization_percent": 7
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 58,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:29.675070+00:00",
+          "utilization_percent": 15
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 59,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:30.836810+00:00",
+          "utilization_percent": 15
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 58,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:32.003191+00:00",
+          "utilization_percent": 17
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 59,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:33.147733+00:00",
+          "utilization_percent": 23
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 59,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:34.300420+00:00",
+          "utilization_percent": 15
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 59,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:35.450295+00:00",
+          "utilization_percent": 31
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:36.607880+00:00",
+          "utilization_percent": 21
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 59,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:37.789848+00:00",
+          "utilization_percent": 23
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:38.953772+00:00",
+          "utilization_percent": 23
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 59,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:40.119481+00:00",
+          "utilization_percent": 16
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 59,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:41.290387+00:00",
+          "utilization_percent": 32
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:42.465699+00:00",
+          "utilization_percent": 30
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:43.643944+00:00",
+          "utilization_percent": 18
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:44.809942+00:00",
+          "utilization_percent": 3
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:45.981715+00:00",
+          "utilization_percent": 39
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:47.169044+00:00",
+          "utilization_percent": 28
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:48.333078+00:00",
+          "utilization_percent": 31
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:49.510516+00:00",
+          "utilization_percent": 15
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:50.668770+00:00",
+          "utilization_percent": 24
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:51.818035+00:00",
+          "utilization_percent": 17
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:52.965613+00:00",
+          "utilization_percent": 16
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 60,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:54.125657+00:00",
+          "utilization_percent": 31
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:55.281477+00:00",
+          "utilization_percent": 30
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:56.438250+00:00",
+          "utilization_percent": 14
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:57.592042+00:00",
+          "utilization_percent": 22
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:58.742971+00:00",
+          "utilization_percent": 15
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:00:59.897265+00:00",
+          "utilization_percent": 20
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:01.046626+00:00",
+          "utilization_percent": 15
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:02.194457+00:00",
+          "utilization_percent": 24
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:03.344270+00:00",
+          "utilization_percent": 8
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:04.491210+00:00",
+          "utilization_percent": 25
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:05.647158+00:00",
+          "utilization_percent": 34
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:06.816027+00:00",
+          "utilization_percent": 14
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:07.967462+00:00",
+          "utilization_percent": 15
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:09.124516+00:00",
+          "utilization_percent": 23
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:10.272184+00:00",
+          "utilization_percent": 15
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:11.445987+00:00",
+          "utilization_percent": 19
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:12.607527+00:00",
+          "utilization_percent": 24
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:13.752430+00:00",
+          "utilization_percent": 14
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:14.937754+00:00",
+          "utilization_percent": 13
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:16.094465+00:00",
+          "utilization_percent": 25
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:17.242064+00:00",
+          "utilization_percent": 22
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:18.406269+00:00",
+          "utilization_percent": 18
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:19.554762+00:00",
+          "utilization_percent": 28
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 61,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:20.744829+00:00",
+          "utilization_percent": 4
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:21.898048+00:00",
+          "utilization_percent": 31
+        },
+        {
+          "device_memory_used_mib": 582,
+          "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "temperature_c": 62,
+          "thermal_slowdown": "Not Active",
+          "time_utc": "2026-10-13T07:01:22.988253+00:00",
+          "utilization_percent": 20
+        }
+      ],
+      "stop_temperature_c": 80,
+      "unavailable_reason": null
+    },
+    "history": [
+      {
+        "checkpoint_selected": true,
+        "cuda_peak_allocated_bytes": 421824000,
+        "cuda_peak_reserved_bytes": 446693376,
+        "epoch": 1,
+        "epoch_seconds": 19.170560199999954,
+        "training_loss": 0.9987482892142402,
+        "training_sample_count": 54,
+        "training_seconds": 15.91373329999999,
+        "validation": {
+          "accuracy": 0.7592592592592593,
+          "batch_seconds": [
+            0.07372529999997823,
+            0.04192369999998391,
+            0.042208599999980834,
+            0.04327390000003106,
+            0.0420449999999164,
+            0.047832900000003065,
+            0.047401599999943755,
+            0.05139859999997043,
+            0.04424790000007306,
+            0.050684199999977864,
+            0.0480677000000469,
+            0.049797000000012304,
+            0.046141700000021046,
+            0.04072189999999409,
+            0.04268539999998211,
+            0.046392599999990125,
+            0.046191900000053465,
+            0.050229999999942265,
+            0.045201700000006895,
+            0.053033499999969536,
+            0.04900220000001809,
+            0.05699400000003152,
+            0.04927969999994275,
+            0.06824310000001788,
+            0.042715900000075635,
+            0.060677599999962695,
+            0.05707480000000942
+          ],
+          "class_counts": [
+            24,
+            24,
+            6
+          ],
+          "class_names": [
+            "healthy",
+            "sick_non_tb",
+            "tb"
+          ],
+          "confusion_matrix": [
+            [
+              20,
+              4,
+              0
+            ],
+            [
+              3,
+              21,
+              0
+            ],
+            [
+              4,
+              2,
+              0
+            ]
+          ],
+          "epoch": 1,
+          "loss": 0.719536319926933,
+          "macro_f1": 0.5359477124183006,
+          "partition": "validation",
+          "per_class_recall": [
+            0.8333333333333334,
+            0.875,
+            0.0
+          ],
+          "sample_count": 54,
+          "zero_division": 0
+        },
+        "validation_seconds": 2.2452809000000116
+      },
+      {
+        "checkpoint_selected": true,
+        "cuda_peak_allocated_bytes": 421824000,
+        "cuda_peak_reserved_bytes": 446693376,
+        "epoch": 2,
+        "epoch_seconds": 17.676149800000076,
+        "training_loss": 0.6585383597347472,
+        "training_sample_count": 54,
+        "training_seconds": 14.747143999999935,
+        "validation": {
+          "accuracy": 0.8148148148148148,
+          "batch_seconds": [
+            0.0439401999999518,
+            0.042016899999907764,
+            0.041436600000224644,
+            0.041161200000033205,
+            0.04698200000007091,
+            0.043788299999960145,
+            0.043741899999986344,
+            0.0456199000000197,
+            0.04128590000004806,
+            0.044294699999909426,
+            0.04260899999985668,
+            0.04230140000004212,
+            0.045660400000087975,
+            0.041385300000001735,
+            0.044725900000003094,
+            0.04334689999996044,
+            0.04199289999996836,
+            0.04354479999983596,
+            0.04276649999997062,
+            0.04866560000004938,
+            0.0419901000000209,
+            0.042970900000000256,
+            0.04220110000005661,
+            0.040885300000127245,
+            0.04205679999995482,
+            0.046046299999943585,
+            0.04017729999986841
+          ],
+          "class_counts": [
+            24,
+            24,
+            6
+          ],
+          "class_names": [
+            "healthy",
+            "sick_non_tb",
+            "tb"
+          ],
+          "confusion_matrix": [
+            [
+              24,
+              0,
+              0
+            ],
+            [
+              4,
+              20,
+              0
+            ],
+            [
+              1,
+              5,
+              0
+            ]
+          ],
+          "epoch": 2,
+          "loss": 0.4712995301794123,
+          "macro_f1": 0.5739956359902452,
+          "partition": "validation",
+          "per_class_recall": [
+            1.0,
+            0.8333333333333334,
+            0.0
+          ],
+          "sample_count": 54,
+          "zero_division": 0
+        },
+        "validation_seconds": 2.020818599999984
+      },
+      {
+        "checkpoint_selected": true,
+        "cuda_peak_allocated_bytes": 421824000,
+        "cuda_peak_reserved_bytes": 446693376,
+        "epoch": 3,
+        "epoch_seconds": 17.146195600000055,
+        "training_loss": 0.6425707053255152,
+        "training_sample_count": 54,
+        "training_seconds": 14.137828500000069,
+        "validation": {
+          "accuracy": 0.8888888888888888,
+          "batch_seconds": [
+            0.04232159999992291,
+            0.0416302999999516,
+            0.04288659999997435,
+            0.041455700000142315,
+            0.04256519999989905,
+            0.04237149999994472,
+            0.04243269999983568,
+            0.042899199999965276,
+            0.04561080000007678,
+            0.046470300000009956,
+            0.04236809999997604,
+            0.044379199999866614,
+            0.04240540000000692,
+            0.0423571000001175,
+            0.042253500000015265,
+            0.042642500000056316,
+            0.042572099999915736,
+            0.043342699999811884,
+            0.0443536000000222,
+            0.0448857000001226,
+            0.043157699999937904,
+            0.04445149999992282,
+            0.061199900000019625,
+            0.04428230000007716,
+            0.04618170000003374,
+            0.043624999999792635,
+            0.040441299999883995
+          ],
+          "class_counts": [
+            24,
+            24,
+            6
+          ],
+          "class_names": [
+            "healthy",
+            "sick_non_tb",
+            "tb"
+          ],
+          "confusion_matrix": [
+            [
+              22,
+              2,
+              0
+            ],
+            [
+              0,
+              24,
+              0
+            ],
+            [
+              1,
+              3,
+              2
+            ]
+          ],
+          "epoch": 3,
+          "loss": 0.41462348084206935,
+          "macro_f1": 0.7806101967081492,
+          "partition": "validation",
+          "per_class_recall": [
+            0.9166666666666666,
+            1.0,
+            0.3333333333333333
+          ],
+          "sample_count": 54,
+          "zero_division": 0
+        },
+        "validation_seconds": 2.034065999999939
+      }
+    ],
+    "image_evidence": "verified_real_tbx11k",
+    "imbalance": {
+      "candidate_weights": [
+        0.7243107769423559,
+        0.7526041666666666,
+        3.4404761904761907
+      ],
+      "enabled": false,
+      "frequency_partition": "complete_frozen_train",
+      "oversampling": false
+    },
+    "implementation": {
+      "git_commit": "0f0729756b04bb37855a3049a053deec7298005f",
+      "source_sha256": {
+        "src/__init__.py": "29f11a79a3dd2b3afce39eb451b2a2c1b8fce0fa9b2889e7560bcd87e09e5020",
+        "src/data/__init__.py": "96ee88f56588d71cb4e5994de5685f80ce12b6726e74f9e82cfc3f43694998ae",
+        "src/data/audit.py": "51f754f90e981a55391cdba760636e9621e0951d9ad5e5799c184e007b662b00",
+        "src/data/datasets.py": "e1a17f5bc65216e9a848afb8382bcb9797392960df352076f86302bc9dfb224c",
+        "src/data/frozen_split.py": "5da2cb0b7eb2794dc62abd6a503812a69f0db1269e533e9a64d2f12396ecd4f4",
+        "src/data/labels.py": "5019089fc9ad92ce42c9795f22dbd857b3319fd9a3231afd9155906cda157f34",
+        "src/data/manifest.py": "3b7ec3c9ef0a7aba0c3af842ec1fec2017b202efc3bf23b47d2290581a67f76d",
+        "src/data/overlap.py": "02e3f7c45d846bc885f8c84a6d41d1e8ee93756449e964bb0cea5b593d11baac",
+        "src/data/phase2_audit.py": "c73733db4f23e363bf99b2c54dc2d2800096f6558237f94333b950915618e5db",
+        "src/data/provenance.py": "e2374d34e75cf3a4bc10afa5a2e9bb628fc184a9a6ef67fb2e201e2beba56d94",
+        "src/data/schema.py": "80de82a3aa04f875dc66d18ab275b7d901ab420728fd0550dc17065f83dc7d39",
+        "src/data/splits.py": "972c65e5ffb813be4784a4ddf312a5af7f600ae2f4fb3f631bccae8d9f618b2a",
+        "src/data/tbx11k_split.py": "1a85c68cba29a6de3125fc3d39edfde336d2839cabcc58c299dc99d0b43cbe9c",
+        "src/data/transforms.py": "f166e8446aeccf81dd1bedde92d83c35c7f85fd3e3adf2d430e2a6ce16b161e4",
+        "src/evaluation/__init__.py": "a58b8fdc1901d08c0a6cb8196a899a4886214305a29788306b8107d630aaaa3d",
+        "src/models/__init__.py": "7beb2a5ca845373dc10d8f1cdf2db5bb0b84b7baa33fe19832a622593b36e3ce",
+        "src/models/densenet.py": "589feb60c78fc2ea0999954a4a52b838674ac612c6faa2401394a98edfc545d7",
+        "src/training/__init__.py": "2b85f7e403d75a92d83f82d56593f8ef797790f382491c3611b41e2988dc6148",
+        "src/training/pilot.py": "d76a67eb3aa0d4e456ba2bbf06ef4c513006a6dbe9e744aa7586b54ccb5b2e1e",
+        "src/training/smoke.py": "95cb0eac1f1cf6ee59712c22fc51c4755305e499263f34c1a5bc36009d2c3654"
+      }
+    },
+    "inputs": {
+      "manifest_lf_sha256": "85e6e6fe4a56ac8b7abeb29a68ac2a256ba1cc46164fd8dd6f1ab6f5187437cd",
+      "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+      "split_lf_sha256": "e4e69370c933f2b12b4b00df62b43ee5b7dee31e415ad67c75adfc84926c2227",
+      "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
+      "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
+    },
+    "model": {
+      "architecture": "densenet121",
+      "class_names": [
+        "healthy",
+        "sick_non_tb",
+        "tb"
+      ],
+      "initial_state_sha256": "e42d1b731d1ab3c2083753906ab3026ae7f29f2ab3e764b488560e4c78c409f0",
+      "initialization": "IMAGENET1K_V1",
+      "weights_sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395"
+    },
+    "optimizer": "AdamW",
+    "optimizer_steps": 81,
+    "phase": "checkpoint_verification",
+    "preprocessing": {
+      "image_size": 224,
+      "normalization": "fixed_imagenet",
+      "train_affine_degrees": 5,
+      "train_translate": [
+        0.02,
+        0.02
+      ],
+      "validation_stochastic_augmentation": false
+    },
+    "purpose": "bounded_engineering_pilot_not_performance_estimate",
+    "selection": {
+      "metric": "macro_f1",
+      "partition": "validation",
+      "tie_breaking": "lower_validation_loss_then_earliest_epoch"
+    },
+    "started_utc": "2026-10-13T07:00:10.022067+00:00",
+    "status": "passed",
+    "steps": [
+      {
+        "epoch": 1,
+        "loss": 0.685957670211792,
+        "sample_ids": [
+          "tbx11k:sick/s2040.png",
+          "tbx11k:sick/s2611.png"
+        ],
+        "seconds": 2.1358635999999933,
+        "step": 1
+      },
+      {
+        "epoch": 1,
+        "loss": 0.6120815277099609,
+        "sample_ids": [
+          "tbx11k:sick/s1695.png",
+          "tbx11k:sick/s0728.png"
+        ],
+        "seconds": 0.4544611999999688,
+        "step": 2
+      },
+      {
+        "epoch": 1,
+        "loss": 0.9193928241729736,
+        "sample_ids": [
+          "tbx11k:sick/s0054.png",
+          "tbx11k:health/h0646.png"
+        ],
+        "seconds": 0.47232950000000073,
+        "step": 3
+      },
+      {
+        "epoch": 1,
+        "loss": 0.93055659532547,
+        "sample_ids": [
+          "tbx11k:sick/s0801.png",
+          "tbx11k:health/h3219.png"
+        ],
+        "seconds": 0.4650143000000071,
+        "step": 4
+      },
+      {
+        "epoch": 1,
+        "loss": 1.647178292274475,
+        "sample_ids": [
+          "tbx11k:tb/tb0795.png",
+          "tbx11k:health/h1869.png"
+        ],
+        "seconds": 0.4684230000000298,
+        "step": 5
+      },
+      {
+        "epoch": 1,
+        "loss": 0.71867835521698,
+        "sample_ids": [
+          "tbx11k:health/h0702.png",
+          "tbx11k:sick/s1258.png"
+        ],
+        "seconds": 0.47031809999998586,
+        "step": 6
+      },
+      {
+        "epoch": 1,
+        "loss": 0.5424962639808655,
+        "sample_ids": [
+          "tbx11k:sick/s0765.png",
+          "tbx11k:sick/s2783.png"
+        ],
+        "seconds": 0.4799098999999387,
+        "step": 7
+      },
+      {
+        "epoch": 1,
+        "loss": 1.7469801902770996,
+        "sample_ids": [
+          "tbx11k:tb/tb0174.png",
+          "tbx11k:health/h3233.png"
+        ],
+        "seconds": 0.4558937000000469,
+        "step": 8
+      },
+      {
+        "epoch": 1,
+        "loss": 0.5437028408050537,
+        "sample_ids": [
+          "tbx11k:sick/s1723.png",
+          "tbx11k:sick/s0975.png"
+        ],
+        "seconds": 0.49876480000000356,
+        "step": 9
+      },
+      {
+        "epoch": 1,
+        "loss": 1.333613634109497,
+        "sample_ids": [
+          "tbx11k:health/h1705.png",
+          "tbx11k:health/h1526.png"
+        ],
+        "seconds": 0.5081596999999647,
+        "step": 10
+      },
+      {
+        "epoch": 1,
+        "loss": 0.5361989736557007,
+        "sample_ids": [
+          "tbx11k:sick/s0336.png",
+          "tbx11k:sick/s2639.png"
+        ],
+        "seconds": 0.4730888999999934,
+        "step": 11
+      },
+      {
+        "epoch": 1,
+        "loss": 0.5803237557411194,
+        "sample_ids": [
+          "tbx11k:health/h0857.png",
+          "tbx11k:sick/s3276.png"
+        ],
+        "seconds": 0.48744809999993777,
+        "step": 12
+      },
+      {
+        "epoch": 1,
+        "loss": 1.1934515237808228,
+        "sample_ids": [
+          "tbx11k:sick/s2144.png",
+          "tbx11k:tb/tb0413.png"
+        ],
+        "seconds": 0.4642393000000311,
+        "step": 13
+      },
+      {
+        "epoch": 1,
+        "loss": 1.3105976581573486,
+        "sample_ids": [
+          "tbx11k:health/h2099.png",
+          "tbx11k:health/h0771.png"
+        ],
+        "seconds": 0.5411461999999574,
+        "step": 14
+      },
+      {
+        "epoch": 1,
+        "loss": 1.285660982131958,
+        "sample_ids": [
+          "tbx11k:health/h4917.png",
+          "tbx11k:health/h0184.png"
+        ],
+        "seconds": 0.5137298000000783,
+        "step": 15
+      },
+      {
+        "epoch": 1,
+        "loss": 1.5158803462982178,
+        "sample_ids": [
+          "tbx11k:health/h0236.png",
+          "tbx11k:tb/tb0825.png"
+        ],
+        "seconds": 0.5184550000000172,
+        "step": 16
+      },
+      {
+        "epoch": 1,
+        "loss": 1.5899815559387207,
+        "sample_ids": [
+          "tbx11k:tb/tb0623.png",
+          "tbx11k:health/h4193.png"
+        ],
+        "seconds": 0.4687590999999429,
+        "step": 17
+      },
+      {
+        "epoch": 1,
+        "loss": 1.1899592876434326,
+        "sample_ids": [
+          "tbx11k:health/h4192.png",
+          "tbx11k:health/h3879.png"
+        ],
+        "seconds": 0.49610199999995075,
+        "step": 18
+      },
+      {
+        "epoch": 1,
+        "loss": 0.726272702217102,
+        "sample_ids": [
+          "tbx11k:sick/s4727.png",
+          "tbx11k:health/h1775.png"
+        ],
+        "seconds": 0.45801140000003215,
+        "step": 19
+      },
+      {
+        "epoch": 1,
+        "loss": 1.1988306045532227,
+        "sample_ids": [
+          "tbx11k:tb/tb0147.png",
+          "tbx11k:health/h0221.png"
+        ],
+        "seconds": 0.5262806000000637,
+        "step": 20
+      },
+      {
+        "epoch": 1,
+        "loss": 0.7743954658508301,
+        "sample_ids": [
+          "tbx11k:sick/s4275.png",
+          "tbx11k:sick/s4829.png"
+        ],
+        "seconds": 0.4944209000000228,
+        "step": 21
+      },
+      {
+        "epoch": 1,
+        "loss": 1.0446125268936157,
+        "sample_ids": [
+          "tbx11k:health/h4624.png",
+          "tbx11k:health/h1053.png"
+        ],
+        "seconds": 0.4760102000000188,
+        "step": 22
+      },
+      {
+        "epoch": 1,
+        "loss": 0.8113702535629272,
+        "sample_ids": [
+          "tbx11k:sick/s2967.png",
+          "tbx11k:sick/s1231.png"
+        ],
+        "seconds": 0.5075652000000446,
+        "step": 23
+      },
+      {
+        "epoch": 1,
+        "loss": 0.7948243618011475,
+        "sample_ids": [
+          "tbx11k:sick/s2666.png",
+          "tbx11k:sick/s3505.png"
+        ],
+        "seconds": 0.47184340000001157,
+        "step": 24
+      },
+      {
+        "epoch": 1,
+        "loss": 1.023659348487854,
+        "sample_ids": [
+          "tbx11k:health/h4531.png",
+          "tbx11k:health/h1678.png"
+        ],
+        "seconds": 0.5343284999999014,
+        "step": 25
+      },
+      {
+        "epoch": 1,
+        "loss": 0.7672647833824158,
+        "sample_ids": [
+          "tbx11k:sick/s3599.png",
+          "tbx11k:sick/s2146.png"
+        ],
+        "seconds": 0.5257731000000376,
+        "step": 26
+      },
+      {
+        "epoch": 1,
+        "loss": 0.9422814846038818,
+        "sample_ids": [
+          "tbx11k:health/h4318.png",
+          "tbx11k:health/h0195.png"
+        ],
+        "seconds": 0.5179143000000295,
+        "step": 27
+      },
+      {
+        "epoch": 2,
+        "loss": 0.8614559769630432,
+        "sample_ids": [
+          "tbx11k:tb/tb0623.png",
+          "tbx11k:health/h3233.png"
+        ],
+        "seconds": 0.7586373999999978,
+        "step": 28
+      },
+      {
+        "epoch": 2,
+        "loss": 0.42183560132980347,
+        "sample_ids": [
+          "tbx11k:sick/s0336.png",
+          "tbx11k:health/h1526.png"
+        ],
+        "seconds": 0.587997400000063,
+        "step": 29
+      },
+      {
+        "epoch": 2,
+        "loss": 0.3842357099056244,
+        "sample_ids": [
+          "tbx11k:sick/s3599.png",
+          "tbx11k:health/h2099.png"
+        ],
+        "seconds": 0.5274989000000687,
+        "step": 30
+      },
+      {
+        "epoch": 2,
+        "loss": 0.8911205530166626,
+        "sample_ids": [
+          "tbx11k:health/h0702.png",
+          "tbx11k:health/h4192.png"
+        ],
+        "seconds": 0.5595696999999973,
+        "step": 31
+      },
+      {
+        "epoch": 2,
+        "loss": 0.8136950731277466,
+        "sample_ids": [
+          "tbx11k:sick/s4275.png",
+          "tbx11k:sick/s0765.png"
+        ],
+        "seconds": 0.504627199999959,
+        "step": 32
+      },
+      {
+        "epoch": 2,
+        "loss": 0.508614182472229,
+        "sample_ids": [
+          "tbx11k:sick/s1723.png",
+          "tbx11k:health/h1775.png"
+        ],
+        "seconds": 0.4963109999999915,
+        "step": 33
+      },
+      {
+        "epoch": 2,
+        "loss": 0.9408934116363525,
+        "sample_ids": [
+          "tbx11k:sick/s2144.png",
+          "tbx11k:tb/tb0174.png"
+        ],
+        "seconds": 0.46350889999996525,
+        "step": 34
+      },
+      {
+        "epoch": 2,
+        "loss": 0.5460354089736938,
+        "sample_ids": [
+          "tbx11k:sick/s2040.png",
+          "tbx11k:health/h3219.png"
+        ],
+        "seconds": 0.47927770000001146,
+        "step": 35
+      },
+      {
+        "epoch": 2,
+        "loss": 1.3615286350250244,
+        "sample_ids": [
+          "tbx11k:tb/tb0825.png",
+          "tbx11k:sick/s4829.png"
+        ],
+        "seconds": 0.519398600000045,
+        "step": 36
+      },
+      {
+        "epoch": 2,
+        "loss": 0.8404082655906677,
+        "sample_ids": [
+          "tbx11k:health/h1053.png",
+          "tbx11k:health/h0221.png"
+        ],
+        "seconds": 0.5165074000000232,
+        "step": 37
+      },
+      {
+        "epoch": 2,
+        "loss": 0.8306113481521606,
+        "sample_ids": [
+          "tbx11k:health/h4193.png",
+          "tbx11k:health/h1705.png"
+        ],
+        "seconds": 0.511308799999938,
+        "step": 38
+      },
+      {
+        "epoch": 2,
+        "loss": 1.2943507432937622,
+        "sample_ids": [
+          "tbx11k:sick/s1231.png",
+          "tbx11k:tb/tb0413.png"
+        ],
+        "seconds": 0.4593847999999525,
+        "step": 39
+      },
+      {
+        "epoch": 2,
+        "loss": 0.892253577709198,
+        "sample_ids": [
+          "tbx11k:sick/s2783.png",
+          "tbx11k:sick/s0054.png"
+        ],
+        "seconds": 0.48267520000001696,
+        "step": 40
+      },
+      {
+        "epoch": 2,
+        "loss": 0.2876041531562805,
+        "sample_ids": [
+          "tbx11k:health/h4624.png",
+          "tbx11k:sick/s4727.png"
+        ],
+        "seconds": 0.528165799999897,
+        "step": 41
+      },
+      {
+        "epoch": 2,
+        "loss": 0.2303369641304016,
+        "sample_ids": [
+          "tbx11k:health/h4917.png",
+          "tbx11k:sick/s0801.png"
+        ],
+        "seconds": 0.5307791999998699,
+        "step": 42
+      },
+      {
+        "epoch": 2,
+        "loss": 1.089972734451294,
+        "sample_ids": [
+          "tbx11k:health/h0195.png",
+          "tbx11k:health/h0646.png"
+        ],
+        "seconds": 0.5174839999999676,
+        "step": 43
+      },
+      {
+        "epoch": 2,
+        "loss": 0.9677047729492188,
+        "sample_ids": [
+          "tbx11k:sick/s2611.png",
+          "tbx11k:sick/s0975.png"
+        ],
+        "seconds": 0.5195819000000483,
+        "step": 44
+      },
+      {
+        "epoch": 2,
+        "loss": 0.2263578176498413,
+        "sample_ids": [
+          "tbx11k:health/h1869.png",
+          "tbx11k:sick/s0728.png"
+        ],
+        "seconds": 0.5071925999998257,
+        "step": 45
+      },
+      {
+        "epoch": 2,
+        "loss": 0.41534358263015747,
+        "sample_ids": [
+          "tbx11k:sick/s2639.png",
+          "tbx11k:health/h1678.png"
+        ],
+        "seconds": 0.4488165999998728,
+        "step": 46
+      },
+      {
+        "epoch": 2,
+        "loss": 0.3204954266548157,
+        "sample_ids": [
+          "tbx11k:sick/s2146.png",
+          "tbx11k:health/h0236.png"
+        ],
+        "seconds": 0.44602489999988393,
+        "step": 47
+      },
+      {
+        "epoch": 2,
+        "loss": 0.29627978801727295,
+        "sample_ids": [
+          "tbx11k:sick/s3276.png",
+          "tbx11k:health/h3879.png"
+        ],
+        "seconds": 0.45079740000005586,
+        "step": 48
+      },
+      {
+        "epoch": 2,
+        "loss": 0.40174007415771484,
+        "sample_ids": [
+          "tbx11k:health/h4318.png",
+          "tbx11k:sick/s1258.png"
+        ],
+        "seconds": 0.4819800000000214,
+        "step": 49
+      },
+      {
+        "epoch": 2,
+        "loss": 0.22096019983291626,
+        "sample_ids": [
+          "tbx11k:sick/s2666.png",
+          "tbx11k:health/h0771.png"
+        ],
+        "seconds": 0.4468194000000949,
+        "step": 50
+      },
+      {
+        "epoch": 2,
+        "loss": 1.0567266941070557,
+        "sample_ids": [
+          "tbx11k:tb/tb0795.png",
+          "tbx11k:health/h4531.png"
+        ],
+        "seconds": 0.48445809999998346,
+        "step": 51
+      },
+      {
+        "epoch": 2,
+        "loss": 1.2598685026168823,
+        "sample_ids": [
+          "tbx11k:tb/tb0147.png",
+          "tbx11k:sick/s3505.png"
+        ],
+        "seconds": 0.46675709999999526,
+        "step": 52
+      },
+      {
+        "epoch": 2,
+        "loss": 0.20582199096679688,
+        "sample_ids": [
+          "tbx11k:health/h0857.png",
+          "tbx11k:sick/s2967.png"
+        ],
+        "seconds": 0.524288899999874,
+        "step": 53
+      },
+      {
+        "epoch": 2,
+        "loss": 0.2142845243215561,
+        "sample_ids": [
+          "tbx11k:health/h0184.png",
+          "tbx11k:sick/s1695.png"
+        ],
+        "seconds": 0.47284530000001723,
+        "step": 54
+      },
+      {
+        "epoch": 3,
+        "loss": 0.8677628040313721,
+        "sample_ids": [
+          "tbx11k:sick/s0975.png",
+          "tbx11k:tb/tb0147.png"
+        ],
+        "seconds": 0.4968910000000051,
+        "step": 55
+      },
+      {
+        "epoch": 3,
+        "loss": 0.8589217662811279,
+        "sample_ids": [
+          "tbx11k:sick/s0054.png",
+          "tbx11k:sick/s2611.png"
+        ],
+        "seconds": 0.49318109999990156,
+        "step": 56
+      },
+      {
+        "epoch": 3,
+        "loss": 0.9196000099182129,
+        "sample_ids": [
+          "tbx11k:tb/tb0825.png",
+          "tbx11k:sick/s2666.png"
+        ],
+        "seconds": 0.5395771000000877,
+        "step": 57
+      },
+      {
+        "epoch": 3,
+        "loss": 0.7145148515701294,
+        "sample_ids": [
+          "tbx11k:health/h4917.png",
+          "tbx11k:tb/tb0174.png"
+        ],
+        "seconds": 0.538949200000161,
+        "step": 58
+      },
+      {
+        "epoch": 3,
+        "loss": 0.9346739649772644,
+        "sample_ids": [
+          "tbx11k:health/h1053.png",
+          "tbx11k:health/h4318.png"
+        ],
+        "seconds": 0.46994969999991554,
+        "step": 59
+      },
+      {
+        "epoch": 3,
+        "loss": 0.803579568862915,
+        "sample_ids": [
+          "tbx11k:sick/s2639.png",
+          "tbx11k:sick/s4275.png"
+        ],
+        "seconds": 0.4631600999998682,
+        "step": 60
+      },
+      {
+        "epoch": 3,
+        "loss": 0.8692015409469604,
+        "sample_ids": [
+          "tbx11k:health/h3219.png",
+          "tbx11k:health/h0857.png"
+        ],
+        "seconds": 0.4752112000001034,
+        "step": 61
+      },
+      {
+        "epoch": 3,
+        "loss": 0.1886746883392334,
+        "sample_ids": [
+          "tbx11k:sick/s2967.png",
+          "tbx11k:health/h0221.png"
+        ],
+        "seconds": 0.44595360000016626,
+        "step": 62
+      },
+      {
+        "epoch": 3,
+        "loss": 0.0891353040933609,
+        "sample_ids": [
+          "tbx11k:health/h1705.png",
+          "tbx11k:sick/s2783.png"
+        ],
+        "seconds": 0.4830480999999054,
+        "step": 63
+      },
+      {
+        "epoch": 3,
+        "loss": 0.1576709747314453,
+        "sample_ids": [
+          "tbx11k:sick/s1258.png",
+          "tbx11k:health/h4531.png"
+        ],
+        "seconds": 0.449653299999909,
+        "step": 64
+      },
+      {
+        "epoch": 3,
+        "loss": 0.8249928951263428,
+        "sample_ids": [
+          "tbx11k:sick/s4727.png",
+          "tbx11k:sick/s3276.png"
+        ],
+        "seconds": 0.4628666000000976,
+        "step": 65
+      },
+      {
+        "epoch": 3,
+        "loss": 0.4696512520313263,
+        "sample_ids": [
+          "tbx11k:sick/s4829.png",
+          "tbx11k:health/h0184.png"
+        ],
+        "seconds": 0.451030499999888,
+        "step": 66
+      },
+      {
+        "epoch": 3,
+        "loss": 1.0280758142471313,
+        "sample_ids": [
+          "tbx11k:sick/s0765.png",
+          "tbx11k:sick/s0801.png"
+        ],
+        "seconds": 0.49343980000003285,
+        "step": 67
+      },
+      {
+        "epoch": 3,
+        "loss": 0.7996916770935059,
+        "sample_ids": [
+          "tbx11k:sick/s2146.png",
+          "tbx11k:sick/s1723.png"
+        ],
+        "seconds": 0.4596867000000202,
+        "step": 68
+      },
+      {
+        "epoch": 3,
+        "loss": 0.23096345365047455,
+        "sample_ids": [
+          "tbx11k:sick/s3599.png",
+          "tbx11k:health/h1775.png"
+        ],
+        "seconds": 0.527945999999929,
+        "step": 69
+      },
+      {
+        "epoch": 3,
+        "loss": 0.9844180345535278,
+        "sample_ids": [
+          "tbx11k:health/h1678.png",
+          "tbx11k:health/h4193.png"
+        ],
+        "seconds": 0.45072140000002037,
+        "step": 70
+      },
+      {
+        "epoch": 3,
+        "loss": 0.14572285115718842,
+        "sample_ids": [
+          "tbx11k:sick/s2144.png",
+          "tbx11k:health/h3233.png"
+        ],
+        "seconds": 0.5051590000000488,
+        "step": 71
+      },
+      {
+        "epoch": 3,
+        "loss": 0.9338536262512207,
+        "sample_ids": [
+          "tbx11k:health/h1869.png",
+          "tbx11k:health/h0236.png"
+        ],
+        "seconds": 0.48153800000000047,
+        "step": 72
+      },
+      {
+        "epoch": 3,
+        "loss": 0.7767572402954102,
+        "sample_ids": [
+          "tbx11k:tb/tb0795.png",
+          "tbx11k:health/h2099.png"
+        ],
+        "seconds": 0.4627451999999721,
+        "step": 73
+      },
+      {
+        "epoch": 3,
+        "loss": 0.07706457376480103,
+        "sample_ids": [
+          "tbx11k:sick/s0336.png",
+          "tbx11k:health/h4624.png"
+        ],
+        "seconds": 0.4560414000000037,
+        "step": 74
+      },
+      {
+        "epoch": 3,
+        "loss": 0.8924459218978882,
+        "sample_ids": [
+          "tbx11k:sick/s3505.png",
+          "tbx11k:tb/tb0623.png"
+        ],
+        "seconds": 0.4760717999999997,
+        "step": 75
+      },
+      {
+        "epoch": 3,
+        "loss": 0.6845799088478088,
+        "sample_ids": [
+          "tbx11k:tb/tb0413.png",
+          "tbx11k:health/h4192.png"
+        ],
+        "seconds": 0.49804489999996804,
+        "step": 76
+      },
+      {
+        "epoch": 3,
+        "loss": 0.12770158052444458,
+        "sample_ids": [
+          "tbx11k:health/h0195.png",
+          "tbx11k:sick/s0728.png"
+        ],
+        "seconds": 0.4463643999999931,
+        "step": 77
+      },
+      {
+        "epoch": 3,
+        "loss": 1.1071943044662476,
+        "sample_ids": [
+          "tbx11k:sick/s1231.png",
+          "tbx11k:sick/s1695.png"
+        ],
+        "seconds": 0.5004003000001376,
+        "step": 78
+      },
+      {
+        "epoch": 3,
+        "loss": 0.9219843149185181,
+        "sample_ids": [
+          "tbx11k:health/h0646.png",
+          "tbx11k:health/h0702.png"
+        ],
+        "seconds": 0.5722114000000147,
+        "step": 79
+      },
+      {
+        "epoch": 3,
+        "loss": 0.10185806453227997,
+        "sample_ids": [
+          "tbx11k:health/h0771.png",
+          "tbx11k:sick/s2040.png"
+        ],
+        "seconds": 0.525728799999797,
+        "step": 80
+      },
+      {
+        "epoch": 3,
+        "loss": 0.838718056678772,
+        "sample_ids": [
+          "tbx11k:health/h1526.png",
+          "tbx11k:health/h3879.png"
+        ],
+        "seconds": 0.49163930000008804,
+        "step": 81
+      }
+    ],
+    "stop_reason": "configured_epochs_completed",
+    "subsets": {
+      "train": {
+        "class_counts": [
+          24,
+          24,
+          6
+        ],
+        "sample_count": 54,
+        "sample_ids": [
+          "tbx11k:health/h0184.png",
+          "tbx11k:health/h0195.png",
+          "tbx11k:health/h0221.png",
+          "tbx11k:health/h0236.png",
+          "tbx11k:health/h0646.png",
+          "tbx11k:health/h0702.png",
+          "tbx11k:health/h0771.png",
+          "tbx11k:health/h0857.png",
+          "tbx11k:health/h1053.png",
+          "tbx11k:health/h1526.png",
+          "tbx11k:health/h1678.png",
+          "tbx11k:health/h1705.png",
+          "tbx11k:health/h1775.png",
+          "tbx11k:health/h1869.png",
+          "tbx11k:health/h2099.png",
+          "tbx11k:health/h3219.png",
+          "tbx11k:health/h3233.png",
+          "tbx11k:health/h3879.png",
+          "tbx11k:health/h4192.png",
+          "tbx11k:health/h4193.png",
+          "tbx11k:health/h4318.png",
+          "tbx11k:health/h4531.png",
+          "tbx11k:health/h4624.png",
+          "tbx11k:health/h4917.png",
+          "tbx11k:sick/s0054.png",
+          "tbx11k:sick/s0336.png",
+          "tbx11k:sick/s0728.png",
+          "tbx11k:sick/s0765.png",
+          "tbx11k:sick/s0801.png",
+          "tbx11k:sick/s0975.png",
+          "tbx11k:sick/s1231.png",
+          "tbx11k:sick/s1258.png",
+          "tbx11k:sick/s1695.png",
+          "tbx11k:sick/s1723.png",
+          "tbx11k:sick/s2040.png",
+          "tbx11k:sick/s2144.png",
+          "tbx11k:sick/s2146.png",
+          "tbx11k:sick/s2611.png",
+          "tbx11k:sick/s2639.png",
+          "tbx11k:sick/s2666.png",
+          "tbx11k:sick/s2783.png",
+          "tbx11k:sick/s2967.png",
+          "tbx11k:sick/s3276.png",
+          "tbx11k:sick/s3505.png",
+          "tbx11k:sick/s3599.png",
+          "tbx11k:sick/s4275.png",
+          "tbx11k:sick/s4727.png",
+          "tbx11k:sick/s4829.png",
+          "tbx11k:tb/tb0147.png",
+          "tbx11k:tb/tb0174.png",
+          "tbx11k:tb/tb0413.png",
+          "tbx11k:tb/tb0623.png",
+          "tbx11k:tb/tb0795.png",
+          "tbx11k:tb/tb0825.png"
+        ]
+      },
+      "validation": {
+        "class_counts": [
+          24,
+          24,
+          6
+        ],
+        "sample_count": 54,
+        "sample_ids": [
+          "tbx11k:health/h0126.png",
+          "tbx11k:health/h0311.png",
+          "tbx11k:health/h0487.png",
+          "tbx11k:health/h0817.png",
+          "tbx11k:health/h0917.png",
+          "tbx11k:health/h1064.png",
+          "tbx11k:health/h1261.png",
+          "tbx11k:health/h1339.png",
+          "tbx11k:health/h1456.png",
+          "tbx11k:health/h1576.png",
+          "tbx11k:health/h2592.png",
+          "tbx11k:health/h3477.png",
+          "tbx11k:health/h3513.png",
+          "tbx11k:health/h3569.png",
+          "tbx11k:health/h3706.png",
+          "tbx11k:health/h3955.png",
+          "tbx11k:health/h3962.png",
+          "tbx11k:health/h4110.png",
+          "tbx11k:health/h4172.png",
+          "tbx11k:health/h4486.png",
+          "tbx11k:health/h4514.png",
+          "tbx11k:health/h4617.png",
+          "tbx11k:health/h4653.png",
+          "tbx11k:health/h4944.png",
+          "tbx11k:sick/s0457.png",
+          "tbx11k:sick/s0598.png",
+          "tbx11k:sick/s0630.png",
+          "tbx11k:sick/s0742.png",
+          "tbx11k:sick/s0840.png",
+          "tbx11k:sick/s0944.png",
+          "tbx11k:sick/s1155.png",
+          "tbx11k:sick/s1164.png",
+          "tbx11k:sick/s1553.png",
+          "tbx11k:sick/s1566.png",
+          "tbx11k:sick/s1688.png",
+          "tbx11k:sick/s1741.png",
+          "tbx11k:sick/s2518.png",
+          "tbx11k:sick/s2543.png",
+          "tbx11k:sick/s2805.png",
+          "tbx11k:sick/s3061.png",
+          "tbx11k:sick/s3064.png",
+          "tbx11k:sick/s3431.png",
+          "tbx11k:sick/s3511.png",
+          "tbx11k:sick/s4024.png",
+          "tbx11k:sick/s4241.png",
+          "tbx11k:sick/s4625.png",
+          "tbx11k:sick/s4751.png",
+          "tbx11k:sick/s4889.png",
+          "tbx11k:tb/tb0053.png",
+          "tbx11k:tb/tb0108.png",
+          "tbx11k:tb/tb0442.png",
+          "tbx11k:tb/tb1014.png",
+          "tbx11k:tb/tb1071.png",
+          "tbx11k:tb/tb1107.png"
+        ]
+      }
+    },
+    "training_class_counts": [
+      2660,
+      2560,
+      560
+    ]
+  },
+  "sanitization": "GPU UUIDs removed; no raw image bytes, private paths or checkpoint contents included"
+}

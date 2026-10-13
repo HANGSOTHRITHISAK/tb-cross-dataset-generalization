@@ -3,6 +3,11 @@
 Date: 2026-10-13. This milestone verifies an executable engineering pathway;
 it supplies no estimate of scientific model performance.
 
+M2 follow-up: smoke provenance now derives from approved manifest/split hashes
+and verified selected raw-image bytes, ignoring the deprecated caller-supplied
+`image_evidence` argument. Historical M1 receipts below remain unchanged.
+See [m2-pilot.md](m2-pilot.md) for the bounded multi-step runner and evidence.
+
 ## Implemented behavior
 
 `load_frozen_tbx11k` joins by stable sample ID and preserves CSV order and every

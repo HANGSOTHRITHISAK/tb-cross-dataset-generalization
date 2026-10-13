@@ -438,12 +438,23 @@ def test_invalid_config_has_failure_receipt(
 
 
 def test_weighted_loss_changes_with_training_weights():
-    logits, labels = (
-        torch.tensor([[3.0, 1.0, 0.0], [2.0, 1.0, 0.0]]),
-        torch.tensor([0, 2]),
-    )
+    model = TinyModel()
+    with torch.no_grad():
+        model.classifier.weight.zero_()
+        model.classifier.bias.copy_(torch.tensor([3.0, 1.0, 0.0]))
+    images, labels = torch.ones(2, 3, 32, 32), torch.tensor([0, 2])
+    logits = model(images).detach()
     plain = nn.functional.cross_entropy(logits, labels)
-    weighted = nn.functional.cross_entropy(
-        logits, labels, weight=torch.tensor([0.7, 0.75, 3.4])
+    weights = torch.tensor([0.7, 0.75, 3.4])
+    weighted = nn.functional.cross_entropy(logits, labels, weight=weights)
+    actual = pilot.train_step(
+        model,
+        {"image": images, "label": labels},
+        torch.optim.AdamW(model.parameters()),
+        torch.amp.GradScaler("cuda", enabled=False),
+        device=torch.device("cpu"),
+        amp=False,
+        weights=weights,
+        guard=lambda: None,
     )
-    assert weighted > plain
+    assert actual == pytest.approx(weighted.item()) and actual > plain.item()

@@ -124,9 +124,75 @@ use a fresh output directory. M2 does not authorize a hyperparameter sweep.
 
 ## Verification and M3
 
-Actual execution observations and fixture/CI outcomes will be recorded with the
-sanitized receipt in `docs/m2-verification.json`. M3 should retain validation-only
-selection, full frozen partition membership and conservative preprocessing, and
-separately review the full training schedule, imbalance choice, augmentation,
-patience and final epoch cap. Held-out evaluation follows those decisions and
-model freezing. M2 provides no held-out or external results.
+Implementation and offline fixture verification are distinct from actual
+execution: the final CPU suite passed **92 tests** (43.47 seconds), including six
+multi-step random-initialized DenseNet updates and
+tiny-model repeatability, selection ties, validation isolation, class weights,
+early stopping, numeric failures, mocked OOM/resource stops, hard budgets and
+provenance. Ruff, maintained-file formatting and `pip check` passed. Existing CI
+discovers the new offline tests and now checks maintained M1/M2 file formatting;
+its remote outcome is reported separately from these local checks.
+
+The actual real-image CUDA run used execution commit
+`0f0729756b04bb37855a3049a053deec7298005f`, the unchanged M1 environment (Python
+3.12.10, Torch 2.13.0+cu126, torchvision 0.28.0+cu126, CUDA 12.6, driver 610.88)
+and cached ImageNet weights. Verified real TBX11K bytes: **54 training plus 54
+validation images**, disjoint IDs, with `[24,24,6]` class representation in each.
+There were **81 finite optimizer updates**, **3 complete validation passes**, and
+one additional validation pass after checkpoint reload. The full run took
+**72.97 seconds**, below its 180-second budget. No sweep or second GPU pilot ran.
+
+| Epoch | Training loss | Validation loss | Accuracy | Macro-F1 | Train / validation seconds |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 1 | 0.998748 | 0.719536 | 0.759259 | 0.535948 | 15.91 / 2.25 |
+| 2 | 0.658538 | 0.471300 | 0.814815 | 0.573996 | 14.75 / 2.02 |
+| 3 (selected) | 0.642571 | 0.414623 | 0.888889 | 0.780610 | 14.14 / 2.03 |
+
+Selected-checkpoint per-class recall: **Healthy 0.916667, Sick non-TB 1.000000,
+TB 0.333333**. Its matrix (true rows / predicted columns, fixed class order) is:
+
+```text
+[[22,  2, 0],
+ [ 0, 24, 0],
+ [ 1,  3, 2]]
+```
+
+The checkpoint state hash matched after reload; validation loss, macro-F1 and
+confusion matrix exactly reproduced the selected epoch. The local checkpoint
+is about 84.4 MB, including optimizer state, and remains ignored. The sanitized
+receipt, original receipt hash, exact subsets, packages, source hashes, full
+history and checkpoint metadata are in [m2-verification.json](m2-verification.json).
+Only six TB validation images were used: the metrics above are **not final
+research findings**, cannot estimate full-validation or test performance, and do
+not justify finalized hyperparameters or an imbalance intervention.
+
+Peak Torch allocated/reserved memory: **402.28 / 426 MiB**. Peak sampled device
+memory: **582 MiB**, including CUDA context/other processes. The monitor collected
+51 samples during GPU work: **57–62 C**, **0–39% utilization**; no hardware thermal
+slowdown, OOM, non-finite value or resource stop was observed. Median training-step
+compute time was **0.487 seconds** (range 0.446–2.136 seconds). These are timings
+with conservative finite/determinism checks, not a hardware throughput benchmark.
+Runner setup/metadata, image decoding, checkpoint writes and reload account for
+additional wall time; interpreter startup/imports precede the recorded runner
+duration. The short run cannot establish sustained laptop cooling,
+long-run memory behavior or an optimal batch size/precision.
+
+M3 feasibility recommendation: retain **batch 2, 224px, FP32, AdamW 1e-4,
+weight decay 1e-4**, zero loader workers initially, the conservative training-only
+augmentation and validation-only macro-F1 selection. Use the complete frozen
+training/validation partitions in a separately reviewed runner, with a duration
+budget, the 80 C guard and memory monitoring. Keep weighting and oversampling
+disabled initially unless the scientific imbalance choice is explicitly changed.
+No need to increase batch size based on this pilot alone; multi-step FP16 was
+implemented but only the historical M1 one-step FP16 GPU result is established.
+
+Scaling observed training epoch times from 27 to 2,890 batches gives roughly
+**25–28 minutes per full training epoch**, plus about **46–52 seconds of full
+validation** if I/O and resource behavior scale linearly. This is a planning
+extrapolation, not a measured full-epoch duration; sustained cooling, decoding and
+finite checks may change it. A 20-epoch schedule could therefore require many
+hours and must not start automatically. Baseline YAML's 20 epochs / patience 5
+remain placeholders. Final epoch cap, patience, full-model fine-tuning choices,
+class weighting, augmentation and any validation-selected threshold still need
+scientific review. Held-out evaluation follows development decisions and model
+freezing; M2 provides no held-out or external results.
