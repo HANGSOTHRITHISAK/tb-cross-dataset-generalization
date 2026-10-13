@@ -155,6 +155,21 @@ subset metrics do not estimate final model performance or establish convergence.
 
 ## Baseline model and evaluation
 
+M3A's bounded full-data preflight passed on 2026-10-13: all 5,780 training images
+once, all 1,239 validation images once, 2,890 finite AdamW updates, 30.59 minutes
+including interpreter startup, and exact checkpoint/continuation-state reload.
+Peak Torch memory was 402.28 MiB allocated / 436 MiB reserved; sampled temperature
+was 58–65 C with no thermal slowdown. CPU and actual CUDA stochastic fixtures
+establish epoch-boundary resume equivalence. The full-data validation macro-F1
+0.908306 and accuracy 0.947538 are **one-epoch preflight diagnostics**, not final
+research results. See [m3a-preflight.md](m3a-preflight.md) and
+[m3a-verification.json](m3a-verification.json). The M3A checkpoint is not a final
+baseline, and M3B remains gated on review and separate scientific approval.
+
+Approved M3A decisions preserve unweighted cross-entropy, the existing conservative
+training-only augmentation without flipping, and validation macro-F1 selection
+with lower-loss/earlier-epoch tie breaks. No imbalance intervention was executed.
+
 The locked baseline is an **ImageNet-pretrained DenseNet-121 adapted for 3-class internal classification**.
 
 Internal TBX11K reporting should include accuracy, macro-F1, per-class recall, and a 3x3 confusion matrix.
@@ -167,10 +182,11 @@ Optional architecture comparisons, stronger augmentation, additional datasets, a
 
 Resume work in this order:
 
-1. review M2 implementation, fixture checks and actual CUDA receipt;
-2. approve M3's full-partition schedule and scientific choices, including epoch cap,
-   patience, class weighting and augmentation; M2 does not finalize these values;
-3. implement and execute separately bounded full baseline training only after M3 authorization;
+1. review the M3A implementation, full-data evidence and CPU/CUDA resume fixtures;
+2. approve M3B's epoch cap, early-stopping patience and any scheduler/threshold
+   policy; retain the already approved primary loss, augmentation and selection;
+3. implement and execute separately bounded full baseline training from fresh
+   ImageNet weights only after M3B authorization; do not promote the M3A checkpoint;
 4. implement held-out evaluation after model and threshold decisions are frozen.
 
 ## Related documentation
