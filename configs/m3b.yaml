@@ -1,0 +1,23 @@
+# Approved M3B protocol; implementation-only delivery does NOT authorize execution.
+manifest: data/manifests/tbx11k.csv
+assignments: data/manifests/tbx11k_split.csv
+summary: data/audit/tbx11k_split_summary.json
+split_sha256: 4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e
+experiment:
+  seed: 42
+  max_epochs: 10
+  patience: 3
+  batch_size: 2
+  image_size: 224
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  precision: fp32
+  optimizer: adamw
+  architecture: imagenet_densenet121_3class
+  loss: unweighted_cross_entropy
+  scheduler: none
+  augmentation: train_affine_5_degrees_translate_0.02_no_flip
+  normalization: fixed_imagenet_rgb
+  selection: validation_macro_f1_lower_loss_earlier_epoch
+  num_threads: 2
+  num_workers: 0

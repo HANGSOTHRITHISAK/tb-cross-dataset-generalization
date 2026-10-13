@@ -19,4 +19,4 @@ jobs:
       - run: python -m pip check
       - run: python -m pytest -q
       - run: ruff check .
-      - run: ruff format --check src/training/pilot.py src/training/smoke.py src/training/epoch.py src/training/full_data.py src/training/preflight.py src/data/provenance.py tests/test_m2.py tests/test_m3a.py
+      - run: ruff format --check src/training/pilot.py src/training/smoke.py src/training/epoch.py src/training/full_data.py src/training/preflight.py src/training/baseline.py src/training/baseline_session.py src/training/cpu_temperature.py src/data/provenance.py tests/test_m2.py tests/test_m3a.py tests/test_m3b.py

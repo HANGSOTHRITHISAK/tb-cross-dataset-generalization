@@ -182,14 +182,24 @@ Optional architecture comparisons, stronger augmentation, additional datasets, a
 
 Resume work in this order:
 
-1. review the M3A implementation, full-data evidence and CPU/CUDA resume fixtures;
-2. approve M3B's epoch cap, early-stopping patience and any scheduler/threshold
-   policy; retain the already approved primary loss, augmentation and selection;
-3. implement and execute separately bounded full baseline training from fresh
-   ImageNet weights only after M3B authorization; do not promote the M3A checkpoint;
+1. review and merge the implementation-only M3B PR and its fixture evidence;
+2. address the documented CPU-temperature observation limitation and authorize
+   the first real baseline session explicitly;
+3. execute at most one epoch per authorized invocation from fresh ImageNet weights
+   initially, then compatible M3B continuation checkpoints; do not promote M3A weights;
 4. implement held-out evaluation after model and threshold decisions are frozen.
 
 ## Related documentation
+
+The approved M3B protocol now fixes 10 maximum total epochs, patience 3, constant
+AdamW learning rate 1e-4 and weight decay 1e-4, batch 2, FP32, seed 42, unweighted
+CE, conservative training-only augmentation and validation macro-F1 selection.
+No scheduler or imbalance intervention is approved for the primary run. The
+implementation is fixture-verified; **zero real M3B epochs have run** in this
+milestone. The CPU and optional actual CUDA fixtures establish same-environment
+continuation and persistent early stopping. See [m3b-baseline.md](m3b-baseline.md)
+and [m3b-verification.json](m3b-verification.json). Real execution remains gated;
+external threshold selection and held-out evaluation are still pending.
 
 Read these alongside this checkpoint when deeper context is needed:
 

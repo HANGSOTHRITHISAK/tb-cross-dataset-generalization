@@ -10,7 +10,15 @@ Rather than optimizing only for in-domain performance, this project focuses on t
 
 ## Project status
 
-**Current stage:** Phase 2 split frozen; M3A one-epoch full-data preflight verified; M3B awaits approval.
+**Current stage:** M3B epoch-by-epoch infrastructure fixture-verified; real baseline execution awaits authorization.
+
+The M3B controller permits one additional epoch per explicit invocation, up to
+10 total, with persistent patience 3 and validation-only checkpoint selection.
+CPU/CUDA fixtures verify exact continuation, atomic checkpoint handling and terminal
+refusal. See [M3B implementation and future commands](docs/m3b-baseline.md).
+This milestone executed no real M3B epoch. Reliable CPU-temperature telemetry is
+unavailable on the current laptop; the runbook records that limitation and manual
+precautions separately from GPU safeguards.
 
 M3A used all 5,780 frozen training images and all 1,239 validation images, completed
 2,890 optimizer updates in 30.59 minutes including startup, and verified checkpoint
