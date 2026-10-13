@@ -122,7 +122,7 @@ one-step smoke CLI. Actual verification and reproducible commands are recorded i
 [m1-implementation.md](m1-implementation.md). The frozen split and Phase 2 audit
 artifacts are unchanged. Baseline training and held-out evaluations remain pending.
 
-Local M1 verification on 2026-10-13 passed 62 tests and real-image CUDA optimizer
+Local M1 verification on 2026-10-13 passed 64 tests and real-image CUDA optimizer
 steps in FP32 and FP16. Peak allocated memory was 348.5 MiB and 235.3 MiB,
 respectively. This is execution evidence only, not scientific performance evidence.
 

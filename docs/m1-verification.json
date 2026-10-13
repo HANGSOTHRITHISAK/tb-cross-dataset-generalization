@@ -2,11 +2,12 @@
   "base_commit": "62e079f8b41f2e64f5214e2033c13fa2c3b10d1a",
   "checks": {
     "pip_check": "passed",
-    "pytest_duration_seconds": 49.87,
-    "pytest_passed": 62,
+    "pytest_duration_seconds": 39.1,
+    "pytest_passed": 64,
     "ruff": "passed"
   },
   "driver_version": "610.88",
+  "metadata_hash_policy": "Metadata binding accepts LF/CRLF equivalents only; raw image hashes remain byte-exact. Final FP16 receipt includes actual and canonical-LF hashes.",
   "purpose": "Engineering verification, not scientific performance evidence",
   "receipts": {
     "fp16_initial_failure": {
@@ -113,8 +114,8 @@
       }
     },
     "fp16_scale1024": {
-      "local_receipt_filename": "m1-cuda-fp16-scale1024.json",
-      "original_receipt_sha256": "9562176bb29e25596f4ebcde82d27511485cba08bea9c91a0afab673eb279bec",
+      "local_receipt_filename": "m1-cuda-fp16-final.json",
+      "original_receipt_sha256": "60e4705c3da02a2e57b2ef4ca7ad907528281c1342b32fd37c84d5b2f8878b65",
       "receipt": {
         "batch": {
           "dtype": "torch.float32",
@@ -132,7 +133,7 @@
         "classifier_updated": true,
         "cuda_peak_allocated_bytes": 246681600,
         "cuda_peak_reserved_bytes": 304087040,
-        "duration_seconds": 26.763973000000078,
+        "duration_seconds": 19.15876759999992,
         "environment": {
           "cuda_available": true,
           "cuda_runtime": "12.6",
@@ -151,34 +152,34 @@
             {
               "device_memory_used_mib": 0,
               "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
-              "temperature_c": 58,
+              "temperature_c": 56,
               "thermal_slowdown": "Not Active",
-              "time_utc": "2026-10-13T05:04:18.212342+00:00",
+              "time_utc": "2026-10-13T05:13:58.713920+00:00",
               "utilization_percent": 0
             },
             {
-              "device_memory_used_mib": 142,
+              "device_memory_used_mib": 232,
               "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
-              "temperature_c": 58,
+              "temperature_c": 57,
               "thermal_slowdown": "Not Active",
-              "time_utc": "2026-10-13T05:04:19.386651+00:00",
+              "time_utc": "2026-10-13T05:13:59.858167+00:00",
               "utilization_percent": 2
             },
             {
-              "device_memory_used_mib": 402,
+              "device_memory_used_mib": 422,
               "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
-              "temperature_c": 59,
+              "temperature_c": 57,
               "thermal_slowdown": "Not Active",
-              "time_utc": "2026-10-13T05:04:20.555426+00:00",
-              "utilization_percent": 2
+              "time_utc": "2026-10-13T05:14:01.012524+00:00",
+              "utilization_percent": 3
             },
             {
               "device_memory_used_mib": 450,
               "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
-              "temperature_c": 59,
+              "temperature_c": 57,
               "thermal_slowdown": "Not Active",
-              "time_utc": "2026-10-13T05:04:21.697554+00:00",
-              "utilization_percent": 2
+              "time_utc": "2026-10-13T05:14:01.590795+00:00",
+              "utilization_percent": 4
             }
           ],
           "stop_temperature_c": 85,
@@ -186,7 +187,9 @@
         },
         "image_evidence": "real_tbx11k",
         "inputs": {
+          "manifest_lf_sha256": "85e6e6fe4a56ac8b7abeb29a68ac2a256ba1cc46164fd8dd6f1ab6f5187437cd",
           "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+          "split_lf_sha256": "e4e69370c933f2b12b4b00df62b43ee5b7dee31e415ad67c75adfc84926c2227",
           "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
           "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
         },
@@ -216,9 +219,9 @@
           "weight_decay": 0.0001,
           "weights": "IMAGENET1K_V1"
         },
-        "started_utc": "2026-10-13T05:03:54.933971+00:00",
+        "started_utc": "2026-10-13T05:13:42.432075+00:00",
         "status": "passed",
-        "step_duration_seconds": 3.3300123999997595
+        "step_duration_seconds": 2.7336927999999716
       }
     },
     "fp32": {

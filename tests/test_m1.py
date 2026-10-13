@@ -13,7 +13,7 @@ from PIL import Image
 from torch import nn
 
 from src.data.datasets import ManifestDataset
-from src.data.frozen_split import load_frozen_tbx11k
+from src.data.frozen_split import load_frozen_tbx11k, metadata_sha256
 from src.data.manifest import file_sha256, save_manifest
 from src.data.schema import SampleRecord
 from src.data.transforms import (
@@ -211,6 +211,39 @@ def test_split_lock_and_summary_binding(frozen_fixture, tmp_path):
     summary.write_text(json.dumps(evidence))
     with pytest.raises(ValueError, match="count mismatch"):
         load_frozen_tbx11k(manifest, assignments, summary=summary)
+
+
+@pytest.mark.parametrize("newline", [b"\n", b"\r\n"])
+def test_metadata_hash_binding_survives_git_newline_conversion(
+    frozen_fixture, tmp_path, newline
+):
+    manifest, assignments, rows, _, _ = frozen_fixture
+    manifest_hash, split_hash = file_sha256(manifest), file_sha256(assignments)
+    canonical_hash = metadata_sha256(assignments)
+    evidence = {
+        "inputs": {"manifest_sha256": manifest_hash},
+        "retained_unique_images": 5,
+        "split_class_counts": {
+            split: {"healthy": count, "sick_non_tb": 0, "tb": 0}
+            for split, count in [("train", 3), ("validation", 1), ("internal_test", 1)]
+        },
+    }
+    summary = tmp_path / "summary.json"
+    summary.write_text(json.dumps(evidence))
+    for path in [manifest, assignments]:
+        path.write_bytes(
+            path.read_bytes().replace(b"\r\n", b"\n").replace(b"\n", newline)
+        )
+    joined = load_frozen_tbx11k(
+        manifest, assignments, summary=summary, expected_split_sha256=split_hash
+    )
+    assert [(r.sample_id, r.split) for r in joined] == [
+        (r["sample_id"], r["split"]) for r in rows
+    ]
+    assert metadata_sha256(assignments) == canonical_hash
+    assignments.write_bytes(assignments.read_bytes().replace(b"h0.png", b"h9.png"))
+    with pytest.raises(ValueError, match="split file hash mismatch"):
+        load_frozen_tbx11k(manifest, assignments, expected_split_sha256=split_hash)
 
 
 @pytest.mark.parametrize("mode", ["L", "RGB", "RGBA", "P"])

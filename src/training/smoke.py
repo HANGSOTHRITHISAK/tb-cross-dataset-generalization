@@ -23,7 +23,7 @@ import yaml
 from torch import nn
 
 from src.data.datasets import ManifestDataset
-from src.data.frozen_split import load_frozen_tbx11k
+from src.data.frozen_split import load_frozen_tbx11k, metadata_sha256
 from src.data.manifest import file_sha256
 from src.data.transforms import build_transform, seed_everything
 from src.models import build_densenet121
@@ -264,6 +264,8 @@ def run_smoke(
         receipt["inputs"] = {
             "manifest_sha256": file_sha256(manifest),
             "split_sha256": file_sha256(assignments),
+            "manifest_lf_sha256": metadata_sha256(manifest),
+            "split_lf_sha256": metadata_sha256(assignments),
             "summary_sha256": file_sha256(summary) if summary else None,
         }
         receipt["sample_ids"] = [record.sample_id for record in selected]

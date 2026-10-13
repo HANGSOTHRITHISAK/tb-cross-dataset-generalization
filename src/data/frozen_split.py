@@ -11,9 +11,25 @@ from dataclasses import replace
 from pathlib import Path, PurePosixPath
 
 from .labels import TBX11K_INTERNAL_CLASS_NAMES, normalize_tbx11k_internal_label
-from .manifest import file_sha256, load_manifest
+from .manifest import load_manifest
 from .schema import SampleRecord
 from .tbx11k_split import SPLIT_NAMES, is_primary_tbx11k_record
+
+
+def metadata_sha256(path: str | Path) -> str:
+    """Canonical LF hash for text metadata; image checksums remain byte-exact."""
+    content = Path(path).read_bytes().replace(b"\r\n", b"\n")
+    return hashlib.sha256(content).hexdigest()
+
+
+def _matches_metadata_hash(path: Path, expected: str) -> bool:
+    # The historical audit hashes were recorded from Windows CSV bytes; Git
+    # normalized those files to LF. Accept only equivalent LF/CRLF encodings.
+    content = path.read_bytes().replace(b"\r\n", b"\n")
+    return expected in {
+        hashlib.sha256(content).hexdigest(),
+        hashlib.sha256(content.replace(b"\n", b"\r\n")).hexdigest(),
+    }
 
 
 def load_frozen_tbx11k(
@@ -31,7 +47,9 @@ def load_frozen_tbx11k(
     No image bytes are opened here (including held-out images).
     """
     manifest, assignments = Path(manifest), Path(assignments)
-    if expected_split_sha256 and file_sha256(assignments) != expected_split_sha256:
+    if expected_split_sha256 and not _matches_metadata_hash(
+        assignments, expected_split_sha256
+    ):
         raise ValueError("Frozen split file hash mismatch")
     records = {record.sample_id: record for record in load_manifest(manifest)}
     with assignments.open(encoding="utf-8-sig", newline="") as handle:
@@ -154,7 +172,7 @@ def load_frozen_tbx11k(
         joined.append(replace(record, image_path=path, split=row["split"]))
     if summary is not None:
         evidence = json.loads(Path(summary).read_text(encoding="utf-8"))
-        if evidence["inputs"]["manifest_sha256"] != file_sha256(manifest):
+        if not _matches_metadata_hash(manifest, evidence["inputs"]["manifest_sha256"]):
             raise ValueError("Audited manifest hash mismatch with frozen summary")
         if evidence["retained_unique_images"] != len(joined):
             raise ValueError("Frozen split count mismatch")

@@ -12,8 +12,13 @@ relocation paths. Extra audited images are expected: the source manifest also
 contains duplicate members, official unreleased test material and supplemental
 images. Only retained frozen representatives enter the joined dataset. The CLI
 binds the full audited manifest to its frozen summary and locks the assignment
-file by SHA-256 in `configs/smoke.yaml`. No split-generation or overlap-audit
-operation runs. Frozen files retain exact bytes across Git checkouts.
+file by SHA-256 in `configs/smoke.yaml`. Metadata hash checks accept only
+equivalent LF/CRLF newline encodings: the historical Windows audit recorded CRLF
+bytes while Git stored LF. All other byte changes fail; raw image checksums
+remain byte-exact. Receipts record both actual-byte and canonical-LF metadata
+hashes. No split-generation or overlap-audit operation runs. New checkouts retain
+the existing Git blob bytes through `.gitattributes`; existing local data is not
+rewritten.
 
 An optional `--image-root` identifies the local release's `imgs` directory;
 paths below it use the audited `relative_release_path`. Without this option,
@@ -99,7 +104,8 @@ wheel tags are selected by the installation source). The original CPU-only
 environment and existing local branches remain preserved.
 
 - Original suite before implementation: **23 passed** (24.09 s).
-- Final suite after the FP16 correction: **62 passed** (49.87 s), no skips.
+- Final suite after FP16 and newline-compatibility corrections: **64 passed**
+  (39.10 s), no skips.
 - Ruff: **all checks passed**; new Python files also pass format checking.
 - `pip check`: **no broken requirements**; final diff has no whitespace errors.
 - Frozen join: **8,257 rows**, preserving every assignment and checksum; the
@@ -113,7 +119,7 @@ environment and existing local branches remain preserved.
 | Actual run | Result | Allocated / reserved peak MiB | GPU step seconds | Total runner seconds | Sampled temperature | Sampled utilization |
 | --- | --- | ---: | ---: | ---: | --- | --- |
 | FP32 | passed; loss 1.169044 | 348.5 / 410 | 2.85 | 30.82 | 57–58 C | 0–6% |
-| FP16, initial scale 1,024 | passed; loss 1.167725 | 235.3 / 290 | 3.33 | 26.76 | 58–59 C | 0–2% |
+| FP16, initial scale 1,024 | passed; loss 1.167725 | 235.3 / 290 | 2.73 | 19.16 | 56–57 C | 0–4% |
 
 The first FP16 attempt with PyTorch's default initial loss scale 65,536 failed
 the non-finite-gradient guard **before any optimizer update**. Lowering the
@@ -122,8 +128,8 @@ retained alongside the successful retry. No sampled hardware thermal slowdown,
 overheating, OOM or abnormal hardware behavior was observed. Four sensor samples
 were collected per run; these brief samples do not measure true utilization or
 temperature peaks. Total runner time includes CPU setup and, for the FP32 run,
-the initial weight download. The FP16 retry overlapped CPU fixture tests. These
-timings are execution observations, not precision-mode speed benchmarks.
+the initial weight download. These timings are execution observations, not
+precision-mode speed benchmarks.
 
 Original JSON receipts remain in ignored `results/`. Sanitized receipts,
 original-receipt hashes, test outcomes and the failed-attempt explanation are
