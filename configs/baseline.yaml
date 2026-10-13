@@ -29,7 +29,7 @@ model:
 
 training:
   epochs: 20
-  batch_size: 32
+  batch_size: 2
   learning_rate: 0.0001
   weight_decay: 0.0001
   optimizer: adamw
@@ -59,4 +59,7 @@ notes: >-
   train/validation files do not expose trustworthy active/latent subtype labels,
   so those subtypes are not inferred. For Shenzhen and Montgomery external
   evaluation, healthy and sick non-TB are harmonized to non-TB and TB remains
-  the positive class. Final split manifests remain a Phase 2 task.
+  the positive class. Phase 2 assignments are frozen in tbx11k_split.csv.
+  Training values are provisional starting settings without baseline pilot
+  evidence; batch size 2 is the initial 6 GB GPU setting. The bounded M1
+  one-step CLI uses configs/smoke.yaml and does not run this training schedule.

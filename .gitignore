@@ -13,6 +13,7 @@ dist/
 
 # Virtual environments
 .venv/
+.venv-*/
 venv/
 env/
 ENV/
@@ -44,7 +45,7 @@ data/external/
 
 # Model artifacts / checkpoints
 checkpoints/
-models/
+/models/
 *.pt
 *.pth
 *.ckpt

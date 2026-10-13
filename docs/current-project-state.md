@@ -1,6 +1,6 @@
 # Current Project State
 
-**Updated:** 2026-09-26
+**Updated:** 2026-10-13
 
 This document is the concise, public-facing checkpoint for the current state of the project. It is intended to help collaborators and future sessions resume work without relying on private local-machine or chat history.
 
@@ -116,7 +116,18 @@ The finalized artifacts are `data/manifests/tbx11k_split.csv` and `data/audit/tb
 
 ## Phase 3 objective
 
-With Phase 2 closed, begin the compute-environment and real-data GPU smoke-test phase.
+M1 implements the strict frozen-manifest adapter, fixed preprocessing with
+training-only augmentation, ImageNet DenseNet-121 with three outputs, and a bounded
+one-step smoke CLI. Actual verification and reproducible commands are recorded in
+[m1-implementation.md](m1-implementation.md). The frozen split and Phase 2 audit
+artifacts are unchanged. Baseline training and held-out evaluations remain pending.
+
+Local M1 verification on 2026-10-13 passed 62 tests and real-image CUDA optimizer
+steps in FP32 and FP16. Peak allocated memory was 348.5 MiB and 235.3 MiB,
+respectively. This is execution evidence only, not scientific performance evidence.
+
+With Phase 2 closed, Phase 3 began with the compute environment and real-data
+GPU smoke pathway described above.
 
 The goal is to establish a reproducible CUDA-capable environment and prove that the project can execute correctly on real TBX11K data before any large training run.
 
@@ -147,11 +158,10 @@ Optional architecture comparisons, stronger augmentation, additional datasets, a
 
 Resume work in this order:
 
-1. set up the CUDA-capable development environment for Phase 3;
-2. locate the ignored raw data without committing it;
-3. run the tiny real-data GPU smoke test against the frozen split;
-4. verify training-only preprocessing fitting and training-only stochastic augmentation in the executable pipeline;
-5. proceed to reproducible baseline training only after the smoke test passes.
+1. review M1 and its verification receipt;
+2. implement a bounded training/validation pilot, including checkpoint selection and resource accounting;
+3. document final training settings only after the pilot;
+4. implement held-out evaluation after model and threshold decisions are frozen.
 
 ## Related documentation
 

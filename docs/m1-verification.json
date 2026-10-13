@@ -1,0 +1,335 @@
+{
+  "base_commit": "62e079f8b41f2e64f5214e2033c13fa2c3b10d1a",
+  "checks": {
+    "pip_check": "passed",
+    "pytest_duration_seconds": 49.87,
+    "pytest_passed": 62,
+    "ruff": "passed"
+  },
+  "driver_version": "610.88",
+  "purpose": "Engineering verification, not scientific performance evidence",
+  "receipts": {
+    "fp16_initial_failure": {
+      "explanation": "Default GradScaler initial scale 65536 produced non-finite gradients; guard stopped before any optimizer step. The final smoke uses initial scale 1024, verified in the succeeding receipt.",
+      "local_receipt_filename": "m1-cuda-fp16.json",
+      "original_receipt_sha256": "a66c35a9e78c4dae8ac4ac15347d152f787714784db4cfdf1787fd08095e214b",
+      "receipt": {
+        "batch": {
+          "dtype": "torch.float32",
+          "labels": [
+            2,
+            0
+          ],
+          "shape": [
+            2,
+            3,
+            224,
+            224
+          ]
+        },
+        "cuda_peak_allocated_bytes": 246681600,
+        "cuda_peak_reserved_bytes": 274726912,
+        "duration_seconds": 23.899620599999935,
+        "environment": {
+          "cuda_available": true,
+          "cuda_runtime": "12.6",
+          "gpu_capability": [
+            7,
+            5
+          ],
+          "gpu_name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "python": "3.12.10",
+          "torch": "2.13.0+cu126",
+          "torchvision": "0.28.0+cu126"
+        },
+        "error_type": "ValueError",
+        "gpu_monitor": {
+          "overheated": false,
+          "samples": [
+            {
+              "device_memory_used_mib": 0,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 59,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:02:33.468728+00:00",
+              "utilization_percent": 0
+            },
+            {
+              "device_memory_used_mib": 142,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 60,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:02:34.656482+00:00",
+              "utilization_percent": 2
+            },
+            {
+              "device_memory_used_mib": 402,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 60,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:02:35.835168+00:00",
+              "utilization_percent": 1
+            },
+            {
+              "device_memory_used_mib": 422,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 60,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:02:36.725707+00:00",
+              "utilization_percent": 2
+            }
+          ],
+          "stop_temperature_c": 85,
+          "unavailable_reason": null
+        },
+        "image_evidence": "real_tbx11k",
+        "inputs": {
+          "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+          "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
+          "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
+        },
+        "optimizer_steps": 0,
+        "partition": "train",
+        "pretrained_weights_sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395",
+        "purpose": "engineering_smoke_not_performance_evidence",
+        "real_image_batch_processed": true,
+        "sample_ids": [
+          "tbx11k:tb/tb0036.png",
+          "tbx11k:health/h1703.png"
+        ],
+        "settings": {
+          "amp_fp16": true,
+          "batch_size": 2,
+          "device": "cuda",
+          "image_size": 224,
+          "learning_rate": 0.0001,
+          "pretrained": true,
+          "seed": 42,
+          "weight_decay": 0.0001,
+          "weights": "IMAGENET1K_V1"
+        },
+        "started_utc": "2026-10-13T05:02:12.828495+00:00",
+        "status": "failed"
+      }
+    },
+    "fp16_scale1024": {
+      "local_receipt_filename": "m1-cuda-fp16-scale1024.json",
+      "original_receipt_sha256": "9562176bb29e25596f4ebcde82d27511485cba08bea9c91a0afab673eb279bec",
+      "receipt": {
+        "batch": {
+          "dtype": "torch.float32",
+          "labels": [
+            2,
+            0
+          ],
+          "shape": [
+            2,
+            3,
+            224,
+            224
+          ]
+        },
+        "classifier_updated": true,
+        "cuda_peak_allocated_bytes": 246681600,
+        "cuda_peak_reserved_bytes": 304087040,
+        "duration_seconds": 26.763973000000078,
+        "environment": {
+          "cuda_available": true,
+          "cuda_runtime": "12.6",
+          "gpu_capability": [
+            7,
+            5
+          ],
+          "gpu_name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "python": "3.12.10",
+          "torch": "2.13.0+cu126",
+          "torchvision": "0.28.0+cu126"
+        },
+        "gpu_monitor": {
+          "overheated": false,
+          "samples": [
+            {
+              "device_memory_used_mib": 0,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 58,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:04:18.212342+00:00",
+              "utilization_percent": 0
+            },
+            {
+              "device_memory_used_mib": 142,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 58,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:04:19.386651+00:00",
+              "utilization_percent": 2
+            },
+            {
+              "device_memory_used_mib": 402,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 59,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:04:20.555426+00:00",
+              "utilization_percent": 2
+            },
+            {
+              "device_memory_used_mib": 450,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 59,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:04:21.697554+00:00",
+              "utilization_percent": 2
+            }
+          ],
+          "stop_temperature_c": 85,
+          "unavailable_reason": null
+        },
+        "image_evidence": "real_tbx11k",
+        "inputs": {
+          "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+          "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
+          "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
+        },
+        "loss": 1.167724609375,
+        "optimizer_steps": 1,
+        "output_shape": [
+          2,
+          3
+        ],
+        "partition": "train",
+        "pretrained_weights_sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395",
+        "purpose": "engineering_smoke_not_performance_evidence",
+        "real_image_batch_processed": true,
+        "sample_ids": [
+          "tbx11k:tb/tb0036.png",
+          "tbx11k:health/h1703.png"
+        ],
+        "settings": {
+          "amp_fp16": true,
+          "amp_initial_scale": 1024.0,
+          "batch_size": 2,
+          "device": "cuda",
+          "image_size": 224,
+          "learning_rate": 0.0001,
+          "pretrained": true,
+          "seed": 42,
+          "weight_decay": 0.0001,
+          "weights": "IMAGENET1K_V1"
+        },
+        "started_utc": "2026-10-13T05:03:54.933971+00:00",
+        "status": "passed",
+        "step_duration_seconds": 3.3300123999997595
+      }
+    },
+    "fp32": {
+      "local_receipt_filename": "m1-cuda-fp32.json",
+      "original_receipt_sha256": "de72aaeaf6458abe9f3af9f955cb0f82fa02b7a273ce9458f52384e413ba055a",
+      "receipt": {
+        "batch": {
+          "dtype": "torch.float32",
+          "labels": [
+            2,
+            0
+          ],
+          "shape": [
+            2,
+            3,
+            224,
+            224
+          ]
+        },
+        "classifier_updated": true,
+        "cuda_peak_allocated_bytes": 365460992,
+        "cuda_peak_reserved_bytes": 429916160,
+        "duration_seconds": 30.82331320000003,
+        "environment": {
+          "cuda_available": true,
+          "cuda_runtime": "12.6",
+          "gpu_capability": [
+            7,
+            5
+          ],
+          "gpu_name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+          "python": "3.12.10",
+          "torch": "2.13.0+cu126",
+          "torchvision": "0.28.0+cu126"
+        },
+        "gpu_monitor": {
+          "overheated": false,
+          "samples": [
+            {
+              "device_memory_used_mib": 0,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 57,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:01:37.770693+00:00",
+              "utilization_percent": 0
+            },
+            {
+              "device_memory_used_mib": 136,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 58,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:01:38.940310+00:00",
+              "utilization_percent": 2
+            },
+            {
+              "device_memory_used_mib": 530,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 58,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:01:40.126501+00:00",
+              "utilization_percent": 3
+            },
+            {
+              "device_memory_used_mib": 566,
+              "name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+              "temperature_c": 58,
+              "thermal_slowdown": "Not Active",
+              "time_utc": "2026-10-13T05:01:40.780201+00:00",
+              "utilization_percent": 6
+            }
+          ],
+          "stop_temperature_c": 85,
+          "unavailable_reason": null
+        },
+        "image_evidence": "real_tbx11k",
+        "inputs": {
+          "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+          "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
+          "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
+        },
+        "loss": 1.169044017791748,
+        "optimizer_steps": 1,
+        "output_shape": [
+          2,
+          3
+        ],
+        "partition": "train",
+        "pretrained_weights_sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395",
+        "purpose": "engineering_smoke_not_performance_evidence",
+        "real_image_batch_processed": true,
+        "sample_ids": [
+          "tbx11k:tb/tb0036.png",
+          "tbx11k:health/h1703.png"
+        ],
+        "settings": {
+          "amp_fp16": false,
+          "batch_size": 2,
+          "device": "cuda",
+          "image_size": 224,
+          "learning_rate": 0.0001,
+          "pretrained": true,
+          "seed": 42,
+          "weight_decay": 0.0001,
+          "weights": "IMAGENET1K_V1"
+        },
+        "started_utc": "2026-10-13T05:01:09.959052+00:00",
+        "status": "passed",
+        "step_duration_seconds": 2.8467430999999124
+      }
+    }
+  },
+  "recorded_date": "2026-10-13",
+  "redactions": "GPU UUIDs omitted from public receipts; original generated receipts remain local in ignored results/"
+}
