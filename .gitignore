@@ -47,6 +47,7 @@ data/external/
 checkpoints/
 /models/
 *.pt
+*.pt.tmp
 *.pth
 *.ckpt
 *.onnx

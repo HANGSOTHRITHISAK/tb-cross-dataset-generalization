@@ -1,0 +1,22 @@
+# Engineering subset only; metrics cannot estimate final research performance.
+manifest: data/manifests/tbx11k.csv
+assignments: data/manifests/tbx11k_split.csv
+summary: data/audit/tbx11k_split_summary.json
+split_sha256: 4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e
+pilot:
+  seed: 42
+  epochs: 3
+  batch_size: 2
+  image_size: 224
+  learning_rate: 0.0001
+  weight_decay: 0.0001
+  precision: fp32
+  train_per_class: [24, 24, 6]
+  validation_per_class: [24, 24, 6]
+  max_steps: 81
+  max_seconds: 180
+  patience: null
+  class_weighted: false
+  stop_temperature_c: 80
+  max_cuda_reserved_mib: 5120
+  num_threads: 2

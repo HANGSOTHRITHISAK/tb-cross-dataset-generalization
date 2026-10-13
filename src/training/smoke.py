@@ -25,6 +25,7 @@ from torch import nn
 from src.data.datasets import ManifestDataset
 from src.data.frozen_split import load_frozen_tbx11k, metadata_sha256
 from src.data.manifest import file_sha256
+from src.data.provenance import validate_image_evidence
 from src.data.transforms import build_transform, seed_everything
 from src.models import build_densenet121
 
@@ -189,8 +190,10 @@ def run_smoke(
     pretrained=True,
     allow_download=False,
     amp=False,
-    image_evidence="real_tbx11k",
+    image_evidence=None,
 ):
+    # Deprecated compatibility argument, intentionally ignored. Provenance is
+    # established by approved metadata and matching selected raw-image hashes.
     output_path = Path(receipt_path).resolve()
     input_paths = {Path(manifest).resolve(), Path(assignments).resolve()}
     if summary is not None:
@@ -225,7 +228,7 @@ def run_smoke(
         },
         "optimizer_steps": 0,
         "real_image_batch_processed": False,
-        "image_evidence": image_evidence,
+        "image_evidence": "not_validated",
     }
     monitor = None
     selected_device = None
@@ -258,9 +261,9 @@ def run_smoke(
         if len(train) < batch_size:
             raise ValueError("Training partition too small for requested batch")
         selected = random.Random(seed).sample(train, batch_size)
-        for record in selected:
-            if file_sha256(record.image_path) != record.checksum_sha256:
-                raise ValueError(f"Raw image checksum mismatch: {record.sample_id}")
+        receipt["image_evidence"] = validate_image_evidence(
+            manifest, assignments, selected
+        )
         receipt["inputs"] = {
             "manifest_sha256": file_sha256(manifest),
             "split_sha256": file_sha256(assignments),
@@ -285,7 +288,9 @@ def run_smoke(
         ):
             raise ValueError("Unexpected batch shape or dtype")
         _finite(images, "input images")
-        receipt["real_image_batch_processed"] = image_evidence == "real_tbx11k"
+        receipt["real_image_batch_processed"] = (
+            receipt["image_evidence"] == "verified_real_tbx11k"
+        )
         receipt["batch"] = {
             "shape": list(images.shape),
             "dtype": str(images.dtype),
