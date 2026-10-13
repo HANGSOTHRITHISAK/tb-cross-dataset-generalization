@@ -1,0 +1,777 @@
+{
+  "actual_execution": {
+    "compatibility": {
+      "best_checkpoint": {
+        "config": {
+          "batch_size": 2,
+          "class_weighted": false,
+          "epochs": 1,
+          "image_size": 224,
+          "learning_rate": 0.0001,
+          "max_cuda_reserved_mib": 5120,
+          "max_seconds": 60,
+          "max_steps": 3,
+          "num_threads": 2,
+          "patience": null,
+          "precision": "fp32",
+          "seed": 42,
+          "stop_temperature_c": 80,
+          "train_per_class": [
+            2,
+            2,
+            2
+          ],
+          "validation_per_class": [
+            2,
+            2,
+            2
+          ],
+          "weight_decay": 0.0001
+        },
+        "epoch": 1,
+        "filename": "best.pt",
+        "image_evidence": "verified_real_tbx11k",
+        "inputs": {
+          "manifest_lf_sha256": "85e6e6fe4a56ac8b7abeb29a68ac2a256ba1cc46164fd8dd6f1ab6f5187437cd",
+          "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+          "split_lf_sha256": "e4e69370c933f2b12b4b00df62b43ee5b7dee31e415ad67c75adfc84926c2227",
+          "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
+          "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
+        },
+        "model": {
+          "architecture": "densenet121",
+          "class_names": [
+            "healthy",
+            "sick_non_tb",
+            "tb"
+          ],
+          "initial_state_sha256": "e42d1b731d1ab3c2083753906ab3026ae7f29f2ab3e764b488560e4c78c409f0",
+          "initialization": "IMAGENET1K_V1",
+          "weights_sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395"
+        },
+        "optimizer_steps": 3,
+        "selection": {
+          "metric": "macro_f1",
+          "partition": "validation",
+          "tie_breaking": "lower_validation_loss_then_earliest_epoch"
+        },
+        "sha256": "4bc9c02561e1dfa53e176b32e08ab892b027c502519a768dd1ce04dbc53a1017",
+        "state_sha256": "35b455d719d66bd10e090d48114fcd48335c3ecb28e7039e419ea651c870ead8",
+        "validation": {
+          "accuracy": 0.3333333333333333,
+          "class_counts": [
+            2,
+            2,
+            2
+          ],
+          "class_names": [
+            "healthy",
+            "sick_non_tb",
+            "tb"
+          ],
+          "confusion_matrix": [
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              2,
+              0
+            ]
+          ],
+          "epoch": 1,
+          "loss": 1.250740796327591,
+          "macro_f1": 0.16666666666666666,
+          "partition": "validation",
+          "per_class_recall": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "sample_count": 6,
+          "zero_division": 0
+        }
+      },
+      "checkpoint_usable": true,
+      "checkpoint_validation": {
+        "accuracy": 0.3333333333333333,
+        "class_counts": [
+          2,
+          2,
+          2
+        ],
+        "class_names": [
+          "healthy",
+          "sick_non_tb",
+          "tb"
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            0
+          ]
+        ],
+        "loss": 1.250740796327591,
+        "macro_f1": 0.16666666666666666,
+        "partition": "validation",
+        "per_class_recall": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "sample_count": 6,
+        "zero_division": 0
+      },
+      "classifier_updated": true,
+      "config": {
+        "batch_size": 2,
+        "class_weighted": false,
+        "epochs": 1,
+        "image_size": 224,
+        "learning_rate": 0.0001,
+        "max_cuda_reserved_mib": 5120,
+        "max_seconds": 60,
+        "max_steps": 3,
+        "num_threads": 2,
+        "patience": null,
+        "precision": "fp32",
+        "seed": 42,
+        "stop_temperature_c": 80,
+        "train_per_class": [
+          2,
+          2,
+          2
+        ],
+        "validation_per_class": [
+          2,
+          2,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "config_file_sha256": "134812fcc2fb3225e0a79373448524a068ccba926d0fd2105334c6f7cf385bc3",
+      "cuda_peak_allocated_bytes": 421824000,
+      "cuda_peak_reserved_bytes": 446693376,
+      "determinism": {
+        "algorithms": true,
+        "amp_initial_scale": null,
+        "cublas_workspace_config": ":4096:8",
+        "cudnn_benchmark": false,
+        "num_workers": 0,
+        "shuffle_seed": 42
+      },
+      "device": "cuda",
+      "duration_seconds": 27.79987280000023,
+      "environment": {
+        "cuda_runtime": "12.6",
+        "gpu_capability": [
+          7,
+          5
+        ],
+        "gpu_name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+        "gpu_total_memory_bytes": 6442123264,
+        "packages": {
+          "Jinja2": "3.1.6",
+          "MarkupSafe": "3.0.4",
+          "PyYAML": "6.0.3",
+          "Pygments": "2.21.0",
+          "colorama": "0.4.6",
+          "filelock": "4.1.1",
+          "fsspec": "2026.9.0",
+          "iniconfig": "2.3.1",
+          "mpmath": "1.3.0",
+          "networkx": "3.7",
+          "numpy": "2.5.4",
+          "packaging": "26.3",
+          "pandas": "3.0.6",
+          "pillow": "12.3.0",
+          "pip": "25.0.1",
+          "pluggy": "1.6.0",
+          "pytest": "9.1.1",
+          "python-dateutil": "2.9.0.post0",
+          "ruff": "0.17.0",
+          "setuptools": "84.0.0",
+          "six": "1.17.0",
+          "sympy": "1.14.0",
+          "torch": "2.13.0+cu126",
+          "torchvision": "0.28.0+cu126",
+          "typing_extensions": "4.16.0",
+          "tzdata": "2026.5"
+        },
+        "platform": "Windows",
+        "python": "3.12.10"
+      },
+      "epoch": 1,
+      "final_state_sha256": "35b455d719d66bd10e090d48114fcd48335c3ecb28e7039e419ea651c870ead8",
+      "gpu_monitor": {
+        "device_memory_used_mib": {
+          "count": 9,
+          "max": 657,
+          "mean": 537.1111111111111,
+          "median": 657,
+          "min": 76
+        },
+        "first_sample_utc": "2026-10-13T08:07:31.870140+00:00",
+        "last_sample_utc": "2026-10-13T08:07:41.173367+00:00",
+        "overheated": false,
+        "sample_count": 9,
+        "stop_temperature_c": 80,
+        "temperature_c": {
+          "count": 9,
+          "max": 60,
+          "mean": 59,
+          "median": 59,
+          "min": 58
+        },
+        "thermal_slowdown_values": [
+          "Not Active"
+        ],
+        "unavailable_reason": null,
+        "utilization_percent": {
+          "count": 9,
+          "max": 27,
+          "mean": 6.222222222222222,
+          "median": 3,
+          "min": 0
+        }
+      },
+      "history": [
+        {
+          "checkpoint_selected": true,
+          "cuda_peak_allocated_bytes": 421824000,
+          "cuda_peak_reserved_bytes": 446693376,
+          "epoch": 1,
+          "epoch_seconds": 6.1078369000006205,
+          "training_loss": 1.2233436107635498,
+          "training_sample_count": 6,
+          "training_seconds": 4.213972300000023,
+          "validation": {
+            "accuracy": 0.3333333333333333,
+            "batch_runtime_summary": {
+              "count": 3,
+              "max": 0.08865919999971084,
+              "mean": 0.07763616666640398,
+              "median": 0.07605880000028264,
+              "min": 0.06819049999921845
+            },
+            "class_counts": [
+              2,
+              2,
+              2
+            ],
+            "class_names": [
+              "healthy",
+              "sick_non_tb",
+              "tb"
+            ],
+            "confusion_matrix": [
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                2,
+                0
+              ]
+            ],
+            "epoch": 1,
+            "loss": 1.250740796327591,
+            "macro_f1": 0.16666666666666666,
+            "partition": "validation",
+            "per_class_recall": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "sample_count": 6,
+            "zero_division": 0
+          },
+          "validation_seconds": 0.3651292000004105
+        }
+      ],
+      "image_evidence": "verified_real_tbx11k",
+      "imbalance": {
+        "candidate_weights": [
+          0.7243107769423559,
+          0.7526041666666666,
+          3.4404761904761907
+        ],
+        "enabled": false,
+        "frequency_partition": "complete_frozen_train",
+        "oversampling": false
+      },
+      "implementation": {
+        "git_commit": "d8c8a250316cbfc6ae1ab35d7400c61b21bf0262",
+        "source_sha256": {
+          "src/__init__.py": "29f11a79a3dd2b3afce39eb451b2a2c1b8fce0fa9b2889e7560bcd87e09e5020",
+          "src/data/__init__.py": "96ee88f56588d71cb4e5994de5685f80ce12b6726e74f9e82cfc3f43694998ae",
+          "src/data/audit.py": "51f754f90e981a55391cdba760636e9621e0951d9ad5e5799c184e007b662b00",
+          "src/data/datasets.py": "e1a17f5bc65216e9a848afb8382bcb9797392960df352076f86302bc9dfb224c",
+          "src/data/frozen_split.py": "5da2cb0b7eb2794dc62abd6a503812a69f0db1269e533e9a64d2f12396ecd4f4",
+          "src/data/labels.py": "5019089fc9ad92ce42c9795f22dbd857b3319fd9a3231afd9155906cda157f34",
+          "src/data/manifest.py": "3b7ec3c9ef0a7aba0c3af842ec1fec2017b202efc3bf23b47d2290581a67f76d",
+          "src/data/overlap.py": "02e3f7c45d846bc885f8c84a6d41d1e8ee93756449e964bb0cea5b593d11baac",
+          "src/data/phase2_audit.py": "c73733db4f23e363bf99b2c54dc2d2800096f6558237f94333b950915618e5db",
+          "src/data/provenance.py": "e2374d34e75cf3a4bc10afa5a2e9bb628fc184a9a6ef67fb2e201e2beba56d94",
+          "src/data/schema.py": "80de82a3aa04f875dc66d18ab275b7d901ab420728fd0550dc17065f83dc7d39",
+          "src/data/splits.py": "972c65e5ffb813be4784a4ddf312a5af7f600ae2f4fb3f631bccae8d9f618b2a",
+          "src/data/tbx11k_split.py": "1a85c68cba29a6de3125fc3d39edfde336d2839cabcc58c299dc99d0b43cbe9c",
+          "src/data/transforms.py": "f166e8446aeccf81dd1bedde92d83c35c7f85fd3e3adf2d430e2a6ce16b161e4",
+          "src/evaluation/__init__.py": "a58b8fdc1901d08c0a6cb8196a899a4886214305a29788306b8107d630aaaa3d",
+          "src/models/__init__.py": "7beb2a5ca845373dc10d8f1cdf2db5bb0b84b7baa33fe19832a622593b36e3ce",
+          "src/models/densenet.py": "589feb60c78fc2ea0999954a4a52b838674ac612c6faa2401394a98edfc545d7",
+          "src/training/__init__.py": "2b85f7e403d75a92d83f82d56593f8ef797790f382491c3611b41e2988dc6148",
+          "src/training/epoch.py": "541acb0decb704b3f00de5b6eb6b75e1a83f2e19b35ad628de98c4a8e3ce41c3",
+          "src/training/full_data.py": "35a04938884758b7b38c3730413cfc6c4db58363432f0308b44da3965fe18ca0",
+          "src/training/pilot.py": "d76a67eb3aa0d4e456ba2bbf06ef4c513006a6dbe9e744aa7586b54ccb5b2e1e",
+          "src/training/preflight.py": "f1ddfb60dcea67eb1ac8e8dd8a43f3df5637c03ca2d72093fcf12727153ac397",
+          "src/training/smoke.py": "95cb0eac1f1cf6ee59712c22fc51c4755305e499263f34c1a5bc36009d2c3654"
+        }
+      },
+      "inputs": {
+        "manifest_lf_sha256": "85e6e6fe4a56ac8b7abeb29a68ac2a256ba1cc46164fd8dd6f1ab6f5187437cd",
+        "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+        "split_lf_sha256": "e4e69370c933f2b12b4b00df62b43ee5b7dee31e415ad67c75adfc84926c2227",
+        "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
+        "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
+      },
+      "model": {
+        "architecture": "densenet121",
+        "class_names": [
+          "healthy",
+          "sick_non_tb",
+          "tb"
+        ],
+        "initial_state_sha256": "e42d1b731d1ab3c2083753906ab3026ae7f29f2ab3e764b488560e4c78c409f0",
+        "initialization": "IMAGENET1K_V1",
+        "weights_sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395"
+      },
+      "optimizer": "AdamW",
+      "optimizer_steps": 3,
+      "original_local_receipt_bytes": 16008,
+      "original_local_receipt_sha256": "1e27350a82ae7566170cba4d8d0f8ed2612e1076a6b631fd45d76c6723c08a88",
+      "phase": "checkpoint_verification",
+      "preprocessing": {
+        "image_size": 224,
+        "normalization": "fixed_imagenet",
+        "train_affine_degrees": 5,
+        "train_translate": [
+          0.02,
+          0.02
+        ],
+        "validation_stochastic_augmentation": false
+      },
+      "purpose": "bounded_engineering_pilot_not_performance_estimate",
+      "selection": {
+        "metric": "macro_f1",
+        "partition": "validation",
+        "tie_breaking": "lower_validation_loss_then_earliest_epoch"
+      },
+      "started_utc": "2026-10-13T08:07:13.374747+00:00",
+      "status": "passed",
+      "steps_summary": {
+        "count": 3,
+        "max": 2.4157666000000972,
+        "mean": 1.3459061000000172,
+        "median": 0.8451261000000159,
+        "min": 0.7768255999999383
+      },
+      "stop_reason": "configured_epochs_completed",
+      "subsets": {
+        "train": {
+          "class_counts": [
+            2,
+            2,
+            2
+          ],
+          "sample_count": 6,
+          "sample_ids": [
+            "tbx11k:health/h0857.png",
+            "tbx11k:health/h4917.png",
+            "tbx11k:sick/s0194.png",
+            "tbx11k:sick/s2125.png",
+            "tbx11k:tb/tb0489.png",
+            "tbx11k:tb/tb0527.png"
+          ]
+        },
+        "validation": {
+          "class_counts": [
+            2,
+            2,
+            2
+          ],
+          "sample_count": 6,
+          "sample_ids": [
+            "tbx11k:health/h0311.png",
+            "tbx11k:health/h2592.png",
+            "tbx11k:sick/s1273.png",
+            "tbx11k:sick/s4260.png",
+            "tbx11k:tb/tb0536.png",
+            "tbx11k:tb/tb0903.png"
+          ]
+        }
+      },
+      "training_class_counts": [
+        2660,
+        2560,
+        560
+      ]
+    },
+    "full_data_preflight": {
+      "best_validation": {
+        "accuracy": 0.9475383373688459,
+        "class_counts": [
+          570,
+          549,
+          120
+        ],
+        "class_names": [
+          "healthy",
+          "sick_non_tb",
+          "tb"
+        ],
+        "confusion_matrix": [
+          [
+            561,
+            2,
+            7
+          ],
+          [
+            3,
+            500,
+            46
+          ],
+          [
+            4,
+            3,
+            113
+          ]
+        ],
+        "epoch": 1,
+        "loss": 0.1521131019716735,
+        "macro_f1": 0.9083055465570148,
+        "partition": "validation",
+        "per_class_recall": [
+          0.9842105263157894,
+          0.9107468123861566,
+          0.9416666666666667
+        ],
+        "sample_count": 1239,
+        "zero_division": 0
+      },
+      "checkpoint": {
+        "bytes": 113027673,
+        "continuation_state_sha256": "d98a722e0cba2f12d3243f0c23da81c0ca2f7d4db45afdbf2cb5df1273bdf303",
+        "extra_validation_passes": 0,
+        "filename": "latest.pt",
+        "model_state_sha256": "99c79cac1ced4c2d874ee207b5a519615c1ce831b2fba059d0c91146e18095b5",
+        "preflight_only_not_final_research_checkpoint": true,
+        "reload_all_state_exact": true,
+        "sha256": "84e8e00058f047d341249fc5b8f0459f1b874ad6262e65447496b5e65dcecb97"
+      },
+      "checkpoint_usable": true,
+      "completed_epochs": 1,
+      "config": {
+        "batch_size": 2,
+        "epochs": 1,
+        "image_size": 224,
+        "learning_rate": 0.0001,
+        "max_cuda_reserved_mib": 5120,
+        "max_seconds": 3600,
+        "num_threads": 2,
+        "precision": "fp32",
+        "seed": 42,
+        "stop_temperature_c": 80,
+        "weight_decay": 0.0001
+      },
+      "config_file_sha256": "cb84d792e499d337dd932ba8856a1f9daf5243bfdb179fc2091ed89e0cc813b7",
+      "cuda_peak_allocated_bytes": 421824000,
+      "cuda_peak_reserved_bytes": 457179136,
+      "determinism": {
+        "algorithms": true,
+        "augmentation": "train_only_affine_5_degrees_translate_0.02_no_flip",
+        "cublas_workspace_config": ":4096:8",
+        "num_threads": 2,
+        "num_workers": 0,
+        "train_loader_seed": 42,
+        "validation_loader_seed": 43
+      },
+      "duration_seconds": 1821.5490941999997,
+      "environment": {
+        "cuda_runtime": "12.6",
+        "device": "cuda",
+        "gpu_memory_bytes": 6442123264,
+        "gpu_name": "NVIDIA GeForce RTX 2060 with Max-Q Design",
+        "packages": {
+          "Jinja2": "3.1.6",
+          "MarkupSafe": "3.0.4",
+          "PyYAML": "6.0.3",
+          "Pygments": "2.21.0",
+          "colorama": "0.4.6",
+          "filelock": "4.1.1",
+          "fsspec": "2026.9.0",
+          "iniconfig": "2.3.1",
+          "mpmath": "1.3.0",
+          "networkx": "3.7",
+          "numpy": "2.5.4",
+          "packaging": "26.3",
+          "pandas": "3.0.6",
+          "pillow": "12.3.0",
+          "pip": "25.0.1",
+          "pluggy": "1.6.0",
+          "pytest": "9.1.1",
+          "python-dateutil": "2.9.0.post0",
+          "ruff": "0.17.0",
+          "setuptools": "84.0.0",
+          "six": "1.17.0",
+          "sympy": "1.14.0",
+          "torch": "2.13.0+cu126",
+          "torchvision": "0.28.0+cu126",
+          "typing_extensions": "4.16.0",
+          "tzdata": "2026.5"
+        },
+        "python": "3.12.10",
+        "system": "Windows"
+      },
+      "epoch_seconds": 1675.3658415,
+      "fixture": false,
+      "gpu_monitor": {
+        "device_memory_used_mib": {
+          "count": 1546,
+          "max": 592,
+          "mean": 545.9715394566623,
+          "median": 582.0,
+          "min": 0
+        },
+        "first_sample_utc": "2026-10-13T08:09:56.676528+00:00",
+        "last_sample_utc": "2026-10-13T08:40:16.337934+00:00",
+        "overheated": false,
+        "sample_count": 1546,
+        "stop_temperature_c": 80,
+        "temperature_c": {
+          "count": 1546,
+          "max": 65,
+          "mean": 62.71862871927555,
+          "median": 63.0,
+          "min": 58
+        },
+        "thermal_slowdown_values": [
+          "Not Active"
+        ],
+        "unavailable_reason": null,
+        "utilization_percent": {
+          "count": 1546,
+          "max": 43,
+          "mean": 19.83699870633894,
+          "median": 21.0,
+          "min": 0
+        }
+      },
+      "history": [
+        {
+          "checkpoint_selected": true,
+          "epoch": 1,
+          "training_loss": 0.3562259189683821,
+          "training_order_sha256": "a4bcbef87638dab001a67f663d4444d7b739426a5d7b12b960fdc27688339122",
+          "training_sample_count": 5780,
+          "training_seconds": 1626.6129745000007,
+          "unique_training_ids": 5780,
+          "validation": {
+            "accuracy": 0.9475383373688459,
+            "batch_runtime_summary": {
+              "count": 620,
+              "max": 0.19620209999993676,
+              "mean": 0.0737421285483804,
+              "median": 0.07252944999981992,
+              "min": 0.06867930000043998
+            },
+            "class_counts": [
+              570,
+              549,
+              120
+            ],
+            "class_names": [
+              "healthy",
+              "sick_non_tb",
+              "tb"
+            ],
+            "confusion_matrix": [
+              [
+                561,
+                2,
+                7
+              ],
+              [
+                3,
+                500,
+                46
+              ],
+              [
+                4,
+                3,
+                113
+              ]
+            ],
+            "epoch": 1,
+            "loss": 0.1521131019716735,
+            "macro_f1": 0.9083055465570148,
+            "partition": "validation",
+            "per_class_recall": [
+              0.9842105263157894,
+              0.9107468123861566,
+              0.9416666666666667
+            ],
+            "sample_count": 1239,
+            "zero_division": 0
+          },
+          "validation_seconds": 47.00273570000081
+        }
+      ],
+      "image_evidence": "verified_real_tbx11k",
+      "implementation": {
+        "git_commit": "e40a3e9bae834fdbc876df8e9113749c44f18fc2",
+        "source_sha256": {
+          "src/__init__.py": "29f11a79a3dd2b3afce39eb451b2a2c1b8fce0fa9b2889e7560bcd87e09e5020",
+          "src/data/__init__.py": "96ee88f56588d71cb4e5994de5685f80ce12b6726e74f9e82cfc3f43694998ae",
+          "src/data/audit.py": "51f754f90e981a55391cdba760636e9621e0951d9ad5e5799c184e007b662b00",
+          "src/data/datasets.py": "e1a17f5bc65216e9a848afb8382bcb9797392960df352076f86302bc9dfb224c",
+          "src/data/frozen_split.py": "5da2cb0b7eb2794dc62abd6a503812a69f0db1269e533e9a64d2f12396ecd4f4",
+          "src/data/labels.py": "5019089fc9ad92ce42c9795f22dbd857b3319fd9a3231afd9155906cda157f34",
+          "src/data/manifest.py": "3b7ec3c9ef0a7aba0c3af842ec1fec2017b202efc3bf23b47d2290581a67f76d",
+          "src/data/overlap.py": "02e3f7c45d846bc885f8c84a6d41d1e8ee93756449e964bb0cea5b593d11baac",
+          "src/data/phase2_audit.py": "c73733db4f23e363bf99b2c54dc2d2800096f6558237f94333b950915618e5db",
+          "src/data/provenance.py": "e2374d34e75cf3a4bc10afa5a2e9bb628fc184a9a6ef67fb2e201e2beba56d94",
+          "src/data/schema.py": "80de82a3aa04f875dc66d18ab275b7d901ab420728fd0550dc17065f83dc7d39",
+          "src/data/splits.py": "972c65e5ffb813be4784a4ddf312a5af7f600ae2f4fb3f631bccae8d9f618b2a",
+          "src/data/tbx11k_split.py": "1a85c68cba29a6de3125fc3d39edfde336d2839cabcc58c299dc99d0b43cbe9c",
+          "src/data/transforms.py": "f166e8446aeccf81dd1bedde92d83c35c7f85fd3e3adf2d430e2a6ce16b161e4",
+          "src/evaluation/__init__.py": "a58b8fdc1901d08c0a6cb8196a899a4886214305a29788306b8107d630aaaa3d",
+          "src/models/__init__.py": "7beb2a5ca845373dc10d8f1cdf2db5bb0b84b7baa33fe19832a622593b36e3ce",
+          "src/models/densenet.py": "589feb60c78fc2ea0999954a4a52b838674ac612c6faa2401394a98edfc545d7",
+          "src/training/__init__.py": "2b85f7e403d75a92d83f82d56593f8ef797790f382491c3611b41e2988dc6148",
+          "src/training/epoch.py": "541acb0decb704b3f00de5b6eb6b75e1a83f2e19b35ad628de98c4a8e3ce41c3",
+          "src/training/full_data.py": "d9bfabba9613e6e8bd2d09e649cc659421e363a711fa33c85e27b4b39f1b5c66",
+          "src/training/pilot.py": "d76a67eb3aa0d4e456ba2bbf06ef4c513006a6dbe9e744aa7586b54ccb5b2e1e",
+          "src/training/preflight.py": "b968aff82f251504e34383d65e5e5b6f05d3806792c8c7c890a1748c030b7e81",
+          "src/training/smoke.py": "95cb0eac1f1cf6ee59712c22fc51c4755305e499263f34c1a5bc36009d2c3654"
+        }
+      },
+      "inputs": {
+        "manifest_lf_sha256": "85e6e6fe4a56ac8b7abeb29a68ac2a256ba1cc46164fd8dd6f1ab6f5187437cd",
+        "manifest_sha256": "fcd16d806431e6f96de407ab964d510f0281a162c8da3046e5defb4c70664c00",
+        "split_lf_sha256": "e4e69370c933f2b12b4b00df62b43ee5b7dee31e415ad67c75adfc84926c2227",
+        "split_sha256": "4638fb21c180a3e05231d9ff682319bf4ddf36bf2b24643fa43e20776ddabf4e",
+        "summary_sha256": "a0f6a5a1a80478603f3c308f5795b8982de5c003a26867e7fc625f1885271955"
+      },
+      "loss": "unweighted_cross_entropy",
+      "model": {
+        "architecture": "densenet121_three_outputs",
+        "initial_state_sha256": "e42d1b731d1ab3c2083753906ab3026ae7f29f2ab3e764b488560e4c78c409f0",
+        "initialization": "IMAGENET1K_V1",
+        "weights_sha256": "a639ec97d7c33b07ae66f0b5fb7d0192f95a3b11b7576c66c0126c2a727c4395"
+      },
+      "optimizer_steps": 2890,
+      "original_local_receipt_bytes": 1637089,
+      "original_local_receipt_sha256": "92ef698dbcb07236deaee2537c6110ea68a610d1148be0f6b45db0a77a37eef2",
+      "partitions": {
+        "train": {
+          "class_counts": [
+            2660,
+            2560,
+            560
+          ],
+          "membership_sha256": "d1d6ae05d53ee228cd5386378e3e15b41d4231c593dd7a84ae5e5434983f495a",
+          "sample_count": 5780
+        },
+        "validation": {
+          "class_counts": [
+            570,
+            549,
+            120
+          ],
+          "membership_sha256": "caec89d7da34d185c6d0e06d4ea2a78f0bc6ddb629f46359989003fe39f6af90",
+          "sample_count": 1239
+        }
+      },
+      "phase": "checkpoint_verification",
+      "purpose": "M3A_one_epoch_preflight_diagnostics_not_final_baseline",
+      "selection": {
+        "metric": "macro_f1",
+        "partition": "validation",
+        "tie_breaking": "lower_validation_loss_then_earliest_epoch"
+      },
+      "started_utc": "2026-10-13T08:09:54.793541+00:00",
+      "status": "passed",
+      "steps_summary": {
+        "count": 2890,
+        "max": 2.667395100000249,
+        "mean": 0.5559193130795862,
+        "median": 0.5227709999999206,
+        "min": 0.45476010000038514
+      },
+      "stop_reason": "one_epoch_cap_completed",
+      "supervisor": {
+        "duration_seconds_including_imports": 1835.5404810999999,
+        "forced_timeout": false,
+        "hard_budget_seconds": 3600,
+        "log_filename": "m3a-cuda-fp32.log",
+        "worker_exit_code": 0
+      },
+      "throughput_images_per_second": {
+        "train": 3.5533959771694894,
+        "validation": 26.360167797636905
+      },
+      "training_samples_this_epoch": 5780,
+      "validation_samples_this_epoch": 1239
+    }
+  },
+  "local_verification": {
+    "actual_cpu_cuda_resume_fixture": {
+      "passed": 2,
+      "real_dataset_used": false,
+      "seconds": 12.56
+    },
+    "final_diff_review": "passed; frozen data, M1/M2 runners and verification artifacts unchanged",
+    "full_suite": {
+      "passed": 125,
+      "seconds": 65.93,
+      "skipped": 1
+    },
+    "maintained_file_formatting": "passed",
+    "pip_check": "passed",
+    "remote_ci": "reported separately in the PR checks and final verification report",
+    "ruff_check": "passed"
+  },
+  "verification_scope": {
+    "M3B": "not_authorized_not_launched",
+    "additional_full_data_epochs": 0,
+    "additional_full_validation_passes": 0,
+    "cpu_and_cuda_resume": "actual stochastic tiny-fixture execution, exact equality",
+    "heldout": "metadata-only join; no held-out image bytes opened"
+  }
+}

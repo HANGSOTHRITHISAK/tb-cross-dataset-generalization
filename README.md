@@ -10,7 +10,15 @@ Rather than optimizing only for in-domain performance, this project focuses on t
 
 ## Project status
 
-**Current stage:** Phase 2 split frozen; M2 bounded DenseNet-121 training/validation pilot verified.
+**Current stage:** Phase 2 split frozen; M3A one-epoch full-data preflight verified; M3B awaits approval.
+
+M3A used all 5,780 frozen training images and all 1,239 validation images, completed
+2,890 optimizer updates in 30.59 minutes including startup, and verified checkpoint
+restoration. CPU/CUDA fixture tests establish deterministic epoch-boundary resume.
+Sampled GPU temperatures were 58–65 C, with no thermal slowdown or resource stop.
+See [M3A preflight and approval gate](docs/m3a-preflight.md) for actual versus fixture
+evidence, diagnostics, local commands, and proposed M3B decisions. The single-epoch
+checkpoint is engineering evidence; extended training requires separate approval.
 
 The pipeline preserves the frozen 8,257-image split and supports bounded multi-step
 training, independent validation, checkpoint selection and resource monitoring.
